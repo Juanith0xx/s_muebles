@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+echo "public/other/nuestra-fabrica.mp4" >> .gitignore
+
