@@ -8,7 +8,7 @@ const Nosotros = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <img
           className='w-98 md:w-1/2 h-auto object-cover rounded-lg'
-          src='./img/nosotros.jpg'
+          src='./img/fondo-2.png'
           alt='Nosotros'
         />
         

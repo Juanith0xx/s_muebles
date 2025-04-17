@@ -1,42 +1,6 @@
-import React, { useEffect, useState } from 'react';
-
-const generateRandomPosition = () => {
-  const positions = ['top', 'bottom'];
-  const vertical = positions[Math.floor(Math.random() * positions.length)];
-  const verticalValue = `${Math.floor(Math.random() * 70)}%`;
-
-  const horizontal = Math.random() > 0.5 ? 'left' : 'right';
-  const horizontalValue = `${Math.floor(Math.random() * 80)}%`;
-
-  return {
-    [vertical]: verticalValue,
-    [horizontal]: horizontalValue,
-  };
-};
-
-const generateRombos = (count) => {
-  return Array.from({ length: count }, (_, i) => {
-    const size = [16, 20, 24, 28, 32, 36, 40][i % 7];
-    const rotate = [0, 6, 12, 45][i % 4];
-    const opacity = [60, 70, 75, 80, 85, 90][i % 6];
-
-    return {
-      id: i,
-      size,
-      rotate,
-      opacity,
-      position: generateRandomPosition(),
-    };
-  });
-};
+import React from 'react';
 
 const Home = () => {
-  const [rombos, setRombos] = useState([]);
-
-  useEffect(() => {
-    setRombos(generateRombos(12));
-  }, []);
-
   return (
     <section
       className="
@@ -44,7 +8,7 @@ const Home = () => {
         w-full 
         min-h-[22rem] sm:min-h-[28rem] md:min-h-[32rem]
         mt-6
-        bg-[#d33834] 
+        bg-cover bg-center bg-no-repeat
         overflow-hidden 
         flex 
         items-center 
@@ -52,24 +16,13 @@ const Home = () => {
         px-4 sm:px-6 md:px-12 
         py-16 sm:py-24 md:py-28
       "
+      style={{
+        backgroundImage: `url('/img/fondo-3.jpg')`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% auto',
+        backgroundPosition: 'center',
+      }}
     >
-      {/* Rombos decorativos */}
-      <div className="absolute inset-0 z-0">
-        {rombos.map(({ id, size, rotate, opacity, position }) => (
-          <div
-            key={id}
-            className="absolute bg-white shadow-md rounded transition-all duration-500"
-            style={{
-              width: `${size}px`,
-              height: `${size}px`,
-              opacity: opacity / 100,
-              transform: `rotate(${rotate}deg)`,
-              ...position,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Contenido principal */}
       <div
         className="
@@ -90,7 +43,7 @@ const Home = () => {
 
         <a
           href="mailto:contacto@sistemamuebles.cl"
-          className="bg-gray-400 hover:bg-gray-500 !text-white font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300"
+          className="bg-[#D33834] hover:bg-white !text-white font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300"
         >
           Más Informaciones
         </a>
