@@ -2,7 +2,7 @@ import React from "react";
 
 const FactoryVideo = () => {
   return (
-    <section className="px-4 py-12 bg-gradient-to-r from-[#d33834] via-[#a52b29] to-[#d33834] bg-[length:200%_200%] animate-gradient-x">
+    <section id="nuestra_fabrica" className="px-4 py-12 bg-gradient-to-r from-[#d33834] via-[#a52b29] to-[#d33834] bg-[length:200%_200%] animate-gradient-x">
       <h2 className="p-6 text-3xl md:text-4xl font-semibold font-Popins text-white mb-6 text-center md:text-left">
         Nuestra Fábrica
       </h2>

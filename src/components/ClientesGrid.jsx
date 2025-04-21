@@ -132,7 +132,7 @@ const ClientesGrid = () => {
   }, []);
 
   return (
-    <section className="py-12">
+    <section id="nuestros_clientes" className="py-12">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="p-6 text-3xl md:text-4xl font-bold font-Popins text-gray-500 mb-6 text-center md:text-left">
           Nuestra Cartera de Clientes

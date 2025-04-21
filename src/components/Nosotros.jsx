@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nosotros = () => {
   return (
-    <section className="p-6 md:p-12 flex flex-col">
+    <section id="nosotros" className="p-6 md:p-12 flex flex-col">
       <h2 className='text-3xl md:text-4xl font-bold text-gray-500 mb-6 text-center md:text-left'>Nosotros</h2>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">

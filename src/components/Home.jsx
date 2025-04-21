@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <section
+    <section 
       className="
         relative 
         w-full 
@@ -37,13 +37,13 @@ const Home = () => {
           text-sm sm:text-base md:text-lg
         "
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-left mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-Popins font-bold text-left mb-6">
           Una <br /> Solución <br /> Integral
         </h1>
 
-        <a
+        <a className="bg-[#D33834] !text-white font-Popins font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300"
           href="mailto:contacto@sistemamuebles.cl"
-          className="bg-[#D33834] hover:bg-white !text-white font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300"
+         
         >
           Más Informaciones
         </a>

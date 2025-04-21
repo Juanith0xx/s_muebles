@@ -1,77 +1,138 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link as RouterLink } from 'react-router-dom';     // para ruta a "/"
+import { Link as ScrollLink } from 'react-scroll';         // para scroll interno
+
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white p-4 pr-8 text-black flex justify-between items-center w-full fixed top-0 left-0 z-50 ">
-      {/* Logo */}
-      <div className="px-4">
-        <img className="w-50 h-auto" src="/img/Logo.jpg" alt="Logo" />
-      </div>
+    <nav className="bg-white p-4 pr-8 text-black flex justify-between items-center w-full fixed top-0 left-0 z-50">
+      {/* Logo: a la home real */}
+      <RouterLink to="/">
+        <img className="w-50 h-auto cursor-pointer" src="/img/Logo.jpg" alt="Logo" />
+      </RouterLink>
 
       {/* Menú de escritorio */}
       <ul className="hidden md:flex gap-8 text-lg font-Popins pl-8">
-        <li><a href="#nosotros" className="hover:underline !text-gray-500 hover:!font-bold">Nosotros</a></li>
-        <li><a href="#nuestros_clientes" className="hover:underline  !text-gray-500 hover:!font-bold">Nuestros Clientes</a></li>
-        <li><a href="#nuestra_fabrica" className="hover:underline  !text-gray-500 hover:!font-bold">Nuestra Fabrica</a></li>
+        <li>
+          <ScrollLink
+            to="nosotros"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+          >
+            Nosotros
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="nuestros_clientes"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+          >
+            Nuestros Clientes
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="nuestra_fabrica"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+          >
+            Nuestra Fábrica
+          </ScrollLink>
+        </li>
 
-        {/* Submenú Proyectos */}
+        {/* Submenú Proyectos con scroll a secciones */}
         <li className="relative group">
-          <a href="#proyectos" className="hover:underline flex items-center  !text-gray-500 hover:!font-bold">
+          <span className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black">
             Proyectos <span className="ml-1">▾</span>
-          </a>
-          <ul className="absolute hidden group-hover:block bg-white text-[1rem] text-black shadow-lg mt-2 rounded-md py-2 px-2 w-48 z-10">
-            <li>
-              <a href="#oficinas_corporativas" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Oficinas Corporativas</a>
-            </li>
-            <li>
-              <a href="#muebles_clinicos-hospitalarios" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Muebles Clinicos - Hospitalarios</a>
-            </li>
-            <li>
-              <a href="#puertas" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Puertas</a>
-            </li>
-            <li>
-              <a href="#revestimiento_fenolico" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Revestimineto Fenolico</a>
-            </li>
-            <li>
-              <a href="#marcos_telescopicos" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Marcos Telescopicos</a>
-            </li>
+          </span>
+          <ul className="absolute hidden group-hover:block bg-white  shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+            {[
+              ['oficinas_corporativas','Oficinas Corporativas'],
+              ['muebles_clinicos-hospitalarios','Muebles Clínicos - Hospitalarios'],
+              ['puertas','Puertas'],
+              ['revestimiento_fenolico','Revestimiento Fenólico'],
+              ['marcos_telescopicos','Marcos Telescópicos']
+            ].map(([id,label]) => (
+              <li key={id}>
+                <ScrollLink
+                  to={id}
+                  smooth
+                  duration={500}
+                  offset={-80}
+                  className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white"
+                >
+                  {label}
+                </ScrollLink>
+              </li>
+            ))}
           </ul>
         </li>
 
-        <li><a href="#servicio" className="hover:underline !text-gray-500 hover:!font-bold">Servicios</a></li>
+        <li>
+          {/* Si Servicios es una ruta distinta */}
+          <RouterLink to="/servicios" className="hover:underline text-gray-500 hover:font-bold">
+            Servicios
+          </RouterLink>
+        </li>
       </ul>
 
-      {/* Botón hamburguesa (visible en móvil) */}
+      {/* Menú móvil */}
       <div className="md:hidden px-4">
         <button onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={20} /> : <Menu size={22} />}
         </button>
       </div>
-
-      {/* Menú móvil */}
       {menuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden ">
-          <ul className="flex flex-col gap-4 text-lg p-4 ">
-            <li><a href="#home" className="hover:underline !text-gray-500">Nosotros</a></li>
-            <li><a href="#nosotros" className="hover:underline !text-gray-500">Nuestros Clientes</a></li>
-            <li><a href="#contacto" className="hover:underline !text-gray-500">Nuestra Fabrica</a></li>
-
-            {/* Submenú Proyectos en móvil */}
+        <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
+          <ul className="flex flex-col gap-4 text-lg p-4">
             <li>
-              <span className="font-semibold font-Popins !text-gray-500">Proyectos</span>
-              <ul className="pl-4 mt-2 text-gray-500">
-                <li><a href="#oficinas_corporativas" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Oficinas Corporativas</a></li>
-                <li><a href="#muebles_clinicos-hospitalarios" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Muebles Clinicos - Hospitalarios</a></li>
-                <li><a href="#puertas" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Puertas</a></li>
-                <li><a href="#revestimiento_fenolico" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Revestimiento Fenolico</a></li>
-                <li><a href="#marcos_telescopicos" className="block px-4 py-2 !text-gray-500 hover:bg-[#d33834] hover:!text-white rounded-md">Marcos Telescopicos</a></li>
+              <ScrollLink to="nosotros" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+                Nosotros
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink to="nuestros_clientes" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+                Nuestros Clientes
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink to="nuestra_fabrica" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+                Nuestra Fábrica
+              </ScrollLink>
+            </li>
+            {/* Proyectos móvil */}
+            <li>
+              <span className="font-semibold font-[Poppins] !text-gray-500">Proyectos</span>
+              <ul className="pl-4 mt-2 !text-gray-500">
+                {['oficinas_corporativas','muebles_clinicos-hospitalarios','puertas','revestimiento_fenolico','marcos_telescopicos']
+                  .map(id => (
+                    <li key={id}>
+                      <ScrollLink to={id} smooth duration offset={-80} className="block px-4 py-2 hover:bg-red-700 !text-gray-500 font-[Poppins] hover:!text-white rounded-md">
+                      { id.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) }
+
+                      </ScrollLink>
+                    </li>
+                ))}
               </ul>
             </li>
-
-            <li><a href="#contacto" className="hover:underline !text-gray-500">Contacto</a></li>
+            <li>
+              <RouterLink 
+               to="/servicios" 
+               className="hover:underline cursor-pointer !text-gray-600 font-bold  hover:text-xl hover:font-black">
+                Servicios
+              </RouterLink>
+            </li>
           </ul>
         </div>
       )}
