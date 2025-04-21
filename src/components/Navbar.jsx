@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Submenú Proyectos con scroll a secciones */}
         <li className="relative group">
-          <span className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black">
+          <span className="hover:underline cursor-pointer !text-gray-500 font-[Poppins] hover:text-xl hover:font-black">
             Proyectos <span className="ml-1">▾</span>
           </span>
           <ul className="absolute hidden group-hover:block bg-white  shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
