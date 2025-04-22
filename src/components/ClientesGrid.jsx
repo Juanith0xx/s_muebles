@@ -134,7 +134,7 @@ const ClientesGrid = () => {
   return (
     <section id="nuestros_clientes" className="py-12">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="p-6 text-3xl md:text-4xl font-bold font-Popins text-gray-500 mb-6 text-center md:text-left">
+        <h2 className="p-6 text-3xl md:text-4xl font-bold font-[Poppins] text-gray-500 mb-6 text-center md:text-left">
           Nuestra Cartera de Clientes
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">

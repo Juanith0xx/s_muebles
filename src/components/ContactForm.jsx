@@ -38,12 +38,12 @@ const ContactForm = () => {
   return (
     <section  id="contacto" className="flex justify-center items-center px-4 py-16 dark:bg-gray-900">
       <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-8">
-        <h2 className="text-3xl font-bold mb-6 text-gray-500 font-Popins dark:text-white">
+        <h2 className="text-3xl font-bold mb-6 text-gray-500 font-[Poppins] dark:text-white">
           Contáctanos
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
               Nombre
             </label>
             <input
@@ -56,7 +56,7 @@ const ContactForm = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
               Correo electrónico
             </label>
             <input
@@ -69,7 +69,7 @@ const ContactForm = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
               Mensaje
             </label>
             <textarea
@@ -83,19 +83,19 @@ const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-3 px-6 rounded-lg !bg-[#d33834] hover:!bg-[#d33834] text-white font-semibold transition duration-300"
+            className="w-full py-3 px-6  rounded-lg !bg-[#d33834] hover:!bg-[#d33834] !text-white font-semibold transition duration-300"
           >
             Enviar mensaje
           </button>
         </form>
 
         {enviado && (
-          <p className="mt-4 text-green-600 font-medium">
+          <p className="mt-4 text-green-600 font-medium font-[Poppins]">
             ✅ ¡Mensaje fue enviado correctamente!
           </p>
         )}
         {error && (
-          <p className="mt-4 text-red-600 font-medium">
+          <p className="mt-4 text-red-600 font-medium font-[Poppins]">
             ❌ {error}
           </p>
         )}

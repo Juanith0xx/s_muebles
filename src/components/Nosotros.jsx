@@ -3,7 +3,7 @@ import React from 'react'
 const Nosotros = () => {
   return (
     <section id="nosotros" className="p-6 md:p-12 flex flex-col">
-      <h2 className='text-3xl md:text-4xl font-bold text-gray-500 mb-6 text-center md:text-left'>Nosotros</h2>
+      <h2 className='text-3xl md:text-4xl font-bold font-[Poppins] text-gray-500 mb-6 text-center md:text-left'>Nosotros</h2>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
         <img
@@ -17,10 +17,10 @@ const Nosotros = () => {
             Somos una empresa dedicada al desarrollo integral de proyectos de interiorismo corporativo encargándonos del desarrollo, planimetría, fabricación e instalación en obra. Nuestra propuesta de valor se basa en el desarrollo, ya que contamos con un equipo multidisciplinario especializado en mobiliario, quienes en conjunto con el taller pueden desarrollar diversos proyectos lo que nos hace caracterizarnos por ser versátiles y adaptarnos a cada uno de los proyectos que el cliente requiera.
           </p>
 
-          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold w-56 h-12 rounded">
+          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold w-65 h-12 rounded">
             <a
               href="mailto:contacto@sistemamuebles.cl"
-              className="no-underline !text-white font-bold hover:!text-white visited:!text-white focus:!text-white"
+              className="no-underline !text-white font-bold font-[Poppins] hover:!text-white visited:!text-white focus:!text-white"
             >
               Obten Nuestro Portafolio
             </a>
