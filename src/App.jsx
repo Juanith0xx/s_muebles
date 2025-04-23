@@ -28,15 +28,6 @@ function App() {
   return (
     <Router>
       {/* Botón opcional para cambiar tema */}
-      <div className="p-2 text-right">
-        <button
-          className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded"
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          Cambiar Tema
-        </button>
-      </div>
-
       <Navbar />
 
       <Routes>

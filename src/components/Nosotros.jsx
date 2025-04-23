@@ -19,7 +19,9 @@ const Nosotros = () => {
 
           <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold  rounded ">
             <a
-              href="mailto:contacto@sistemamuebles.cl"
+              href="/other/portafolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="no-underline !text-white font-bold font-[Poppins] hover:!text-white visited:!text-white focus:!text-white"
             >
               Obten Nuestro Portafolio

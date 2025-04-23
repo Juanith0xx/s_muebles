@@ -6,6 +6,8 @@ import {
   FaClock,
 } from "react-icons/fa";
 
+import { Link as ScrollLink } from 'react-scroll';
+
 const Footer = () => {
   return (
     <footer  className="bg-[#d33834] text-white py-12 px-4 sm:px-6">
@@ -23,9 +25,10 @@ const Footer = () => {
         <div className="text-center md:text-left font-[Poppins]">
           <h2 className="text-xl font-semibold mb-4">Navegación</h2>
           <ul className="space-y-2">
-            <li><a href="#nosotros" className="hover:underline !text-white font-[Poppins]">Nosotros</a></li>
-            <li><a href="#nuestros_clientes" className="hover:underline !text-white font-[Poppins]">Nuestros Clientes</a></li>
-            <li><a href="#proyectos" className="hover:underline !text-white font-[Poppins]">Nuestros Proyectos</a></li>
+            <li><ScrollLink to="home" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Inicio</ScrollLink></li>
+            <li><ScrollLink to="nosotros" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Nosotros</ScrollLink></li>
+            <li><ScrollLink to="nuestros_clientes" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Nuestros Clientes</ScrollLink></li>
+            
           </ul>
         </div>
 

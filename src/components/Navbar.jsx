@@ -22,7 +22,7 @@ const Navbar = () => {
             to="nosotros"
             smooth={true}
             duration={500}
-            offset={-80}
+            offset={-70}
             className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
           >
             Nosotros
