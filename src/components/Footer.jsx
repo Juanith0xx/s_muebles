@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         {/* Navegación */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left font-[Poppins]">
           <h2 className="text-xl font-semibold mb-4">Navegación</h2>
           <ul className="space-y-2">
             <li><a href="#nosotros" className="hover:underline !text-white font-[Poppins]">Nosotros</a></li>

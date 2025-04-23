@@ -13,11 +13,11 @@ const Nosotros = () => {
         />
         
         <div className="w-full md:w-1/2 flex flex-col">
-          <p className='mt-[5rem] text-gray-700 text-2xl md:text-xl font-medium font-Poppins mb-4 text-justify'>
+          <p className='mt-[2rem] text-gray-600 text-2xl md:text-xl font-medium font-Poppins mb-4 text-justify'>
             Somos una empresa dedicada al desarrollo integral de proyectos de interiorismo corporativo encargándonos del desarrollo, planimetría, fabricación e instalación en obra. Nuestra propuesta de valor se basa en el desarrollo, ya que contamos con un equipo multidisciplinario especializado en mobiliario, quienes en conjunto con el taller pueden desarrollar diversos proyectos lo que nos hace caracterizarnos por ser versátiles y adaptarnos a cada uno de los proyectos que el cliente requiera.
           </p>
 
-          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold w-65 h-12 rounded">
+          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold  rounded ">
             <a
               href="mailto:contacto@sistemamuebles.cl"
               className="no-underline !text-white font-bold font-[Poppins] hover:!text-white visited:!text-white focus:!text-white"

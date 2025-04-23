@@ -83,7 +83,8 @@ const ContactForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-3 px-6  rounded-lg !bg-[#d33834] hover:!bg-[#d33834] !text-white font-semibold transition duration-300"
+            className="no-underline !bg-[#D33834] text-white "
+          
           >
             Enviar mensaje
           </button>

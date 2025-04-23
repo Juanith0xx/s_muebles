@@ -23,7 +23,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-80}
-            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+            className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
           >
             Nosotros
           </ScrollLink>
@@ -34,7 +34,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-80}
-            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+            className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
           >
             Nuestros Clientes
           </ScrollLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             offset={-80}
-            className="hover:underline cursor-pointer !text-[#6a7282] font-bold font-[Poppins] hover:text-xl hover:font-black"
+            className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
           >
             Nuestra Fábrica
           </ScrollLink>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Submenú Proyectos con scroll a secciones */}
         <li className="relative group">
-          <span className="hover:underline cursor-pointer !text-gray-500 font-[Poppins] hover:text-xl hover:font-black">
+          <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
             Proyectos <span className="ml-1">▾</span>
           </span>
           <ul className="absolute hidden group-hover:block bg-white  shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
@@ -81,7 +81,7 @@ const Navbar = () => {
 
         <li>
           {/* Si Servicios es una ruta distinta */}
-          <RouterLink to="/servicios" className="hover:underline text-gray-500 hover:font-bold">
+          <RouterLink to="/servicios" className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
             Servicios
           </RouterLink>
         </li>
@@ -95,30 +95,30 @@ const Navbar = () => {
       </div>
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
-          <ul className="flex flex-col gap-4 text-lg p-4">
+          <ul className="flex flex-col gap-4 text-lg font-[Popins] p-4">
             <li>
-              <ScrollLink to="nosotros" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+              <ScrollLink to="nosotros" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
                 Nosotros
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="nuestros_clientes" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+              <ScrollLink to="nuestros_clientes" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
                 Nuestros Clientes
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="nuestra_fabrica" smooth duration offset={-80} className="hover:underline cursor-pointer !text-gray-500 font-[Poppins]">
+              <ScrollLink to="nuestra_fabrica" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
                 Nuestra Fábrica
               </ScrollLink>
             </li>
             {/* Proyectos móvil */}
             <li>
-              <span className="font-semibold font-[Poppins] !text-gray-500">Proyectos</span>
+              <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">Proyectos</span>
               <ul className="pl-4 mt-2 !text-gray-500">
                 {['oficinas_corporativas','muebles_clinicos-hospitalarios','puertas','revestimiento_fenolico','marcos_telescopicos']
                   .map(id => (
                     <li key={id}>
-                      <ScrollLink to={id} smooth duration offset={-80} className="block px-4 py-2 hover:bg-red-700 !text-gray-500 font-[Poppins] hover:!text-white rounded-md">
+                      <ScrollLink to={id} smooth duration offset={-80} className="block px-4 py-2 hover:bg-red-700 !text-gray-500 !font-[Poppins] hover:!text-white hover:font-semibold rounded-md">
                       { id.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) }
 
                       </ScrollLink>
@@ -129,7 +129,7 @@ const Navbar = () => {
             <li>
               <RouterLink 
                to="/servicios" 
-               className="hover:underline cursor-pointer !text-gray-600 font-bold  hover:text-xl hover:font-black">
+               className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
                 Servicios
               </RouterLink>
             </li>
