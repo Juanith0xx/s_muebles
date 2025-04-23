@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Poppins: ['Poppins', 'sans-serif'],  // Añadido 'Poppins' como fuente
+        Poppins: ['Poppins', 'sans-serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 6s ease infinite',
+        'fall': 'fall linear infinite', // ⬅️ Añadido
       },
       keyframes: {
         'gradient-x': {
@@ -19,6 +20,16 @@ export default {
           },
           '50%': {
             'background-position': '100% 50%',
+          },
+        },
+        fall: { // ⬅️ Añadido
+          '0%': {
+            transform: 'translateY(-100%)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'translateY(100vh)',
+            opacity: '0',
           },
         },
       },

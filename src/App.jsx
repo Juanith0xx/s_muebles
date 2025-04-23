@@ -9,6 +9,7 @@ import Home from './components/Home';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import ServicePanel from './components/ServicePanel';
+import Puertas from './pages/Puertas';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -52,6 +53,7 @@ function App() {
           </>
         } />
         <Route path="/servicios" element={<ServicePanel />} />
+        <Route path="/puertas" element={<Puertas />} />
       </Routes>
     </Router>
   );

@@ -3,10 +3,11 @@ import { Menu, X } from "lucide-react";
 import { Link as RouterLink } from 'react-router-dom';     // para ruta a "/"
 import { Link as ScrollLink } from 'react-scroll';         // para scroll interno
 
-
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Función para cerrar el menú
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav className="bg-white p-4 pr-8 text-black flex justify-between items-center w-full fixed top-0 left-0 z-50">
@@ -97,17 +98,42 @@ const Navbar = () => {
         <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
           <ul className="flex flex-col gap-4 text-lg font-[Popins] p-4">
             <li>
-              <ScrollLink to="nosotros" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+              <ScrollLink 
+                to="nosotros" 
+                smooth 
+                duration 
+                offset={-80} 
+                className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+                
+                onClick={() => {
+                  console.log("Intentando hacer scroll a nosotros...");
+                  closeMenu();
+                }} // Cierra el menú al hacer clic
+              >
                 Nosotros
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="nuestros_clientes" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+              <ScrollLink 
+                to="nuestros_clientes" 
+                smooth 
+                duration 
+                offset={-80} 
+                className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+                onClick={closeMenu} // Cierra el menú al hacer clic
+              >
                 Nuestros Clientes
               </ScrollLink>
             </li>
             <li>
-              <ScrollLink to="nuestra_fabrica" smooth duration offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+              <ScrollLink 
+                to="nuestra_fabrica" 
+                smooth 
+                duration 
+                offset={-80} 
+                className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+                onClick={closeMenu} // Cierra el menú al hacer clic
+              >
                 Nuestra Fábrica
               </ScrollLink>
             </li>
@@ -118,9 +144,15 @@ const Navbar = () => {
                 {['oficinas_corporativas','muebles_clinicos-hospitalarios','puertas','revestimiento_fenolico','marcos_telescopicos']
                   .map(id => (
                     <li key={id}>
-                      <ScrollLink to={id} smooth duration offset={-80} className="block px-4 py-2 hover:bg-red-700 !text-gray-500 !font-[Poppins] hover:!text-white hover:font-semibold rounded-md">
-                      { id.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) }
-
+                      <ScrollLink 
+                        to={id} 
+                        smooth 
+                        duration 
+                        offset={-80} 
+                        className="block px-4 py-2 hover:bg-red-700 !text-gray-500 !font-[Poppins] hover:!text-white hover:font-semibold rounded-md"
+                        onClick={closeMenu} // Cierra el menú al hacer clic
+                      >
+                        { id.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) }
                       </ScrollLink>
                     </li>
                 ))}
@@ -129,7 +161,9 @@ const Navbar = () => {
             <li>
               <RouterLink 
                to="/servicios" 
-               className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+               className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+               onClick={closeMenu} // Cierra el menú al hacer clic
+              >
                 Servicios
               </RouterLink>
             </li>
