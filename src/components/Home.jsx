@@ -41,7 +41,7 @@ const Home = () => {
           Una <br /> Solución <br /> Integral
         </h1>
 
-        <a className="bg-[#D33834] !text-white font-Popins font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300"
+        <a className="bg-[#D33834] !text-white font-Popins font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300 hover:bg-red-700"
           href="mailto:contacto@sistemamuebles.cl"
          
         >

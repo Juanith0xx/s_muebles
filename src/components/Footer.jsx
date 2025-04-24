@@ -44,7 +44,7 @@ const Footer = () => {
               <FaEnvelope /> contacto@sistemamuebles.cl
             </li>
             <li className="flex justify-center md:justify-start items-center gap-2">
-              <FaMapMarkerAlt /> Santiago, Chile
+              <FaMapMarkerAlt /> Cerrillos , Santiago , Chile.
             </li>
           </ul>
         </div>

@@ -17,7 +17,7 @@ const Nosotros = () => {
             Somos una empresa dedicada al desarrollo integral de proyectos de interiorismo corporativo encargándonos del desarrollo, planimetría, fabricación e instalación en obra. Nuestra propuesta de valor se basa en el desarrollo, ya que contamos con un equipo multidisciplinario especializado en mobiliario, quienes en conjunto con el taller pueden desarrollar diversos proyectos lo que nos hace caracterizarnos por ser versátiles y adaptarnos a cada uno de los proyectos que el cliente requiera.
           </p>
 
-          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-[#D33834] transition !text-white !text-[1rem] font-bold  rounded ">
+          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-red-700 transition !text-white !text-[1rem] font-bold  rounded ">
             <a
               href="/other/portafolio.pdf"
               target="_blank"

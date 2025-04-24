@@ -32,8 +32,7 @@ button {
   font-size: 1em;
   font-weight: 500; /* Aquí puedes cambiar el peso si deseas */
   font-family: 'Poppins', sans-serif; /* Cambiado a Poppins directamente */
-  background-color: #f9f9f9;
-  cursor: pointer;
+ 
   transition: border-color 0.25s;
 }
 

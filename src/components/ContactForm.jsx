@@ -52,7 +52,7 @@ const ContactForm = () => {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             />
           </div>
           <div>
@@ -65,7 +65,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             />
           </div>
           <div>
@@ -78,12 +78,12 @@ const ContactForm = () => {
               value={formData.mensaje}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             ></textarea>
           </div>
           <button
             type="submit"
-            className="no-underline !bg-[#D33834] text-white "
+            className="no-underline !bg-[#D33834] text-white font-bold hover:!bg-red-700 cursor-pointer hover:font-bold"
           
           >
             Enviar mensaje

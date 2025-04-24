@@ -9,7 +9,13 @@ import Home from './components/Home';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import ServicePanel from './components/ServicePanel';
+
+import OficinasCorporativa from './pages/OficinasCorporativa';
+import MueblesClinicosHospitalarios from './pages/MueblesClinicosHospitalarios';
 import Puertas from './pages/Puertas';
+import RevestimientoFenolico from './pages/RevestimientoFenolico';
+import { MarcosTelescopicos } from './pages/MarcosTelescopicos';
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -53,7 +59,14 @@ function App() {
           </>
         } />
         <Route path="/servicios" element={<ServicePanel />} />
-        <Route path="/puertas" element={<Puertas />} />
+        <Route path="/proyectos/oficinas-corporativa" element={<OficinasCorporativa />} />
+        <Route path="/proyectos/muebles_clinicos_hospitalarios" element={<MueblesClinicosHospitalarios />} />
+        <Route path="/proyectos/puertas" element={<Puertas />} />
+        <Route path="/proyectos/revestimiento_fenolico" element={<RevestimientoFenolico />} />
+        <Route path="/proyectos/marcos_telescopicos" element={<MarcosTelescopicos/>} />
+        
+
+        
       </Routes>
     </Router>
   );
