@@ -40,7 +40,7 @@ export default function ServicePanel() {
           <div
             key={idx}
             className={`p-6 bg-white dark:bg-gray-800 cursor-pointer rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1
-              ${idx >= 3 ? "md:ml-8" : ""}
+              ${idx >= 3 ? "" : ""}
             `}
           >
             <div className="text-primary mb-4">{service.icon}</div>

@@ -8,6 +8,7 @@ const Navbar = () => {
 
   const closeMenu = () => setMenuOpen(false);
 
+
   return (
     <nav className="bg-white p-4 pr-8 text-black flex justify-between items-center w-full fixed top-0 left-0 z-50">
       <RouterLink to="/">

@@ -67,7 +67,7 @@ const Footer = () => {
       </div>
 
       {/* Línea inferior */}
-      <div className="mt-12 border-t border-white/30 pt-6 text-center text-white/80 text-sm font-[Poppins]">
+      <div className="mt-12 border-t border-white/30 pt-6 text-center text-white/80 text-sm font-[Poppins] font-bold">
         © {new Date().getFullYear()} Sistema Muebles. Todos los derechos reservados.
       </div>
     </footer>
