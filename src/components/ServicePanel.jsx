@@ -32,7 +32,7 @@ const services = [
 export default function ServicePanel() {
   return (
     <section className="w-screen py-12 px-4 pb-28 md:px-16 bg-[#D33834] dark:bg-gray-900">
-      <h2 className="px-4 pb-4 text-3xl font-bold font-[Poppins] text-center text-white dark:text-white mb-10">
+      <h2 className="px-4 pb-2 text-3xl font-bold font-[Poppins] text-center text-white dark:text-white mb-10 mt-20">
         Nuestros Servicios
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
