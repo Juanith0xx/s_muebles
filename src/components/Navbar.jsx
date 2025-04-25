@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Submenú con rutas */}
         <li className="relative group">
-          <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+          <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
             Proyectos <span className="ml-1">▾</span>
           </span>
           <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
