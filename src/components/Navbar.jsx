@@ -92,7 +92,7 @@ const Navbar = () => {
               <ul className="pl-4 mt-2 !text-gray-500">
                 {[
                   ['/proyectos/oficinas-corporativa', 'Oficinas Corporativa'],
-                  ['/proyectos/muebles_clinicos-hospitalarios', 'Muebles Clínicos - Hospitalarios'],
+                  ['/proyectos/muebles_clinicos_hospitalarios', 'Muebles Clínicos - Hospitalarios'],
                   ['/proyectos/puertas', 'Puertas'],
                   ['/proyectos/revestimiento_fenolico', 'Revestimiento Fenólico'],
                   ['/proyectos/marcos_telescopicos', 'Marcos Telescópicos']

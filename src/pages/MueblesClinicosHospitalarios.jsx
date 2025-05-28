@@ -1,5 +1,6 @@
 import React from 'react'
 import PageNotFound from './PageNotFound';
+import { Helmet } from 'react-helmet-async';
 
 const MueblesClinicosHospitalarios = () => {
   return (
