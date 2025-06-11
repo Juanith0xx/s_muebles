@@ -1,36 +1,29 @@
-import React from 'react'
+import React from 'react';
 
 const Nosotros = () => {
   return (
     <section id="nosotros" className="p-6 md:p-12 flex flex-col">
-      <h2 className='text-3xl md:text-4xl font-bold font-[Poppins] text-gray-500 mb-6 text-center md:text-left'>Nosotros</h2>
-
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-        <img
-          className='w-98 md:w-1/2 h-auto object-cover rounded-lg'
-          src='./img/fondo-2.png'
-          alt='Nosotros'
-        />
-        
-        <div className="w-full md:w-1/2 flex flex-col">
-          <p className='mt-[2rem] text-gray-600 lg:text-xl md:text-xl font-Poppins mb-4 text-justify'>
-            Somos una empresa dedicada al desarrollo integral de proyectos de interiorismo corporativo encargándonos del desarrollo, planimetría, fabricación e instalación en obra. Nuestra propuesta de valor se basa en el desarrollo, ya que contamos con un equipo multidisciplinario especializado en mobiliario, quienes en conjunto con el taller pueden desarrollar diversos proyectos lo que nos hace caracterizarnos por ser versátiles y adaptarnos a cada uno de los proyectos que el cliente requiera.
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Columna Alianzas */}
+        <div className="w-full md:w-1/2 flex flex-col items-start">
+          <h2 className="text-3xl md:text-4xl font-bold font-[Poppins] text-gray-500 mb-4 text-left">Alianzas</h2>
+          <p className="text-gray-600 text-justify text-base md:text-lg font-[Poppins]">
+            * prueba 1 
+            * prueba 2
           </p>
-
-          <button className="mt-2 self-center md:self-start !bg-[#D33834] hover:!bg-red-700 transition !text-white !text-[1rem] font-bold  rounded ">
-            <a
-              href="/other/portafolio.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline !text-white font-bold font-[Poppins] hover:!text-white visited:!text-white focus:!text-white"
-            >
-              Obten Nuestro Portafolio
-            </a>
-          </button>
+          
         </div>
+
+        {/* Columna Noticias */}
+        <div className="w-full md:w-1/2 flex flex-col items-start">
+  <h2 className="text-3xl md:text-4xl font-bold font-[Poppins] text-gray-500 mb-4 text-center w-full">Noticias</h2>
+  <p className="text-gray-600 text-justify text-base md:text-lg font-[Poppins]">
+    Mantente al día con nuestras últimas novedades, avances en proyectos, colaboraciones estratégicas y participaciones en ferias del rubro. Compartimos noticias relevantes sobre nuestro trabajo, alianzas y desarrollos que reflejan nuestro compromiso con la innovación y la excelencia en cada proyecto.
+  </p>
+</div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Nosotros
+export default Nosotros;

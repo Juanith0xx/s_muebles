@@ -1,63 +1,62 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    arrows: false
+  };
+
+  const slides = [
+    {
+      src: "/img/slider1.jpg",
+      label: "Proyectos Clínicos Hospitalarios",
+      link: "/productos/proyectos_clinicos_hospitalarios"
+    },
+    {
+      src: "/img/slider2.jpg",
+      label: "Puertas HPL y Marcos Telescópicos",
+      link: "/productos/puertas_hpl_marcos_telescopicos"
+    },
+    {
+      src: "/img/slider3.jpg",
+      label: "Proyectos Int. Corporativos",
+      link: "/productos/proyectos_int_corporativos"
+    },
+    {
+      src: "/images/slider4.jpg",
+      label: "Soluciones Integrales",
+      link: "/productos/soluciones_integrales"
+    }
+  ];
+
   return (
-    <>
-     //Seo de componente
-      <Helmet>
-        <title>Sistema Muebles | Soluciones Integrales en Mobiliario</title>
-        <meta name="description" content="Ofrecemos soluciones integrales en mobiliario para oficinas, clínicas y proyectos especiales. Calidad, diseño y funcionalidad a tu medida." />
-        <link rel="canonical" href="https://sistemamuebles.cl/" />
-      </Helmet>
-
-      <section 
-        className="
-          relative 
-          w-full 
-          min-h-[22rem] sm:min-h-[28rem] md:min-h-[32rem]
-          mt-6
-          bg-cover bg-center bg-no-repeat
-          overflow-hidden 
-          flex 
-          items-center 
-          justify-start
-          px-4 sm:px-6 md:px-12 
-          py-16 sm:py-24 md:py-28
-        "
-        style={{
-          backgroundImage: `url('/img/fondo-3.jpg')`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100% auto',
-          backgroundPosition: 'center',
-        }}
-      >
-        {/* Contenido principal */}
-        <div
-          className="
-            relative 
-            z-10 
-            flex 
-            flex-col 
-            items-start 
-            max-w-2xl 
-            text-white 
-            font-[Poppins] 
-            text-sm sm:text-base md:text-lg
-          "
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-Popins font-bold text-left mb-6">
-            Una <br /> Solución <br /> Integral
-          </h1>
-
-          <a className="bg-[#D33834] !text-white font-Popins font-bold rounded w-48 sm:w-56 h-10 sm:h-12 flex items-center justify-center transition duration-300 hover:bg-red-700"
-            href="mailto:contacto@sistemamuebles.cl"
-          >
-            Más Informaciones
-          </a>
-        </div>
-      </section>
-    </>
+    <div className="w-full max-w-screen-xl mx-auto mt-6 px-4">
+      <Slider {...settings}>
+        {slides.map((slide, index) => (
+          <div key={index} className="relative">
+            <img
+              src={slide.src}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-[250px] sm:h-[320px] md:h-[400px] lg:h-[500px] xl:h-[600px] object-cover rounded-xl transition-all duration-500"
+            />
+            <a
+              href={slide.link}
+              className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm md:text-base font-semibold shadow-lg transition duration-300"
+            >
+              {slide.label}
+            </a>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

@@ -16,6 +16,7 @@ import MueblesClinicosHospitalarios from './pages/MueblesClinicosHospitalarios';
 import Puertas from './pages/Puertas';
 import RevestimientoFenolico from './pages/RevestimientoFenolico';
 import { MarcosTelescopicos } from './pages/MarcosTelescopicos';
+import ProyectosEmblematicos from './components/ProyectosEmblematicos';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -47,12 +48,13 @@ function App() {
               <div id="nosotros">
                 <Nosotros />
               </div>
+              <div>
+                <ProyectosEmblematicos />
+              </div>
               <div id="nuestros_clientes">
                 <ClientesGrid />
               </div>
-              <div id="nuestra_fabrica">
-                <FactoryVideo />
-              </div>
+            
               <div id="contacto">
                 <ContactForm />
               </div>
