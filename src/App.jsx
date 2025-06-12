@@ -2,11 +2,8 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async'; // 👈 Import necesario
 import './App.css';
-
-import Nosotros from './components/Nosotros';
 import Navbar from './components/Navbar';
 import ClientesGrid from './components/ClientesGrid';
-import FactoryVideo from './components/FactoryVideo';
 import Home from './components/Home';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -17,6 +14,7 @@ import Puertas from './pages/Puertas';
 import RevestimientoFenolico from './pages/RevestimientoFenolico';
 import { MarcosTelescopicos } from './pages/MarcosTelescopicos';
 import ProyectosEmblematicos from './components/ProyectosEmblematicos';
+import AlianzasNoticias from './components/AlianzasNoticias';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -45,8 +43,8 @@ function App() {
               <div id="home">
                 <Home />
               </div>
-              <div id="nosotros">
-                <Nosotros />
+              <div id="alianzas">
+                <AlianzasNoticias />
               </div>
               <div>
                 <ProyectosEmblematicos />
