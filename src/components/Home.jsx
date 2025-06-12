@@ -49,7 +49,7 @@ const Home = () => {
             />
             <a
               href={slide.link}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm md:text-base font-semibold shadow-lg transition duration-300"
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white font-[Montserrat] px-4 sm:px-6 py-2 rounded-lg text-xs sm:text-sm md:text-base font-semibold shadow-lg transition duration-300"
             >
               {slide.label}
             </a>
