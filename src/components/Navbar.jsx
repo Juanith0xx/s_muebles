@@ -18,10 +18,10 @@ const Navbar = () => {
       {/* Menú de escritorio */}
       <ul className="hidden md:flex gap-8 text-lg font-Popins pl-8">
         <li className="relative group">
-      <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+      <span className="hover:no-underline cursor-pointer !text-gray-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
           Nosotros <span className="ml-1">▾</span>
       </span>
-      <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-48 z-10">
+      <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-52 z-10">
        {[
          ['/nosotros/equipo', 'Nuestro Equipo'],
          ['/nosotros/fabrica', 'Nuestra Fábrica'],
@@ -30,7 +30,7 @@ const Navbar = () => {
           <li key={to}>
         <RouterLink
           to={to}
-          className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+          className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
         >
           {label}
         </RouterLink>
@@ -39,7 +39,7 @@ const Navbar = () => {
         </ul>
         </li>
         <li className="relative group">
-  <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-lg hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+  <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-lg hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
     Productos <span className="ml-1">▾</span>
   </span>
   <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-72 z-10">
@@ -55,7 +55,7 @@ const Navbar = () => {
       <li key={to}>
         <RouterLink
           to={to}
-          className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+          className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
         >
           {label}
         </RouterLink>
@@ -65,7 +65,7 @@ const Navbar = () => {
       </li>
 
         <li className="relative group">
-        <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+        <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
          Alianzas <span className="ml-1">▾</span>
         </span>
         <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-48 z-10 ">
@@ -80,7 +80,7 @@ const Navbar = () => {
         <li key={to}>
         <RouterLink
           to={to}
-          className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+          className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
         >
           {label}
         </RouterLink>
@@ -90,17 +90,17 @@ const Navbar = () => {
         </li>
 
         <li className="relative group">
-        <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+        <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
          Apent <span className="ml-1">▾</span>
         </span>
-        <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-48 z-10 ">
+        <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-54 z-10 ">
          {[
             ['/apent/marcos_y_puertas', 'Marcos y Puertas'],
          ].map(([to, label]) => (
         <li key={to}>
         <RouterLink
           to={to}
-          className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+          className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
         >
           {label}
         </RouterLink>
@@ -110,39 +110,10 @@ const Navbar = () => {
         </li>
 
         <li>
-          <ScrollLink to="contacto" smooth duration={500} offset={-80} className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+          <ScrollLink to="contacto" smooth duration={500} offset={-80} className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
             Contactanos
           </ScrollLink>
         </li>
-
-        {/* Submenú con rutas 
-        <li className="relative group">
-          <span className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
-            Proyectos <span className="ml-1">▾</span>
-          </span>
-          <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
-            {[
-              ['/proyectos/oficinas-corporativa','Oficinas Corporativa'],
-              ['/proyectos/muebles_clinicos_hospitalarios','Muebles Clínicos - Hospitalarios'],
-              ['/proyectos/puertas','Puertas'],
-              ['/proyectos/revestimiento_fenolico','Revestimiento Fenólico'],
-              ['/proyectos/marcos_telescopicos','Marcos Telescópicos']
-            ].map(([to, label]) => (
-              <li key={to}>
-                <RouterLink to={to} className="block px-4 py-2 cursor-pointer !text-gray-500 rounded-md hover:bg-red-700 hover:!text-white">
-                  {label}
-                </RouterLink>
-              </li>
-            ))}
-          </ul>
-        </li>
-
-        <li>
-          <RouterLink to="/servicios" className="hover:no-underline cursor-pointer !text-[#6a7282] font-[Poppins] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
-            Servicios
-          </RouterLink>
-        </li>
-        */}
       </ul>
       
 
@@ -154,14 +125,14 @@ const Navbar = () => {
       </div>
       {menuOpen && (
   <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden z-50">
-    <ul className="flex flex-col gap-2 text-lg font-[Poppins] p-4">
+    <ul className="flex flex-col gap-2 text-lg font-[Montserrat] p-4">
       {/* Nosotros */}
       <li>
         <details className="group">
-          <summary className="cursor-pointer text-[#6a7282] font-semibold flex justify-between items-center">
+          <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
             Nosotros <span>▾</span>
           </summary>
-          <ul className="pl-4 mt-2 text-gray-500">
+          <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
             {[
               ['/nosotros/equipo', 'Nuestro Equipo'],
               ['/nosotros/fabrica', 'Nuestra Fábrica'],
@@ -171,7 +142,7 @@ const Navbar = () => {
                 <RouterLink
                   to={to}
                   onClick={closeMenu}
-                  className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+                  className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
                 >
                   {label}
                 </RouterLink>
@@ -184,10 +155,10 @@ const Navbar = () => {
       {/* Productos */}
       <li>
         <details className="group">
-          <summary className="cursor-pointer text-[#6a7282] font-semibold flex justify-between items-center">
+          <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
             Productos <span>▾</span>
           </summary>
-          <ul className="pl-4 mt-2 text-gray-500">
+          <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
             {[
               ['/productos/proyectos_clinicos_hospitalarios', 'Proyectos Clínicos Hospitalarios'],
               ['/productos/puertas_hpl_marcos_telescopicos', 'Puertas HPL y Marcos Telescópicos'],
@@ -201,7 +172,7 @@ const Navbar = () => {
                 <RouterLink
                   to={to}
                   onClick={closeMenu}
-                  className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+                  className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold hover:font-[Montserrat]"
                 >
                   {label}
                 </RouterLink>
@@ -214,10 +185,10 @@ const Navbar = () => {
       {/* Alianzas */}
       <li>
         <details className="group">
-          <summary className="cursor-pointer text-[#6a7282] font-semibold flex justify-between items-center">
+          <summary className="cursor-pointer text-gray-800 font-semibold font-[Montserrat] flex justify-between items-center">
             Alianzas <span>▾</span>
           </summary>
-          <ul className="pl-4 mt-2 text-gray-500">
+          <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
             {[
               ['/alianzas/hafele', 'Hafele'],
               ['/alianzas/porcelanosa', 'Porcelanosa'],
@@ -242,10 +213,10 @@ const Navbar = () => {
 
       <li>
         <details className="group">
-          <summary className="cursor-pointer text-[#6a7282] font-semibold flex justify-between items-center">
+          <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
             Apent <span>▾</span>
           </summary>
-          <ul className="pl-4 mt-2 text-gray-500">
+          <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
             {[
               ['/apent/marcos_y_puertas', 'Marcos y Puertas'],
             ].map(([to, label]) => (
@@ -263,8 +234,6 @@ const Navbar = () => {
         </details>
       </li>
 
-
-
       {/* Contacto */}
       <li>
         <ScrollLink
@@ -272,7 +241,7 @@ const Navbar = () => {
           smooth
           duration={500}
           offset={-80}
-          className="cursor-pointer text-[#6a7282] font-semibold hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+          className="cursor-pointer text-grey-800 font-[Montserrat] font-semibold hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
           onClick={closeMenu}
         >
           Contáctanos

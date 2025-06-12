@@ -8,6 +8,8 @@ export default {
     extend: {
       fontFamily: {
         Poppins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        noto: ['"Noto Sans"', 'sans-serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 6s ease infinite',
