@@ -18,11 +18,19 @@ const proyectos = [
   },
   {
     id: 3,
+    title: "Oficinas Corporativas BAEZA",
+    description: "Proyecto de remodelación interior en estilo moderno.",
+    image: "/img/proyecto2.jpg",
+    link: "/proyectos/oficinas-baeza",
+  },
+  {
+    id: 4,
     title: "Centro Logístico Modular",
     description: "Solución industrial eficiente con estructura desmontable.",
     image: "/img/proyecto3.jpg",
     link: "/proyectos/centro-logistico",
   },
+  
   // Puedes agregar más proyectos aquí...
 ];
 

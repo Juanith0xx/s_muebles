@@ -49,10 +49,7 @@ function App() {
               <div>
                 <ProyectosEmblematicos />
               </div>
-              <div id="nuestros_clientes">
-                <ClientesGrid />
-              </div>
-            
+                          
               <div id="contacto">
                 <ContactForm />
               </div>
