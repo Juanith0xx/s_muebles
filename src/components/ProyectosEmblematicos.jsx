@@ -4,38 +4,38 @@ import Masonry from "react-masonry-css";
 const proyectos = [
   {
     id: 1,
-    title: "Clínica Modular Las Condes",
+    title: "Proyecto CCHC",
     description: "Diseño clínico modular con integración de Häfele y Cabinarent.",
-    image: "/img/proyecto1.jpg",
-    link: "/proyectos/clinica-modular",
+    image: "/img/Emblematicos/CCHC/cchc_1.jpg",
+    link: "/proyectos/cchc",
   },
   {
     id: 2,
-    title: "Oficinas Corporativas BAEZA",
+    title: "COK",
     description: "Proyecto de remodelación interior en estilo moderno.",
-    image: "/img/proyecto2.jpg",
-    link: "/proyectos/oficinas-baeza",
+    image: "/img/Emblematicos/COK/cok_1.jpg",
+    link: "/proyectos/COK",
   },
   {
     id: 3,
-    title: "Oficinas Corporativas BAEZA",
+    title: "Correa & Gubbins",
     description: "Proyecto de remodelación interior en estilo moderno.",
-    image: "/img/proyecto2.jpg",
-    link: "/proyectos/oficinas-baeza",
+    image: "/img/Emblematicos/CyG/c&b_1.webp",
+    link: "/proyectos/Correa&Gubbins",
   },
   {
     id: 4,
-    title: "Centro Logístico Modular",
+    title: "FALP",
     description: "Solución industrial eficiente con estructura desmontable.",
-    image: "/img/proyecto3.jpg",
-    link: "/proyectos/centro-logistico",
+    image: "/img/Emblematicos/FALP/falp_1.jpg",
+    link: "/proyectos/Falp",
   },
   
   // Puedes agregar más proyectos aquí...
 ];
 
 const breakpointColumnsObj = {
-  default: 3,
+  default: 4,
   1024: 2,
   640: 1,
 };
