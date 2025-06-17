@@ -20,8 +20,8 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_c60cjid", // ✅ Tu Service ID
-        "template_m615mel", // ✅ Tu Template ID
+        "service_p1d87o5", // ✅ Tu Service ID
+        "template_8sj05kw", // ✅ Tu Template ID
         formData,
         "kEfgki1uhnRq31pjs" // ✅ Tu Public Key
       )
