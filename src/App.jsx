@@ -11,6 +11,7 @@ import AlianzasNoticias from './components/AlianzasNoticias';
 import ClientesEmblematicos from './components/ClientesEmblematicos';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import WhatsAppBubble from './components/WhatsAppBubble';
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -54,6 +55,7 @@ function App() {
                 <ContactForm />
               </div>
               <Footer />
+              <WhatsAppBubble />
             </>
           } />
         
