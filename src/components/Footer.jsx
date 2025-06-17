@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -14,7 +13,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* Logo y descripción */}
         <div className="text-center md:text-left text-xs">
-          <h1 className="text-2xl font-bold font-[Poppins]">Sistema Muebles</h1>
+          <h1 className="text-2xl font-bold font-[Montserrat]">Sistema Muebles</h1>
           <p className="mt-4 text-white">
             Muebles a medida con diseño, calidad y pasión. Transformamos tus
             espacios en lugares únicos.
@@ -22,18 +21,18 @@ const Footer = () => {
         </div>
 
         {/* Navegación */}
-        <div className="text-center md:text-left font-[Poppins]">
+        <div className="text-center md:text-left font-[Montserrat]">
           <h2 className="text-xl font-semibold mb-4">Navegación</h2>
           <ul className="space-y-2">
-            <li><ScrollLink to="home" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Inicio</ScrollLink></li>
-            <li><ScrollLink to="nosotros" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Nosotros</ScrollLink></li>
-            <li><ScrollLink to="nuestros_clientes" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Poppins] ">Nuestros Clientes</ScrollLink></li>
+            <li><ScrollLink to="home" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Montserrat] ">Inicio</ScrollLink></li>
+            <li><ScrollLink to="nosotros" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Montserrat] ">Nosotros</ScrollLink></li>
+            <li><ScrollLink to="nuestros_clientes" smooth={true} duration={500} offset={-70} className="hover:underline cursor-pointer !text-white font-[Montserrat] ">Nuestros Clientes</ScrollLink></li>
             
           </ul>
         </div>
 
         {/* Contacto */}
-        <div className="text-center md:text-left font-[Poppins]">
+        <div className="text-center md:text-left font-[Montserrat]">
           <h2 className="text-lg font-semibold mb-4">Contacto</h2>
           <ul className="space-y-3 text-white text-sm">
             {/*
@@ -50,7 +49,7 @@ const Footer = () => {
         </div>
 
         {/* Horarios */}
-        <div className="text-center md:text-left font-[Poppins]">
+        <div className="text-center md:text-left font-[Montserrat]">
           <h2 className="text-lg font-semibold mb-4">Horarios</h2>
           <ul className="text-white text-sm space-y-2">
             <li className="flex justify-center md:justify-start items-center gap-2">
@@ -67,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Línea inferior */}
-      <div className="mt-12 border-t border-white/30 pt-6 text-center text-white/80 text-sm font-[Poppins] font-bold">
+      <div className="mt-12 border-t border-white/30 pt-6 text-center text-white/80 text-sm font-[Montserrat] font-bold">
         © {new Date().getFullYear()} Sistema Muebles. Todos los derechos reservados.
       </div>
     </footer>

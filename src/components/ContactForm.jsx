@@ -5,6 +5,7 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
+    telefono: "",
     mensaje: "",
   });
 
@@ -26,7 +27,7 @@ const ContactForm = () => {
       )
       .then(() => {
         setEnviado(true);
-        setFormData({ nombre: "", email: "", mensaje: "" });
+        setFormData({ nombre: "", email: "", telefono: "", mensaje: "" });
         setTimeout(() => setEnviado(false), 5000);
       })
       .catch((err) => {
@@ -36,14 +37,18 @@ const ContactForm = () => {
   };
 
   return (
-    <section  id="contacto" className="flex justify-center items-center px-4 py-16 dark:bg-gray-900">
+    <section
+      id="contacto"
+      className="flex justify-center items-center px-4 py-16 dark:bg-gray-900"
+    >
       <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-8">
-        <h2 className="text-3xl font-bold mb-6 text-gray-500 font-[Poppins] dark:text-white">
+        <h2 className="text-3xl font-bold mb-6 text-gray-800 font-[Montserrat] dark:text-white">
           Contáctanos
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Nombre */}
           <div>
-            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
               Nombre
             </label>
             <input
@@ -52,11 +57,13 @@ const ContactForm = () => {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             />
           </div>
+
+          {/* Correo electrónico */}
           <div>
-            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
               Correo electrónico
             </label>
             <input
@@ -68,8 +75,25 @@ const ContactForm = () => {
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             />
           </div>
+
+          {/* Teléfono */}
           <div>
-            <label className="block text-sm font-medium font-[Poppins] text-gray-700 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
+              Teléfono
+            </label>
+            <input
+              type="tel"
+              name="telefono"
+              value={formData.telefono}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+            />
+          </div>
+
+          {/* Mensaje */}
+          <div>
+            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
               Mensaje
             </label>
             <textarea
@@ -81,22 +105,26 @@ const ContactForm = () => {
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
             ></textarea>
           </div>
+
+          {/* Botón */}
           <button
             type="submit"
-            className="no-underline !bg-[#D33834] text-white font-bold hover:!bg-red-700 cursor-pointer hover:font-bold"
-          
+            className="no-underline !bg-[#D33834] text-white font-bold font-[Montserrat] hover:!bg-red-700 cursor-pointer hover:font-bold px-6 py-2 rounded-lg"
           >
             Enviar mensaje
           </button>
         </form>
 
+        {/* Mensaje de éxito */}
         {enviado && (
-          <p className="mt-4 text-green-600 font-medium font-[Poppins]">
+          <p className="mt-4 text-green-600 font-medium font-[Montserrat]">
             ✅ ¡Mensaje fue enviado correctamente!
           </p>
         )}
+
+        {/* Mensaje de error */}
         {error && (
-          <p className="mt-4 text-red-600 font-medium font-[Poppins]">
+          <p className="mt-4 text-red-600 font-medium font-[Montserrat]">
             ❌ {error}
           </p>
         )}

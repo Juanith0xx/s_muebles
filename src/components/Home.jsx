@@ -1,4 +1,4 @@
-import Slider from 'react-slick';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -11,41 +11,46 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3500,
-    arrows: false
+    arrows: false,
   };
 
   const slides = [
     {
-      src: "/img/slider1.jpg",
+      src: "/img/Carrusel/respaldo_HPL.png", // Imagen alta resolución recomendada (mín 1920x1080)
       label: "Proyectos Clínicos Hospitalarios",
-      link: "/productos/proyectos_clinicos_hospitalarios"
+      link: "/productos/proyectos_clinicos_hospitalarios",
     },
     {
-      src: "/img/slider2.jpg",
+      src: "/img/Carrusel/Puertas_HPL.jpg",
       label: "Puertas HPL y Marcos Telescópicos",
-      link: "/productos/puertas_hpl_marcos_telescopicos"
+      link: "/productos/puertas_hpl_marcos_telescopicos",
     },
     {
-      src: "/img/slider3.jpg",
+      src: "/img/Carrusel/forus.jpg",
       label: "Proyectos Int. Corporativos",
-      link: "/productos/proyectos_int_corporativos"
+      link: "/productos/proyectos_int_corporativos",
     },
     {
       src: "/images/slider4.jpg",
       label: "Soluciones Integrales",
-      link: "/productos/soluciones_integrales"
-    }
+      link: "/productos/soluciones_integrales",
+    },
   ];
 
   return (
     <div className="w-full max-w-screen-xl mx-auto mt-6 px-4">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="relative aspect-[16/9] rounded-xl overflow-hidden">
+          <div
+            key={index}
+            className="relative aspect-[16/9] rounded-xl overflow-hidden"
+          >
             <img
               src={slide.src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover transition-all duration-500"
+              className="w-full h-full object-contain object-center transition-all duration-500"
+              // Cambia a object-cover si prefieres que cubra todo el contenedor con posible recorte:
+              // className="w-full h-full object-cover object-center transition-all duration-500"
             />
             <a
               href={slide.link}
