@@ -34,16 +34,6 @@ const ClientesEmblematicos = () => {
     { src: "/img/Clientes/CCHC.png", alt: "CCHC" },
     { src: "/img/Clientes/ACHS.png", alt: "ACHS" },
     { src: "/img/Clientes/farmacia_ahumada.png", alt: "Ahumada" },
-    { src: "/img/clientes/cok.png", alt: "Logo 1" },
-    { src: "/img/clientes/cok.png", alt: "Logo 2" },
-    { src: "/img/clientes/cok.png", alt: "Logo 3" },
-    { src: "/img/clientes/cok.png", alt: "Logo 4" },
-    { src: "/img/clientes/cok.png", alt: "Logo 5" },
-    { src: "/img/clientes/cok.png", alt: "Logo 6" },
-    { src: "/img/clientes/cok.png", alt: "Logo 7" },
-    { src: "/img/clientes/cok.png", alt: "Logo 8" },
-    { src: "/img/clientes/cok.png", alt: "Logo 9" },
-    { src: "/img/clientes/cok.png", alt: "Logo 10" },
   ];
 
   return (
