@@ -16,7 +16,7 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/respaldo_HPL.png", // Imagen alta resolución recomendada (mín 1920x1080)
+      src: "/img/Carrusel/hospitalarios.jpg", // Imagen alta resolución recomendada (mín 1920x1080)
       label: "Proyectos Clínicos Hospitalarios",
       link: "/productos/proyectos_clinicos_hospitalarios",
     },
@@ -43,7 +43,7 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[600px] rounded-xl overflow-hidden"
+            className="relative h-[500px] rounded-xl overflow-hidden"
           >
             <img
               src={slide.src}

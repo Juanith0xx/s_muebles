@@ -59,7 +59,7 @@ const AlianzasNoticias = () => {
 
         {/* Columna Noticias */}
         <div className="w-full md:w-1/2 flex flex-col items-start">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-[Montserrat] text-gray-100 mb-6 text-left md:text-center w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-[Montserrat] text-white mb-6 text-left md:text-center w-full">
             Noticias
           </h2>
 

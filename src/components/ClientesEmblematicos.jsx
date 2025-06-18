@@ -29,7 +29,7 @@ const ClientesEmblematicos = () => {
   };
 
   const logos = [
-    { src: "/img/Clientes/nestles.png", alt: "Nestlé" },
+    { src: "/img/Clientes/nestle.png", alt: "Nestlé" },
     { src: "/img/Clientes/falp.png", alt: "FALP" },
     { src: "/img/Clientes/CCHC.png", alt: "CCHC" },
     { src: "/img/Clientes/ACHS.png", alt: "ACHS" },

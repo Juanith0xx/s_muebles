@@ -30,7 +30,7 @@ const WhatsAppBubble = () => {
         fixed bottom-4 right-4 z-50 
         bg-[#25d366] hover:bg-green-600 
         text-white 
-        rounded-full shadow-lg transition duration-300
+        rounded-full shadow-lg transition duration-500
         p-3 sm:p-4 md:p-5
         ${bounce ? "animate-bounce" : ""}
       `}
@@ -40,7 +40,7 @@ const WhatsAppBubble = () => {
         marginBottom: '1rem'
       }}
     >
-      <FaWhatsapp className="text-2xl sm:text-3xl md:text-4xl" />
+      <FaWhatsapp className="text-2xl sm:text-3xl md:text-1xl" />
     </a>
   );
 };
