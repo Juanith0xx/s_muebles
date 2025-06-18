@@ -7,29 +7,30 @@ const secciones = [
     titulo: "Muebles Área Limpia - Sucia",
     imagenes: [
       "/img/hospitalarios/IMG_1381.JPG",
-      "/img/hospitalarios/sucia2.jpg",
-      "/img/hospitalarios/limpia3.jpg",
+      "/img/hospitalarios/IMG-4616.JPG",
+      "/img/hospitalarios/IMG_1395.JPG",
     ],
   },
   {
     titulo: "Estación de Enfermería",
     imagenes: [
-      "/img/hospitalarios/enfermeria1.jpg",
-      "/img/hospitalarios/enfermeria2.jpg",
+      "/img/enfermeria/estacione1.jpg",
+      "/img/enfermeria/estacione2.jpg",
     ],
   },
   {
     titulo: "Estaciones Box - Laboratorio",
     imagenes: [
-      "/img/hospitalarios/box1.jpg",
-      "/img/hospitalarios/laboratorio2.jpg",
+      "/img/laboratorio/laboratorio1.jpg",
+      "/img/laboratorio/laboratorio2.jpg",
+      "/img/laboratorio/laboratorio3.jpg"
     ],
   },
   {
     titulo: "Estantes y Lockers",
     imagenes: [
-      "/img/hospitalarios/lockers1.jpg",
-      "/img/hospitalarios/estantes2.jpg",
+      "/img/lockers/locker1.jpg",
+      "/img/lockers/locker2.jpg",
     ],
   },
 ];
