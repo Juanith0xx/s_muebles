@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -16,7 +17,7 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/hospitalarios.jpg", // Imagen alta resolución recomendada (mín 1920x1080)
+      src: "/img/Carrusel/hospitalarios.jpg",
       label: "Proyectos Clínicos Hospitalarios",
       link: "/productos/proyectos_clinicos_hospitalarios",
     },
@@ -45,19 +46,22 @@ const Home = () => {
             key={index}
             className="relative h-[500px] rounded-xl overflow-hidden"
           >
-            <img
-              src={slide.src}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-[600px] object-cover object-center transition-all duration-500"
-              // Cambia a object-cover si prefieres que cubra todo el contenedor con posible recorte:
-              // className="w-full h-full object-cover object-center transition-all duration-500"
-            />
-            <a
-              href={slide.link}
+            {/* Imagen clickeable */}
+            <Link to={slide.link}>
+              <img
+                src={slide.src}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-[600px] object-cover object-center transition-all duration-500"
+              />
+            </Link>
+
+            {/* Botón clickeable */}
+            <Link
+              to={slide.link}
               className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white font-[Montserrat] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-lg font-semibold rounded-md shadow-md transition duration-300"
             >
               {slide.label}
-            </a>
+            </Link>
           </div>
         ))}
       </Slider>

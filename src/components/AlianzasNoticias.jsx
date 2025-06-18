@@ -22,7 +22,6 @@ const noticias = [
     imagen: '/img/alianza-porcelanosa.jpg',
     link: '/noticias/alianza-porcelanosa'
   },
-
   {
     titulo: 'Nueva alianza estratégica con Porcelanosa',
     descripcion:
@@ -32,11 +31,20 @@ const noticias = [
   }
 ]
 
+const alianzas = [
+  { nombre: 'Häfele', url: 'https://www.hafele.cl' },
+  { nombre: 'Porcelanosa', url: 'https://www.porcelanosa.com' },
+  { nombre: 'Abet Laminati', url: 'https://laminati.cl/' },
+  { nombre: 'Robfu', url: 'https://www.robfu.com' },
+  { nombre: 'Merino', url: 'https://www.merinolaminates.com' },
+  { nombre: 'Cabinarent', url: 'https://www.cabinarent.cl' }
+]
+
 const AlianzasNoticias = () => {
   return (
     <section id="nosotros" className="px-4 sm:px-6 md:px-12 py-8 flex flex-col mt-10 bg-[#d33834]">
       <div className="flex flex-col md:flex-row gap-4">
-        
+
         {/* Columna Alianzas */}
         <div className="w-full md:w-1/2 flex flex-col items-center mt-55">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-[Montserrat] text-gray-100 mb-4 text-left">
@@ -44,14 +52,16 @@ const AlianzasNoticias = () => {
           </h2>
 
           <ul className="list-disc list-inside text-gray-100 text-base sm:text-lg md:text-xl font-[Montserrat] space-y-2">
-            {["Häfele", "Porcelanosa", "Abet Laminati", "Robfu", "Merino", "Cabinarent"].map((marca) => (
-              <li
-                key={marca}
-                className="cursor-pointer hover:font-semibold font-[Montserrat]"
-              >
-                <span className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-gray-100 after:transition-all after:duration-300 hover:after:w-full">
-                  {marca}
-                </span>
+            {alianzas.map(({ nombre, url }) => (
+              <li key={nombre} className="font-[Montserrat]">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-gray-100 after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+                >
+                  {nombre}
+                </a>
               </li>
             ))}
           </ul>

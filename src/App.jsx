@@ -12,6 +12,10 @@ import ClientesEmblematicos from './components/ClientesEmblematicos';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WhatsAppBubble from './components/WhatsAppBubble';
+import PHospitalarios from './pages/PHospitalarios';
+import PuertasHPL from './pages/PuertasHPL';
+import PCorporativos from './pages/PCorporativos';
+
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("theme") === "dark";
@@ -47,9 +51,7 @@ function App() {
               </div>
               <div>
                 <ClientesEmblematicos />
-              </div>
-
-             
+              </div>            
 
               <div id="contacto">
                 <ContactForm />
@@ -59,6 +61,11 @@ function App() {
             </>
           } />
         
+        <Route path="/productos/proyectos_clinicos_hospitalarios" element={<PHospitalarios />} />
+        <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
+        <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
+
+
         </Routes>
       </Router>
     </HelmetProvider>
