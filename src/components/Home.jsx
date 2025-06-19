@@ -58,7 +58,7 @@ const Home = () => {
             {/* Botón clickeable */}
             <Link
               to={slide.link}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white font-[Montserrat] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-lg font-semibold rounded-md shadow-md transition duration-300"
+              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white font-[Montserrat] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-base font-semibold rounded-md shadow-md transition duration-300"
             >
               {slide.label}
             </Link>
