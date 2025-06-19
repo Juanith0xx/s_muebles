@@ -39,7 +39,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto mt-6 px-4 md:px-6 lg:px-12">
+    <div className="w-screen mt-6 pb-4">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div
@@ -51,7 +51,7 @@ const Home = () => {
               <img
                 src={slide.src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[600px] object-cover object-center transition-all duration-500"
+                className="w-full h-[600px] object-cover object-center transition-all duration-300"
               />
             </Link>
 

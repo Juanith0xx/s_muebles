@@ -61,6 +61,7 @@ function App() {
             </>
           } />
         
+        /* Paginas de slider de home */
         <Route path="/productos/proyectos_clinicos_hospitalarios" element={<PHospitalarios />} />
         <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
         <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />

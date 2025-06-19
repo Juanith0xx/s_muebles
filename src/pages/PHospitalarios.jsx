@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
@@ -39,17 +38,8 @@ const secciones = [
 const PHospitalarios = () => {
   return (
     <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-10">
-      <Helmet>
-        <title>Muebles Clínicos y Hospitalarios | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Soluciones en mobiliario clínico-hospitalario: muebles clinicos, estaciones de enfermería, áreas limpias-sucias, boxes y más. Diseños funcionales y adaptados a normativas sanitarias."
-        />
-        <link rel="canonical" href="https://sistemamuebles.cl/proyectos/muebles_clinicos_hospitalarios" />
-      </Helmet>
-
-      <h1 className="!text-4xl text-center sm:text-2xl font-bold text-gray-800 dark:text-white mb-4 mt-10">
-        Proyectos Clínicos Hospitalarios
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4 mt-10">
+        Proyectos Clínicos-Hospitalarios
       </h1>
       <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
         Ofrecemos soluciones integrales en mobiliario clínico-hospitalario, adaptadas a las normativas sanitarias y estándares de calidad. Nuestra línea incluye estaciones de enfermería, boxes de atención, áreas limpias-sucias y sistemas de almacenamiento para entornos clínicos.
@@ -58,7 +48,7 @@ const PHospitalarios = () => {
       <PhotoProvider>
         {secciones.map((seccion, index) => (
           <div key={index} className="mb-12">
-            <h2 className="text-2xl font-medium text-gray-700 dark:text-white mb-4">
+            <h2 className="text-2xl font-semibold text-gray-700 dark:text-white mb-4">
               {seccion.titulo}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -67,6 +57,7 @@ const PHospitalarios = () => {
                   <img
                     src={src}
                     alt={`${seccion.titulo} ${i + 1}`}
+                    loading="lazy"
                     className="w-full h-64 object-cover rounded-xl shadow-md cursor-zoom-in hover:scale-105 transition-transform duration-300"
                   />
                 </PhotoView>
