@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const noticias = [
   {
@@ -29,7 +29,7 @@ const noticias = [
     imagen: '/img/alianza-porcelanosa.jpg',
     link: '/noticias/alianza-porcelanosa'
   }
-]
+];
 
 const alianzas = [
   { nombre: 'Häfele', url: 'https://www.hafele.cl' },
@@ -38,27 +38,26 @@ const alianzas = [
   { nombre: 'Robfu', url: 'https://www.robfu.com' },
   { nombre: 'Merino', url: 'https://www.merinolaminates.com' },
   { nombre: 'Cabinarent', url: 'https://www.cabinarent.cl' }
-]
+];
 
 const AlianzasNoticias = () => {
   return (
-    <section id="nosotros" className="px-4 sm:px-6 md:px-12 py-8 flex flex-col mt-10 bg-[#d33834]">
-      <div className="flex flex-col md:flex-row gap-4">
+    <section id="nosotros" className="px-4 sm:px-6 md:px-12 py-16 bg-[#d33834]">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
 
-        {/* Columna Alianzas */}
-        <div className="w-full md:w-1/2 flex flex-col items-center mt-55">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-[Montserrat] text-gray-100 mb-4 text-left">
+        {/* Alianzas */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Montserrat] text-white mb-6">
             Alianzas
           </h2>
-
-          <ul className="list-disc list-inside text-gray-100 text-base sm:text-lg md:text-xl font-[Montserrat] space-y-2">
+          <ul className="text-white text-base sm:text-lg lg:text-xl font-[Montserrat] space-y-4">
             {alianzas.map(({ nombre, url }) => (
-              <li key={nombre} className="font-[Montserrat]">
+              <li key={nombre}>
                 <a
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-gray-100 after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
+                  className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
                 >
                   {nombre}
                 </a>
@@ -67,13 +66,12 @@ const AlianzasNoticias = () => {
           </ul>
         </div>
 
-        {/* Columna Noticias */}
-        <div className="w-full md:w-1/2 flex flex-col items-start">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-[Montserrat] text-white mb-6 text-left md:text-center w-full">
+        {/* Noticias */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Montserrat] text-white mb-6 sm:text-center">
             Noticias
           </h2>
-
-          <div className="grid gap-6 sm:grid-cols-2 w-full">
+          <div className="grid grid-cols-1 gap-6 w-full">
             {noticias.map((noticia, index) => (
               <article
                 key={index}
@@ -91,7 +89,9 @@ const AlianzasNoticias = () => {
                   <h3 className="text-lg font-bold font-[Montserrat] text-gray-800 group-hover:text-[#d33834] transition-colors">
                     {noticia.titulo}
                   </h3>
-                  <p className="text-sm text-gray-600 mt-2 font-[Montserrat]">{noticia.descripcion}</p>
+                  <p className="text-sm text-gray-600 mt-2 font-[Montserrat]">
+                    {noticia.descripcion}
+                  </p>
                   <a
                     href={noticia.link}
                     className="inline-block mt-3 text-sm font-semibold text-[#d33834] hover:underline"
@@ -103,10 +103,9 @@ const AlianzasNoticias = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AlianzasNoticias
+export default AlianzasNoticias;
