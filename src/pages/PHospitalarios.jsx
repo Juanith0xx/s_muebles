@@ -37,11 +37,11 @@ const secciones = [
 
 const PHospitalarios = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-8 mt-4 sm:px-6 lg:px-12 py-10 text-1xl">
-      <h1 className="!text-3xl sm:text-2xl text-center font-semibold font-[Montserrat] text-gray-800 dark:text-white mb-4 mt-10">
+    <div className="px-8 sm:px-12 lg:px-32 py-10">
+      <h1 className="!text-3xl sm:text-4xl font-semibold font-[Montserrat] text-gray-800 dark:text-white mb-6 mt-10">
         Proyectos Clínicos-Hospitalarios
       </h1>
-      <p className="text-base sm:text-lg font-[Montserrat] text-gray-600 dark:text-gray-300 mb-8">
+      <p className="text-base sm:text-lg font-[Montserrat] text-gray-600 dark:text-gray-300 mb-10">
         Ofrecemos soluciones integrales en mobiliario clínico-hospitalario, adaptadas a las normativas sanitarias y estándares de calidad. Nuestra línea incluye estaciones de enfermería, boxes de atención, áreas limpias-sucias y sistemas de almacenamiento para entornos clínicos.
       </p>
 
