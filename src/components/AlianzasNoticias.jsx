@@ -42,8 +42,8 @@ const alianzas = [
 
 const AlianzasNoticias = () => {
   return (
-    <section id="nosotros" className="px-4 sm:px-6 md:px-12 py-16 bg-[#d33834]">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+    <section id="nosotros" className="w-full px-4 sm:px-6 md:px-12 py-16 bg-[#d33834]">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row">
 
         {/* Alianzas */}
         <div className="w-full lg:w-1/2">
@@ -75,7 +75,7 @@ const AlianzasNoticias = () => {
             {noticias.map((noticia, index) => (
               <article
                 key={index}
-                className="group rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-white transition-all hover:shadow-xl"
+                className="w-full group rounded-2xl overflow-hidden shadow-md border border-gray-200 bg-white transition-all hover:shadow-xl"
               >
                 <figure>
                   <img
