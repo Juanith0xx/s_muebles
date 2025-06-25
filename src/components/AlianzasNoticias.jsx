@@ -47,10 +47,10 @@ const AlianzasNoticias = () => {
 
         {/* Alianzas */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Montserrat] text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Inter] text-white mb-6">
             Alianzas
           </h2>
-          <ul className="text-white text-base sm:text-lg lg:text-xl font-[Montserrat] space-y-4">
+          <ul className="text-white text-base sm:text-lg lg:text-2xl font-[Source Sans 3] space-y-4">
             {alianzas.map(({ nombre, url }) => (
               <li key={nombre}>
                 <a
@@ -68,7 +68,7 @@ const AlianzasNoticias = () => {
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Montserrat] text-white mb-6 sm:text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Inter] text-white mb-6 sm:text-center">
             Noticias
           </h2>
           <div className="grid grid-cols-1 gap-6 w-full">
@@ -86,10 +86,10 @@ const AlianzasNoticias = () => {
                   />
                 </figure>
                 <div className="p-4">
-                  <h3 className="text-lg font-bold font-[Montserrat] text-gray-800 group-hover:text-[#d33834] transition-colors">
+                  <h3 className="text-lg font-bold font-[Inter] text-gray-800 group-hover:text-[#d33834] transition-colors">
                     {noticia.titulo}
                   </h3>
-                  <p className="text-sm text-gray-600 mt-2 font-[Montserrat]">
+                  <p className="text-sm text-gray-600 mt-2 font-[Source Sans 3]">
                     {noticia.descripcion}
                   </p>
                   <a

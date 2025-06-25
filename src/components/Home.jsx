@@ -39,7 +39,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-screen mt-6 pb-4">
+    <div className="w-screen mt-6 pb-10">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div

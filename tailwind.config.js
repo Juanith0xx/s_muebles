@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Poppins: ['Poppins', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        noto: ['"Noto Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        source: ['Source Sans 3', 'sans-serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 6s ease infinite',
-        'fall': 'fall linear infinite', // ⬅️ Añadido
+        'fall': 'fall linear infinite',
       },
       keyframes: {
         'gradient-x': {
@@ -24,7 +24,7 @@ export default {
             'background-position': '100% 50%',
           },
         },
-        fall: { // ⬅️ Añadido
+        fall: {
           '0%': {
             transform: 'translateY(-100%)',
             opacity: '1',
