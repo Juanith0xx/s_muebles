@@ -14,7 +14,7 @@ const Navbar = () => {
       </RouterLink>
 
       {/* Menú de escritorio */}
-      <ul className="hidden md:flex gap-8 text-lg font-Inter pl-8">
+      <ul className="hidden md:flex gap-8 text-lg font-[Inter] pl-8">
         {/* Nosotros */}
         <li className="relative group">
           <span className="hover:no-underline cursor-pointer !text-gray-800 font-[Inter] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/* Productos */}
         <li className="relative group">
-          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-lg hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Inter] hover:text-lg hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
             Productos <span className="ml-1">▾</span>
           </span>
           <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-800 ease-out bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-62 z-10">
@@ -56,7 +56,7 @@ const Navbar = () => {
               <li key={to}>
                 <RouterLink
                   to={to}
-                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
+                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Source Sans 3]"
                 >
                   {label}
                 </RouterLink>
@@ -67,7 +67,7 @@ const Navbar = () => {
 
         {/* Alianzas (actualizado con enlaces externos) */}
         <li className="relative group">
-          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Inter] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
             Alianzas <span className="ml-1">▾</span>
           </span>
           <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-800 ease-out bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-62 z-10">
@@ -84,7 +84,7 @@ const Navbar = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
+                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Source Sans 3]"
                 >
                   {nombre}
                 </a>
@@ -95,7 +95,7 @@ const Navbar = () => {
 
         {/* Apent */}
         <li className="relative group">
-          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
+          <span className="hover:no-underline cursor-pointer !text-grey-800 font-[Inter] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-800 hover:after:w-full">
             Apent <span className="ml-1">▾</span>
           </span>
           <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-800 ease-out bg-white shadow-lg mt-2 rounded-md py-2 px-2 w-62 z-10">
@@ -105,7 +105,7 @@ const Navbar = () => {
               <li key={to}>
                 <RouterLink
                   to={to}
-                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
+                  className="block px-4 py-2 cursor-pointer !text-gray-800 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Source Sans 3]"
                 >
                   {label}
                 </RouterLink>
@@ -115,7 +115,7 @@ const Navbar = () => {
         </li>
 
         <li>
-          <ScrollLink to="contacto" smooth duration={500} offset={-80} className="hover:no-underline cursor-pointer !text-grey-800 font-[Montserrat] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
+          <ScrollLink to="contacto" smooth duration={500} offset={-80} className="hover:no-underline cursor-pointer !text-grey-800 font-[Inter] hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full">
             Contactanos
           </ScrollLink>
         </li>
@@ -133,10 +133,10 @@ const Navbar = () => {
             {/* Nosotros */}
             <li>
               <details className="group">
-                <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
+                <summary className="cursor-pointer text-grey-800 font-semibold font-[Inter] flex justify-between items-center">
                   Nosotros <span>▾</span>
                 </summary>
-                <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
+                <ul className="pl-4 mt-2 text-gray-800 font-[Source Sans 3]">
                   {[
                     ['/nosotros/equipo', 'Nuestro Equipo'],
                     ['/nosotros/fabrica', 'Nuestra Fábrica'],
@@ -146,7 +146,7 @@ const Navbar = () => {
                       <RouterLink
                         to={to}
                         onClick={closeMenu}
-                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Montserrat]"
+                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-medium hover:font-[Source Sans 3] text-base"
                       >
                         {label}
                       </RouterLink>
@@ -159,10 +159,10 @@ const Navbar = () => {
             {/* Productos */}
             <li>
               <details className="group">
-                <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
+                <summary className="cursor-pointer text-grey-800 font-semibold font-[Inter] flex justify-between items-center">
                   Productos <span>▾</span>
                 </summary>
-                <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
+                <ul className="pl-4 mt-2 text-gray-800 font-[Source Sans 3]">
                   {[
                     ['/productos/proyectos_clinicos_hospitalarios', 'Proyectos Clínicos Hospitalarios'],
                     ['/productos/puertas_hpl_marcos_telescopicos', 'Puertas HPL y Marcos Telescópicos'],
@@ -176,7 +176,7 @@ const Navbar = () => {
                       <RouterLink
                         to={to}
                         onClick={closeMenu}
-                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold hover:font-[Montserrat]"
+                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold hover:font-[Source Sans 3] text-base"
                       >
                         {label}
                       </RouterLink>
@@ -189,10 +189,10 @@ const Navbar = () => {
             {/* Alianzas (actualizado) */}
             <li>
               <details className="group">
-                <summary className="cursor-pointer text-gray-800 font-semibold font-[Montserrat] flex justify-between items-center">
+                <summary className="cursor-pointer text-gray-800 font-semibold font-[Inter] flex justify-between items-center">
                   Alianzas <span>▾</span>
                 </summary>
-                <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
+                <ul className="pl-4 mt-2 text-gray-800 font-[Source Sans 3]">
                   {[
                     { nombre: 'Häfele', url: 'https://www.hafele.cl' },
                     { nombre: 'Porcelanosa', url: 'https://www.porcelanosa.com' },
@@ -207,7 +207,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={closeMenu}
-                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold hover:font-[Source Sans 3] text-base"
                       >
                         {nombre}
                       </a>
@@ -220,10 +220,10 @@ const Navbar = () => {
             {/* Apent */}
             <li>
               <details className="group">
-                <summary className="cursor-pointer text-grey-800 font-semibold font-[Montserrat] flex justify-between items-center">
+                <summary className="cursor-pointer text-grey-800 font-semibold font-[Inter] flex justify-between items-center">
                   Apent <span>▾</span>
                 </summary>
-                <ul className="pl-4 mt-2 text-gray-800 font-[Montserrat]">
+                <ul className="pl-4 mt-2 text-gray-800 font-[Source Sans 3]">
                   {[
                     ['/apent/marcos_y_puertas', 'Marcos y Puertas'],
                   ].map(([to, label]) => (
@@ -231,7 +231,7 @@ const Navbar = () => {
                       <RouterLink
                         to={to}
                         onClick={closeMenu}
-                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold"
+                        className="block px-2 py-2 rounded-md hover:bg-red-700 hover:!text-white hover:font-semibold hover:font-[Source Sans 3] text-base"
                       >
                         {label}
                       </RouterLink>
@@ -248,7 +248,7 @@ const Navbar = () => {
                 smooth
                 duration={500}
                 offset={-80}
-                className="cursor-pointer text-grey-800 font-[Montserrat] font-semibold hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
+                className="cursor-pointer text-grey-800 font-[Inter] font-semibold hover:text-xl hover:font-semibold relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#D33834] after:transition-all after:duration-500 hover:after:w-full"
                 onClick={closeMenu}
               >
                 Contáctanos
