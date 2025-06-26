@@ -14,16 +14,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Logo y descripción */}
         <div className="text-center sm:text-left text-sm">
-          <h1 className="text-2xl font-bold font-[Montserrat] mb-2">Sistema Muebles</h1>
-          <p className="text-white/90 leading-relaxed">
+          <h1 className="!text-3xl font-bold font-[Inter] mb-2">Sistema Muebles</h1>
+          <p className="text-white/90 leading-relaxed font-[Source Sans 3]">
             Muebles a medida con diseño, calidad y pasión. Transformamos tus
             espacios en lugares únicos.
           </p>
         </div>
 
         {/* Navegación */}
-        <div className="text-center sm:text-left font-[Montserrat] text-sm">
-          <h2 className="text-xl font-semibold mb-3">Navegación</h2>
+        <div className="text-center sm:text-left font-[Inter] text-sm">
+          <h2 className="text-xl font-bold underline mb-3">Navegación</h2>
           <ul className="space-y-2">
             {["home", "nosotros", "nuestros_clientes"].map((section) => (
               <li key={section}>
@@ -32,7 +32,7 @@ const Footer = () => {
                   smooth
                   duration={500}
                   offset={-70}
-                  className="hover:underline cursor-pointer !text-white font-semibold"
+                  className="hover:underline cursor-pointer !text-white font-semibold font-[Source Sans 3]"
                 >
                   {section
                     .replace("_", " ")
@@ -44,13 +44,13 @@ const Footer = () => {
         </div>
 
         {/* Contacto */}
-        <div className="text-center sm:text-left font-[Montserrat] text-sm">
-          <h2 className="text-xl font-semibold mb-3">Contacto</h2>
+        <div className="text-center sm:text-left font-[Inter] text-sm">
+          <h2 className="text-xl font-bold underline mb-3">Contacto</h2>
           <ul className="space-y-2">
-            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold">
+            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold font-[Source Sans 3]">
               <FaEnvelope /> contacto@sistemamuebles.cl
             </li>
-            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold">
+            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold font-[Source Sans 3]">
               <FaMapMarkerAlt /> Cerrillos, Santiago, Chile
             </li>
           </ul>
@@ -79,16 +79,16 @@ const Footer = () => {
         </div>
 
         {/* Horarios */}
-        <div className="text-center sm:text-left font-[Montserrat] text-sm">
-          <h2 className="text-xl font-semibold mb-3">Horarios</h2>
+        <div className="text-center sm:text-left font-[Inter] text-sm">
+          <h2 className="text-xl font-bold underline mb-3">Horarios</h2>
           <ul className="space-y-2">
-            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold">
+            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold font-[Source Sans 3]">
               <FaClock /> Lunes a Viernes: 9:00 - 18:00
             </li>
-            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold">
+            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold font-[Source Sans 3]">
               <FaClock /> Sábados: Cerrado
             </li>
-            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold">
+            <li className="flex justify-center sm:justify-start items-center gap-2 font-semibold font-[Source Sans 3]">
               <FaClock /> Domingos: Cerrado
             </li>
           </ul>

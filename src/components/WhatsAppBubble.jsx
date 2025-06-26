@@ -27,20 +27,15 @@ const WhatsAppBubble = () => {
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        fixed bottom-4 right-4 z-50 
+        fixed bottom-6 right-6 z-50 
         bg-[#25d366] hover:bg-green-600 
         text-white 
         rounded-full shadow-lg transition duration-500
         p-3 sm:p-4 md:p-5
         ${bounce ? "animate-bounce" : ""}
       `}
-      style={{ 
-        // opcional: para que el botón no quede muy pegado al borde en pantallas grandes
-        marginRight: '1rem', 
-        marginBottom: '1rem'
-      }}
     >
-      <FaWhatsapp className="text-2xl sm:text-3xl md:text-1xl" />
+      <FaWhatsapp className="text-2xl sm:text-3xl md:text-4xl" />
     </a>
   );
 };

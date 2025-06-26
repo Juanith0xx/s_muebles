@@ -23,7 +23,7 @@ const ClientesEmblematicos = () => {
       },
       {
         breakpoint: 640, // sm: celulares
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 2 },
       },
     ],
   };
@@ -37,7 +37,7 @@ const ClientesEmblematicos = () => {
   ];
 
   return (
-    <div className="w-full max-w-screen-xl mx-auto px-4 py-10 font-[Montserrat]">
+    <div className="w-full max-w-screen-xl mx-auto px-4 py-10 font-[Inter]">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Han Confiado en Nosotros</h2>
       <Slider {...settings}>
         {logos.map((logo, index) => (

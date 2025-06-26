@@ -42,14 +42,14 @@ const ContactForm = () => {
       className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900"
     >
       <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 sm:p-8">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Montserrat] dark:text-white">
+        <h2 className="text-3xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Inter] dark:text-white">
           Contáctanos
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nombre */}
           <div>
-            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
               Nombre
             </label>
             <input
@@ -64,7 +64,7 @@ const ContactForm = () => {
 
           {/* Correo electrónico */}
           <div>
-            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
               Correo electrónico
             </label>
             <input
@@ -79,7 +79,7 @@ const ContactForm = () => {
 
           {/* Teléfono */}
           <div>
-            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
               Teléfono
             </label>
             <input
@@ -94,7 +94,7 @@ const ContactForm = () => {
 
           {/* Mensaje */}
           <div>
-            <label className="block text-sm font-medium font-[Montserrat] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
               Mensaje
             </label>
             <textarea
@@ -110,7 +110,7 @@ const ContactForm = () => {
           {/* Botón */}
           <button
             type="submit"
-            className="w-full sm:w-auto bg-[#D33834] text-white font-bold font-[Montserrat] hover:bg-red-700 px-6 py-3 rounded-lg transition-colors duration-200"
+            className="w-full sm:w-auto sm:bottom-6 sm:left-6 bg-[#d33834] text-white !font-[Source Sans 3] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-base font-semibold rounded-md shadow-md transition duration-300"
           >
             Enviar mensaje
           </button>
