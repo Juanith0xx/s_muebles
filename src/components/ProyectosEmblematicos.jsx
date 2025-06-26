@@ -43,7 +43,7 @@ const breakpointColumnsObj = {
 const ProyectosEmblematicos = () => {
   return (
     <section id="proyectos-emblematicos" className="px-6 py-12 bg-gray-50">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10 font-[Montserrat]">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10 font-[Inter]">
         Proyectos Emblemáticos
       </h2>
 
@@ -63,10 +63,10 @@ const ProyectosEmblematicos = () => {
               className="w-full object-cover h-64"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 font-[Montserrat]">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2 font-[Inter]">
                 {proyecto.title}
               </h3>
-              <p className="text-gray-600 text-sm font-[Montserrat]">
+              <p className="text-gray-600 text-sm font-[Source Sans 3]">
                 {proyecto.description}
               </p>
               <a

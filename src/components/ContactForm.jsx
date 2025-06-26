@@ -39,12 +39,13 @@ const ContactForm = () => {
   return (
     <section
       id="contacto"
-      className="flex justify-center items-center px-4 py-16 dark:bg-gray-900"
+      className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900"
     >
-      <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-8">
-        <h2 className="text-3xl font-bold mb-6 text-gray-800 font-[Montserrat] dark:text-white">
+      <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 sm:p-8">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Montserrat] dark:text-white">
           Contáctanos
         </h2>
+
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nombre */}
           <div>
@@ -109,7 +110,7 @@ const ContactForm = () => {
           {/* Botón */}
           <button
             type="submit"
-            className="no-underline !bg-[#D33834] text-white font-bold font-[Montserrat] hover:!bg-red-700 cursor-pointer hover:font-bold px-6 py-2 rounded-lg"
+            className="w-full sm:w-auto bg-[#D33834] text-white font-bold font-[Montserrat] hover:bg-red-700 px-6 py-3 rounded-lg transition-colors duration-200"
           >
             Enviar mensaje
           </button>
