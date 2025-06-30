@@ -62,18 +62,18 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
-              className="hover:text-white/80"
+              className="group transition-transform duration-300 "
             >
-              <FaWhatsapp className="text-2xl" />
+              <FaWhatsapp className="text-2xl text-white group-hover:text-green-500 group-hover:scale-135 transition-all duration-300" />
             </a>
             <a
               href="https://linkedin.com/company/sistemamuebles"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="hover:text-white/80"
+              className="group transition-transform duration-300 "
             >
-              <FaLinkedin className="text-2xl" />
+              <FaLinkedin className="text-2xl text-white group-hover:text-[#0a66c2] group-hover:scale-135 transition-all duration-300" />
             </a>
           </div>
         </div>
