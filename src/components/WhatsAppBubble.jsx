@@ -35,7 +35,7 @@ const WhatsAppBubble = () => {
         ${bounce ? "animate-bounce" : ""}
       `}
     >
-      <FaWhatsapp className="text-2xl sm:text-3xl md:text-4xl" />
+      <FaWhatsapp className="text-2xl sm:text-3xl md:text-5xl" />
     </a>
   );
 };

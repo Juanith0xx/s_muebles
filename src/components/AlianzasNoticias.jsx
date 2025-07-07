@@ -42,12 +42,12 @@ const alianzas = [
 
 const AlianzasNoticias = () => {
   return (
-    <section id="nosotros" className="w-full px-4 sm:px-6 md:px-12 py-16 bg-[#d33834]">
+    <section id="nosotros" className="w-full px-4 sm:px-6 md:px-12 py-16 bg-red-500">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center">
 
         {/* Alianzas */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-3xl lg:text-4xl font-bold font-[Inter] text-white mb-6 ">
+          <h2 className="text-3xl lg:text-4xl font-bold font-[Barlow] text-white mb-6 ">
             Alianzas
           </h2>
           <ul className="text-white text-2xl hover:underline sm:text-lg lg:text-2xl font-[Source Sans 3] space-y-4">
@@ -68,10 +68,10 @@ const AlianzasNoticias = () => {
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold font-[Inter] text-white mb-6 sm:text-center">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6 sm:text-center">
             Noticias
           </h2>
-          <div className="grid grid-cols-1 gap-6 w-full">
+          <div className="grid grid-cols-2 gap-6 w-full">
             {noticias.map((noticia, index) => (
               <article
                 key={index}
