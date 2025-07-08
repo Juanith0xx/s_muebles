@@ -10,11 +10,12 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
         source: ['"Source Sans 3"', 'sans-serif'],
-        barlow: ['Barlow', 'sans-serif'], // ⬅️ Aquí agregamos Barlow
+        barlow: ['Barlow', 'sans-serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 6s ease infinite',
         'fall': 'fall linear infinite',
+        'fadeInLeft': 'fadeInLeft 0.8s ease-out forwards',
       },
       keyframes: {
         'gradient-x': {
@@ -33,6 +34,16 @@ export default {
           '100%': {
             transform: 'translateY(100vh)',
             opacity: '0',
+          },
+        },
+        fadeInLeft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
           },
         },
       },

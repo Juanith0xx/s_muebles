@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { FiChevronRight } from "react-icons/fi";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -46,7 +47,6 @@ const Home = () => {
             key={index}
             className="relative h-[500px] rounded-xl overflow-hidden"
           >
-            {/* Imagen clickeable */}
             <Link to={slide.link}>
               <img
                 src={slide.src}
@@ -55,12 +55,16 @@ const Home = () => {
               />
             </Link>
 
-            {/* Botón clickeable */}
             <Link
               to={slide.link}
-              className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-red-600 hover:bg-red-700 text-white font-[Source Sans 3] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-base font-semibold rounded-md shadow-md transition duration-300"
+              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-6 bg-red-600 hover:bg-red-800 text-white font-[Poppins] text-center flex items-center gap-3 px-6 py-2 text-sm sm:text-base font-semibold rounded-full border border-white shadow-md transition duration-300"
             >
-              {slide.label}
+              <span className="whitespace-pre-line leading-tight">
+                {slide.label}
+              </span>
+              <span className="border border-white rounded-full p-2">
+                <FiChevronRight className="text-white w-6 h-6" />
+              </span>
             </Link>
           </div>
         ))}

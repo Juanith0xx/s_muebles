@@ -1,5 +1,9 @@
 import React from "react";
-import Masonry from "react-masonry-css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const proyectos = [
   {
@@ -30,55 +34,52 @@ const proyectos = [
     image: "/img/Emblematicos/FALP/falp_1.jpg",
     link: "/proyectos/Falp",
   },
-  
-  // Puedes agregar más proyectos aquí...
 ];
-
-const breakpointColumnsObj = {
-  default: 4,
-  1024: 2,
-  640: 1,
-};
 
 const ProyectosEmblematicos = () => {
   return (
-    <section id="proyectos-emblematicos" className="px-6 py-12 bg-gray-50">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10 font-[Inter]">
+    <section id="proyectos-emblematicos" className="px-6 py-12 bg-[#142063] mt-10 ">
+      <h2 className="text-xl md:text-4xl font-bold text-white text-left mb-10 font-[Poppins]">
         Proyectos Emblemáticos
       </h2>
 
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="flex gap-6"
-        columnClassName="flex flex-col gap-6"
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        spaceBetween={30}
+        slidesPerView={1}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="max-w-[1200px] mx-auto"
       >
         {proyectos.map((proyecto) => (
-          <div
-            key={proyecto.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300"
-          >
-            <img
-              src={proyecto.image}
-              alt={proyecto.title}
-              className="w-full object-cover h-64"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2 font-[Inter]">
-                {proyecto.title}
-              </h3>
-              <p className="text-gray-600 text-sm font-[Source Sans 3]">
-                {proyecto.description}
-              </p>
-              <a
-                href={proyecto.link}
-                className="inline-block mt-3 text-[#d33834] font-semibold text-sm hover:underline"
-              >
-                Ver más →
-              </a>
+          <SwiperSlide key={proyecto.id}>
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+              <img
+                src={proyecto.image}
+                alt={proyecto.title}
+                className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4">
+                <h3 className="text-white text-xl font-semibold mb-1 font-[Inter]">
+                  {proyecto.title}
+                </h3>
+                <p className="text-white text-sm font-[Source Sans 3]">
+                  {proyecto.description}
+                </p>
+                <a
+                  href={proyecto.link}
+                  className="mt-3 inline-block text-sm text-white font-semibold underline"
+                >
+                  Ver más →
+                </a>
+              </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </Masonry>
+      </Swiper>
     </section>
   );
 };

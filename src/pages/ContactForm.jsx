@@ -7,6 +7,7 @@ const ContactForm = () => {
     email: "",
     telefono: "",
     mensaje: "",
+    categoria: "", // nuevo campo
   });
 
   const [enviado, setEnviado] = useState(false);
@@ -27,7 +28,13 @@ const ContactForm = () => {
       )
       .then(() => {
         setEnviado(true);
-        setFormData({ nombre: "", email: "", telefono: "", mensaje: "" });
+        setFormData({
+          nombre: "",
+          email: "",
+          telefono: "",
+          mensaje: "",
+          categoria: "",
+        });
         setTimeout(() => setEnviado(false), 5000);
       })
       .catch((err) => {
@@ -41,7 +48,7 @@ const ContactForm = () => {
       id="contacto"
       className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900"
     >
-      <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 sm:p-8">
+      <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 mt-20 sm:p-8">
         <h2 className="text-3xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Inter] dark:text-white">
           Contáctanos
         </h2>
@@ -49,7 +56,7 @@ const ContactForm = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nombre */}
           <div>
-            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Poppins] text-gray-800 dark:text-gray-300 mb-1">
               Nombre
             </label>
             <input
@@ -58,13 +65,13 @@ const ContactForm = () => {
               value={formData.nombre}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
             />
           </div>
 
           {/* Correo electrónico */}
           <div>
-            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
+            <label className="block text-sm font-medium font-[Poppins] text-gray-800 dark:text-gray-300 mb-1">
               Correo electrónico
             </label>
             <input
@@ -73,7 +80,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
             />
           </div>
 
@@ -88,8 +95,29 @@ const ContactForm = () => {
               value={formData.telefono}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
             />
+          </div>
+
+          {/* Categoría */}
+          <div>
+            <label className="block text-sm font-medium font-[Source Sans 3] text-gray-800 dark:text-gray-300 mb-1">
+              Motivo de consulta
+            </label>
+            <select
+              name="categoria"
+              value={formData.categoria}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
+            >
+              <option value="" disabled>Selecciona una opción</option>
+              <option value="Cotización Puertas">Cotización Puertas</option>
+              <option value="Cotización Soluciones Hospitales">Cotización Soluciones Hospitales</option>
+              <option value="Cotización Clínicas y Laboratorios">Cotización Clínicas y Laboratorios</option>
+              <option value="Cotización Espacios Corporativos">Cotización Espacios Corporativos</option>
+              <option value="Otras consultas">Otras consultas</option>
+            </select>
           </div>
 
           {/* Mensaje */}
@@ -103,14 +131,14 @@ const ContactForm = () => {
               value={formData.mensaje}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#D33834]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
             ></textarea>
           </div>
 
           {/* Botón */}
           <button
             type="submit"
-            className="w-full sm:w-auto sm:bottom-6 sm:left-6 bg-[#d33834] text-white !font-[Source Sans 3] px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base md:text-base font-semibold rounded-md shadow-md transition duration-300"
+            className="w-full sm:w-auto bg-[#d33834] text-white !font-[Source Sans 3] px-5 py-2 text-base font-semibold rounded-md shadow-md transition duration-300"
           >
             Enviar mensaje
           </button>
