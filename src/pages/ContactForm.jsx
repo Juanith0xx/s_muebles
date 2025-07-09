@@ -116,8 +116,7 @@ const ContactForm = () => {
                 Selecciona una opción
               </option>
               <option value="Cotización Puertas">Cotización Puertas</option>
-              <option value="Cotización Soluciones Hospitales">Cotización Soluciones Hospitales</option>
-              <option value="Cotización Clínicas y Laboratorios">Cotización Clínicas y Laboratorios</option>
+              <option value="Cotización Soluciones Hospitales">Cotización Clinico-Hospitalario</option>
               <option value="Cotización Espacios Corporativos">Cotización Espacios Corporativos</option>
               <option value="Otras consultas">Otras consultas</option>
             </select>

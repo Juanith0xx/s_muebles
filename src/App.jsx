@@ -36,7 +36,7 @@ function App() {
       <Router>
         {/* Botón opcional para cambiar tema */}
         <Navbar />
-
+        <WhatsAppBubble />
         <Routes>
           <Route path="/" element={
             <>
@@ -54,7 +54,7 @@ function App() {
               </div>            
 
               <Footer />
-              <WhatsAppBubble />
+              
             </>
           } />
         
