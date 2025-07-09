@@ -67,7 +67,7 @@ const Footer = () => {
               <FaWhatsapp className="text-2xl text-white group-hover:text-green-500 group-hover:scale-135 transition-all duration-300" />
             </a>
             <a
-              href="https://linkedin.com/company/sistemamuebles"
+              href="https://www.linkedin.com/company/sistemamuebles"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

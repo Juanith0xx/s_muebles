@@ -47,7 +47,7 @@ const Navbar = () => {
       items: [
         ["/contacto/contact", "Formulario de Contacto"],
         ["https://wa.me/56912345678", "Whatsapp", true],
-        ["https://www.linkedin.com/company/empresa", "LinkedIn", true]
+        ["https://www.linkedin.com/company/sistemamuebles", "LinkedIn", true]
       ]
     },
     {
