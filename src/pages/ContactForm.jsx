@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FiChevronRight } from "react-icons/fi";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -7,7 +8,7 @@ const ContactForm = () => {
     email: "",
     telefono: "",
     mensaje: "",
-    categoria: "", // nuevo campo
+    categoria: "",
   });
 
   const [enviado, setEnviado] = useState(false);
@@ -21,10 +22,10 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_p1d87o5", // ✅ Tu Service ID
-        "template_8sj05kw", // ✅ Tu Template ID
+        "service_p1d87o5",
+        "template_8sj05kw",
         formData,
-        "kEfgki1uhnRq31pjs" // ✅ Tu Public Key
+        "kEfgki1uhnRq31pjs"
       )
       .then(() => {
         setEnviado(true);
@@ -49,7 +50,7 @@ const ContactForm = () => {
       className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900"
     >
       <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 mt-20 sm:p-8">
-        <h2 className="text-3xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Inter] dark:text-white">
+        <h2 className="text-3xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Poppins] dark:text-white">
           Contáctanos
         </h2>
 
@@ -109,9 +110,11 @@ const ContactForm = () => {
               value={formData.categoria}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-800 font-[Barlow] bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-[#142063]"
             >
-              <option value="" disabled>Selecciona una opción</option>
+              <option value="" disabled>
+                Selecciona una opción
+              </option>
               <option value="Cotización Puertas">Cotización Puertas</option>
               <option value="Cotización Soluciones Hospitales">Cotización Soluciones Hospitales</option>
               <option value="Cotización Clínicas y Laboratorios">Cotización Clínicas y Laboratorios</option>
@@ -135,12 +138,17 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          {/* Botón */}
+          {/* Botón con flecha estilo FiChevronRight */}
           <button
             type="submit"
-            className="w-full sm:w-auto bg-[#d33834] text-white !font-[Source Sans 3] px-5 py-2 text-base font-semibold rounded-md shadow-md transition duration-300"
+            className="w-full sm:w-auto bg-[#142063]  text-white font-[Poppins] text-center flex items-center gap-3 px-6 py-2 text-sm sm:text-base font-semibold rounded-full border border-white shadow-md transition duration-300 justify-center"
           >
-            Enviar mensaje
+            <span className="whitespace-pre-line leading-tight">
+              Enviar mensaje
+            </span>
+            <span className="border border-white rounded-full">
+              <FiChevronRight className="text-white w-6 h-6" />
+            </span>
           </button>
         </form>
 
