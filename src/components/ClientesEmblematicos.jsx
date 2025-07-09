@@ -34,11 +34,28 @@ const ClientesEmblematicos = () => {
     { src: "/img/Clientes/CCHC.png", alt: "CCHC" },
     { src: "/img/Clientes/ACHS.png", alt: "ACHS" },
     { src: "/img/Clientes/farmacia_ahumada.png", alt: "Ahumada" },
+    { src: "/img/Clientes/BCG.png", alt: "BCG"},
+    { src: "/img/Clientes/BHP.png", alt: "BHP"},
+    { src: "/img/Clientes/clinica_bio.png", alt: "Clinica Bio Bio"},
+    { src: "/img/Clientes/Hill.jpeg", alt: "Hill"},
+    { src: "/img/Clientes/courtyard.png", alt: "Courtyard"},
+    { src: "/img/Clientes/cristales-chile.png", alt: "Cristales chile"},
+    { src: "/img/Clientes/fls.png", alt: "FLS"},
+    { src: "/img/Clientes/idom.png", alt: "IDOM"},
+    { src: "/img/Clientes/implementos.png", alt: "Implementos"},
+    { src: "/img/Clientes/Lago.png", alt: "Lago Riñigue"},
+    { src: "/img/Clientes/mandarin.png", alt: "Mandarin Oriental"},
+    { src: "/img/Clientes/mutual.png", alt: "Mutual de Seguridad"},
+    { src: "/img/Clientes/OHLA.png", alt: "OHLA "},
+    { src: "/img/Clientes/parque.png", alt: "Parque Arauco "},
+    { src: "/img/Clientes/plange.png", alt: "Plaenge"},
+    { src: "/img/Clientes/quest.png", alt: "Quest"},
+    { src: "/img/Clientes/van.png", alt: "VanTrust Capital "},    
   ];
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 py-10 font-[Inter]">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Han Confiado en Nosotros</h2>
+      <h2 className="text-4xl font-bold font-[Poppins] text-center text-gray-800 mb-8">Han Confiado en Nosotros</h2>
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} className="flex justify-center items-center">
