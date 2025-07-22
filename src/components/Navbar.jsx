@@ -61,15 +61,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#142063] p-4 text-white flex justify-between items-center w-full fixed top-0 left-0 z-50 mr-8">
+    <nav className="bg-white p-4 text-gray-600 flex justify-between items-center w-full fixed top-0 left-0 z-50 mr-8">
       <div className="flex items-center gap-6 mt-2 mb-4">
         <RouterLink to="/">
-          <img className="h-12 w-auto cursor-pointer" src="/img/Logo.jpg" alt="Logo" />
+          <img className="h-12 w-auto cursor-pointer" src="/img/Logo.webp" alt="Logo" />
         </RouterLink>
 
         {/* Catálogo Mega Menu */}
         <div className="relative group hidden md:block text-xl font-[Poppins]">
-          <span className="cursor-pointer text-white hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-white after:transition-all after:duration-500 hover:after:w-full">
+          <span className="cursor-pointer text-black hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-white after:transition-all after:duration-500 hover:after:w-full">
             Catálogo <span className="ml-1">▾</span>
           </span>
           <ul className="absolute left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-800 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-84 z-10">
@@ -77,7 +77,7 @@ const Navbar = () => {
               <li key={name}>
                 <RouterLink
                   to={href}
-                  className="block px-4 py-2 rounded-md hover:bg-blue-800 hover:text-white hover:font-semibold font-[Barlow]"
+                  className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
                 >
                   {name}
                 </RouterLink>
@@ -101,14 +101,14 @@ const Navbar = () => {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-2 rounded-md hover:bg-blue-800 hover:text-white hover:font-semibold font-[Barlow]"
+                      className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
                     >
                       {name}
                     </a>
                   ) : (
                     <RouterLink
                       to={href}
-                      className="block px-4 py-2 rounded-md hover:bg-blue-800 hover:text-white hover:font-semibold font-[Barlow]"
+                      className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
                     >
                       {name}
                     </RouterLink>
