@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {/* Catálogo Mega Menu */}
         <div className="relative group hidden md:block text-xl font-[Poppins]">
-          <span className="cursor-pointer text-black hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-white after:transition-all after:duration-500 hover:after:w-full">
+          <span className="cursor-pointer text-black hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-500 hover:after:w-full">
             Catálogo <span className="ml-1">▾</span>
           </span>
           <ul className="absolute left-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-800 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-84 z-10">
@@ -90,7 +90,7 @@ const Navbar = () => {
       <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
         {menus.slice(1).map(({ label, items }) => (
           <li className="relative group" key={label}>
-            <span className="cursor-pointer hover:text-xl font-semibold font-[Poppins] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-white after:transition-all after:duration-800 hover:after:w-full pr-4">
+            <span className="cursor-pointer hover:text-xl font-semibold font-[Poppins] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-800 hover:after:w-full pr-4">
               {label} <span className="ml-1">▾</span>
             </span>
             <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-500 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">

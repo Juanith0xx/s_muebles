@@ -47,7 +47,7 @@ const ContactForm = () => {
   return (
     <section
       id="contacto"
-      className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900"
+      className="w-full flex justify-center items-center px-4 py-12 sm:py-16 dark:bg-gray-900 bg-[#142063]"
     >
       <div className="w-full max-w-2xl bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 mt-20 sm:p-8">
         <h2 className="text-3xl sm:text-3xl font-bold mb-6 text-gray-800 font-[Poppins] dark:text-white">

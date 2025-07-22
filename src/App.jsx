@@ -51,10 +51,7 @@ function App() {
               </div>
               <div>
                 <ClientesEmblematicos />
-              </div>            
-
-              <Footer />
-              
+              </div>                        
             </>
           } />
         
@@ -64,8 +61,9 @@ function App() {
         <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
          <Route path="/contacto/contact" element={<ContactForm />} />
 
-
+          
         </Routes>
+          <Footer />
       </Router>
     </HelmetProvider>
   );
