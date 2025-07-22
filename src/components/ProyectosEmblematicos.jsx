@@ -38,7 +38,7 @@ const proyectos = [
 
 const ProyectosEmblematicos = () => {
   return (
-    <section id="proyectos-emblematicos" className="px-6 py-12 bg-[#142063] mt-10 ">
+    <section id="proyectos-emblematicos" className="px-6 py-12 bg-[#011E31] mt-10 ">
       <h2 className="text-xl md:text-4xl font-bold text-white text-left mb-10 font-[Poppins]">
         Proyectos Emblemáticos
       </h2>

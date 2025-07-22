@@ -8,32 +8,33 @@ const Home = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 800,
+    cssEase: "ease-in-out",
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3500,
+    autoplaySpeed: 4000,
     arrows: false,
   };
 
   const slides = [
     {
-      src: "/img/Carrusel/hospitalarios.jpg",
+      src: "/img/Carrusel/hospitalarios.jpg", // Usa WebP si puedes
       label: "Proyectos Clínicos Hospitalarios",
       link: "/productos/proyectos_clinicos_hospitalarios",
     },
     {
-      src: "/img/Carrusel/Puertas_HPL.jpg",
+      src: "/img/Carrusel/Puertas_HPL.webp",
       label: "Puertas HPL y Marcos Telescópicos",
       link: "/productos/puertas_hpl_marcos_telescopicos",
     },
     {
-      src: "/img/Carrusel/forus.jpg",
+      src: "/img/Carrusel/reunion.webp",
       label: "Proyectos Int. Corporativos",
       link: "/productos/proyectos_int_corporativos",
     },
     {
-      src: "/images/slider4.jpg",
+      src: "/images/reunion.webp",
       label: "Soluciones Integrales",
       link: "/productos/soluciones_integrales",
     },
@@ -45,26 +46,25 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[500px] rounded-xl overflow-hidden"
+            className="relative h-[600px] sm:h-[700px] md:h-[800px] overflow-hidden rounded-xl"
           >
             <Link to={slide.link}>
               <img
                 src={slide.src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-[600px] object-cover object-center transition-all duration-300"
+                className="w-full h-full object-cover object-center transition-all duration-700"
               />
-            </Link>
-
-            <Link
-              to={slide.link}
-              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-6 bg-red-600 hover:bg-red-800 text-white font-[Poppins] text-center flex items-center gap-3 px-6 py-2 text-sm sm:text-base font-semibold rounded-full border border-white shadow-md transition duration-300"
-            >
-              <span className="whitespace-pre-line leading-tight">
-                {slide.label}
-              </span>
-              <span className="border border-white rounded-full p-2">
-                <FiChevronRight className="text-white w-6 h-6" />
-              </span>
+              <div className="absolute inset-0 bg-black/30 z-10" />
+              <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
+                <div className="flex items-center gap-3 bg-[#970C10] hover:bg-red-600 text-white px-6 py-2 rounded-full font-semibold text-sm sm:text-base transition duration-300 shadow-lg border border-white">
+                  <span className="whitespace-pre-line leading-tight">
+                    {slide.label}
+                  </span>
+                  <span className="border border-white rounded-full p-2">
+                    <FiChevronRight className="text-white w-6 h-6" />
+                  </span>
+                </div>
+              </div>
             </Link>
           </div>
         ))}
