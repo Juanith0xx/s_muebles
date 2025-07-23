@@ -28,25 +28,23 @@ const Navbar = () => {
     {
       label: "Productos",
       items: [
-        ["/producto/hospitalario", "Hospitales"],
-        ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos"],
-        ["/producto/interiorismo", "Interiorismo"],
-        ["/productos/integrales", "integrales"],
-        ["/productos/residenciales_hoteles", "Residenciales y Hoteles"],
+        ["/producto/clinicos-hospitalarios", "Clinicos-Hospitalarios"],
+        ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
+        ["/producto/interiorismo", "Interiorismo Corporativo"],
+        ["/productos/muebles_integrales", "Muebles Integrales"],
+        ["/productos/residencial_hoteles", "Residencial y Hoteles"],
       ],
     },
     {
       label: "Proyectos",
       items: [
-        ["/proyectos/emblematicos", "Proyectos Emblematicos"],
+        ["https://www.linkedin.com/company/sistemamuebles/", "Proyectos Emblematicos"],
       ],
     },
     {
       label: "Blog",
       items: [
-        ["/blog/articulos", "Artículos Técnicos"],
-        ["/blog/tendencias", "Tendencias en Materiales"],
-        ["/blog/guias", "Guías de Especificaciones"],
+        ["https://www.linkedin.com/company/sistemamuebles/posts/", "Artículos Técnicos", true],
       ],
     },
     {
