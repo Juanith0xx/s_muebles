@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
 
   const menus = [
     {
@@ -115,26 +122,26 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Barra vertical fija solo en móvil */}
-      <div className="fixed right-0 top-0 h-full w-1 bg-blue-600 z-50 block md:hidden" />
-
-      {/* Sidebar móvil */}
+      {/* Sidebar móvil con animaciones y scroll */}
       <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-white z-50 shadow-lg transform transition-all duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-64 bg-[#142063] z-50 shadow-lg transform transition-all duration-500 ease-in-out ${
           menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        }`}
+        } overflow-y-auto`}
       >
-        <div className="flex justify-between items-center p-4 border-b">
-          <span className="text-lg font-semibold">Menú</span>
+        <div className="flex justify-between items-center p-4 border-b text-white">
+          <span className="text-lg font-semibold font-[Poppins] animate-slide-in-right">
+            Menú
+          </span>
           <button onClick={closeMenu}>
             <X size={24} />
           </button>
         </div>
-        <div className="p-4 space-y-4">
+
+        <div className="p-4 space-y-6">
           {menus.map(({ label, items }, index) => (
-            <div key={label}>
-              <p className="text-sm font-bold text-gray-700 mb-1">{label}</p>
-              <ul className="space-y-2 ml-2">
+            <div key={label} className="animate-slide-in-right">
+              <p className="text-sm font-bold text-white mb-1">{label}</p>
+              <ul className="space-y-2 ml-2 font-[Barlow] animate-slide-in-left">
                 {items.map(([href, name, external]) => (
                   <li key={name}>
                     {external ? (
@@ -143,7 +150,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={closeMenu}
-                        className="text-sm text-blue-600 hover:underline"
+                        className="text-sm text-white hover:underline"
                       >
                         {name}
                       </a>
@@ -151,7 +158,7 @@ const Navbar = () => {
                       <RouterLink
                         to={href}
                         onClick={closeMenu}
-                        className="text-sm text-blue-600 hover:underline"
+                        className="text-sm text-white hover:underline"
                       >
                         {name}
                       </RouterLink>
@@ -159,22 +166,36 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              {/* Línea separadora entre secciones */}
               {index < menus.length - 1 && (
-                <hr className="my-4 border-t border-gray-300" />
+                <hr className="my-4 border-t border-white" />
               )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Fondo oscuro cuando el menú móvil está abierto */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-40 transition-opacity duration-300"
-          onClick={closeMenu}
-        />
-      )}
+      {/* Tailwind animations */}
+      <style>
+        {`
+          @keyframes slide-in-right {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+
+          @keyframes slide-in-left {
+            0% { transform: translateX(-20px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+          }
+
+          .animate-slide-in-right {
+            animation: slide-in-right 0.5s ease-out forwards;
+          }
+
+          .animate-slide-in-left {
+            animation: slide-in-left 0.5s ease-out forwards;
+          }
+        `}
+      </style>
     </>
   );
 };
