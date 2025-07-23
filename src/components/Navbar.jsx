@@ -66,11 +66,18 @@ const Navbar = () => {
     },
   ];
 
+  // Extraemos el menú "Catálogo"
+  const catalogoMenu = menus.find(menu => menu.label === "Catálogo");
+
+  // Menús sin "Catálogo"
+  const otherMenus = menus.filter(menu => menu.label !== "Catálogo");
+
   return (
     <>
       {/* Navbar superior */}
       <nav className="bg-white p-4 text-gray-600 flex justify-between items-center w-full fixed top-0 left-0 z-50 shadow-md">
-        <div className="flex items-center gap-6">
+        {/* Logo + Catálogo */}
+        <div className="flex items-center gap-8">
           <RouterLink to="/">
             <img
               className="h-12 w-auto cursor-pointer"
@@ -78,11 +85,43 @@ const Navbar = () => {
               alt="Logo"
             />
           </RouterLink>
+
+          {/* Catálogo menu desktop */}
+          <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
+            <li className="relative group" key={catalogoMenu.label}>
+              <span className="cursor-pointer hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-800 hover:after:w-full pr-4">
+                {catalogoMenu.label} <span className="ml-1">▾</span>
+              </span>
+              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-500 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+                {catalogoMenu.items.map(([href, name, external]) => (
+                  <li key={name}>
+                    {external ? (
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
+                      >
+                        {name}
+                      </a>
+                    ) : (
+                      <RouterLink
+                        to={href}
+                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
+                      >
+                        {name}
+                      </RouterLink>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
         </div>
 
-        {/* Menú Desktop */}
+        {/* Otros menús desktop */}
         <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
-          {menus.map(({ label, items }) => (
+          {otherMenus.map(({ label, items }) => (
             <li className="relative group" key={label}>
               <span className="cursor-pointer hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-800 hover:after:w-full pr-4">
                 {label} <span className="ml-1">▾</span>

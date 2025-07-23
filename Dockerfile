@@ -6,7 +6,6 @@ WORKDIR /app
 
 # Copia los archivos del proyecto al contenedor
 COPY package*.json ./
-docker run -p 8080:80 mi-app-frontend
 
 # Instala las dependencias
 RUN npm install

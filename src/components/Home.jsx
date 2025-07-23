@@ -19,7 +19,7 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/hospitalarios.jpg", // Usa WebP si puedes
+      src: "/img/Carrusel/hospitalarios.jpg",
       label: "Proyectos Clínicos Hospitalarios",
       link: "/productos/proyectos_clinicos_hospitalarios",
     },
@@ -46,7 +46,7 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[600px] sm:h-[700px] md:h-[800px] overflow-hidden rounded-xl"
+            className="relative h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden rounded-xl"
           >
             <Link to={slide.link}>
               <img
@@ -55,13 +55,13 @@ const Home = () => {
                 className="w-full h-full object-cover object-center transition-all duration-700"
               />
               <div className="absolute inset-0 bg-black/30 z-10" />
-              <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
-                <div className="flex items-center gap-3 bg-[#970C10] hover:bg-red-600 text-white px-6 py-2 rounded-full font-semibold text-sm sm:text-base transition duration-300 shadow-lg border border-white">
-                  <span className="whitespace-pre-line leading-tight">
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 px-4">
+                <div className="flex items-center justify-center gap-2 sm:gap-3 bg-[#970C10] hover:bg-red-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full font-semibold text-xs sm:text-sm md:text-base transition duration-300 shadow-lg border border-white max-w-xs mx-auto">
+                  <span className="whitespace-pre-line leading-tight text-center">
                     {slide.label}
                   </span>
-                  <span className="border border-white rounded-full p-2">
-                    <FiChevronRight className="text-white w-6 h-6" />
+                  <span className="border border-white rounded-full p-1 sm:p-2">
+                    <FiChevronRight className="text-white w-4 h-4 sm:w-6 sm:h-6" />
                   </span>
                 </div>
               </div>

@@ -65,9 +65,9 @@ const AlianzasNoticias = () => {
   return (
     <section
       id="nosotros"
-      className="w-full px-4 sm:px-6 md:px-12 py-16 bg-gray-600"
+      className="w-full px-4 sm:px-6 md:px-12 py-12 sm:py-16 bg-gray-600"
     >
-      <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center lg:text-left">
         {/* Alianzas */}
         <div
           ref={alianzasRef}
@@ -75,10 +75,10 @@ const AlianzasNoticias = () => {
             visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
-          <h2 className="text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6">
             Alianzas
           </h2>
-          <ul className="text-white text-xl sm:text-lg lg:text-2xl font-[Barlow] space-y-4">
+          <ul className="text-white text-lg sm:text-xl lg:text-2xl font-[Barlow] space-y-4">
             {alianzas.map(({ nombre, url }, index) => (
               <li
                 key={nombre}
@@ -102,10 +102,10 @@ const AlianzasNoticias = () => {
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6 sm:text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6">
             Noticias
           </h2>
-          <div className="grid grid-cols-2 gap-6 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
             {noticias.map((noticia, index) => (
               <article
                 key={index}
@@ -124,10 +124,10 @@ const AlianzasNoticias = () => {
                 </figure>
 
                 <div className="p-4 relative z-20">
-                  <h3 className="text-lg font-bold font-[Inter] text-gray-800 transition-colors group-hover:text-white">
+                  <h3 className="text-lg sm:text-xl font-bold font-[Poppins] text-gray-800 transition-colors group-hover:text-white">
                     {noticia.titulo}
                   </h3>
-                  <p className="text-sm mt-2 font-[Source Sans 3] leading-relaxed text-gray-600 transition-colors group-hover:text-white">
+                  <p className="text-xs sm:text-sm mt-2 font-[Barlow] leading-relaxed text-gray-600 transition-colors group-hover:text-white">
                     {noticia.descripcion}
                   </p>
                   <a
