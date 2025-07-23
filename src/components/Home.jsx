@@ -19,24 +19,29 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/hospitalarios.jpg",
+      src: "/img/Carrusel/Portada-Hospitalario.webp",
       label: "Proyectos Clínicos Hospitalarios",
-      link: "/productos/proyectos_clinicos_hospitalarios",
+      link: "producto/clinicos-hospitalarios",
     },
     {
-      src: "/img/Carrusel/Puertas_HPL.webp",
+      src: "/img/Carrusel/Portada-Puertas.webp",
       label: "Puertas HPL y Marcos Telescópicos",
       link: "/productos/puertas_hpl_marcos_telescopicos",
     },
     {
-      src: "/img/Carrusel/reunion.webp",
+      src: "/img/Carrusel/Portada-Interiorismo.webp",
       label: "Proyectos Int. Corporativos",
       link: "/productos/proyectos_int_corporativos",
     },
     {
-      src: "/images/reunion.webp",
+      src: "/img/Carrusel/Portada-integrales.webp",
       label: "Soluciones Integrales",
       link: "/productos/soluciones_integrales",
+    },
+    {
+      src: "/img/Carrusel/Portada-Residencial.webp",
+      label: "Residencial y Hotelero",
+      link: "/productos/residensial_hotelero",
     },
   ];
 
@@ -46,7 +51,7 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden rounded-xl"
+            className="relative h-[500px] sm:h-[00px] md:h-[700px] overflow-hidden rounded-xl"
           >
             <Link to={slide.link}>
               <img

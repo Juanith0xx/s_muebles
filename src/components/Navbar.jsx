@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  X,
+  BookOpen,
+  Package,
+  Building2,
+  Newspaper,
+  Phone,
+  Users,
+} from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const closeMenu = () => setMenuOpen(false);
+  const [activeSection, setActiveSection] = useState(null);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
@@ -16,6 +25,7 @@ const Navbar = () => {
   const menus = [
     {
       label: "Catálogo",
+      icon: <BookOpen size={32} />,
       items: [
         ["/catalogo/hpl", "Placas y Muebles Fenólicos HPL"],
         ["/catalogo/krion", "KRION"],
@@ -27,6 +37,7 @@ const Navbar = () => {
     },
     {
       label: "Productos",
+      icon: <Package size={32} />,
       items: [
         ["/producto/clinicos-hospitalarios", "Clinicos-Hospitalarios"],
         ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
@@ -37,18 +48,21 @@ const Navbar = () => {
     },
     {
       label: "Proyectos",
+      icon: <Building2 size={32} />,
       items: [
-        ["https://www.linkedin.com/company/sistemamuebles/", "Proyectos Emblematicos"],
+        ["https://www.linkedin.com/company/sistemamuebles/", "Proyectos Emblemáticos", true],
       ],
     },
     {
       label: "Blog",
+      icon: <Newspaper size={32} />,
       items: [
         ["https://www.linkedin.com/company/sistemamuebles/posts/", "Artículos Técnicos", true],
       ],
     },
     {
       label: "Contacto",
+      icon: <Phone size={32} />,
       items: [
         ["/contacto/contact", "Formulario de Contacto"],
         ["https://wa.me/56912345678", "Whatsapp", true],
@@ -57,6 +71,7 @@ const Navbar = () => {
     },
     {
       label: "Sobre Nosotros",
+      icon: <Users size={32} />,
       items: [
         ["/nosotros/equipo", "Equipo"],
         ["/nosotros/fabrica", "Fábrica Propia"],
@@ -65,17 +80,17 @@ const Navbar = () => {
     },
   ];
 
-  // Extraemos el menú "Catálogo"
-  const catalogoMenu = menus.find(menu => menu.label === "Catálogo");
+  const handleSectionClick = (label) => {
+    setActiveSection(label === activeSection ? null : label);
+  };
 
-  // Menús sin "Catálogo"
+  const catalogoMenu = menus.find(menu => menu.label === "Catálogo");
   const otherMenus = menus.filter(menu => menu.label !== "Catálogo");
 
   return (
     <>
-      {/* Navbar superior */}
+      {/* Navbar escritorio */}
       <nav className="bg-white p-4 text-gray-600 flex justify-between items-center w-full fixed top-0 left-0 z-50 shadow-md">
-        {/* Logo + Catálogo */}
         <div className="flex items-center gap-8">
           <RouterLink to="/">
             <img
@@ -85,29 +100,20 @@ const Navbar = () => {
             />
           </RouterLink>
 
-          {/* Catálogo menu desktop */}
           <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
             <li className="relative group" key={catalogoMenu.label}>
-              <span className="cursor-pointer hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-800 hover:after:w-full pr-4">
+              <span className="cursor-pointer hover:text-xl font-semibold pr-4">
                 {catalogoMenu.label} <span className="ml-1">▾</span>
               </span>
-              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-500 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
                 {catalogoMenu.items.map(([href, name, external]) => (
                   <li key={name}>
                     {external ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
-                      >
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
                         {name}
                       </a>
                     ) : (
-                      <RouterLink
-                        to={href}
-                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
-                      >
+                      <RouterLink to={href} className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
                         {name}
                       </RouterLink>
                     )}
@@ -118,30 +124,21 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Otros menús desktop */}
         <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
           {otherMenus.map(({ label, items }) => (
             <li className="relative group" key={label}>
-              <span className="cursor-pointer hover:text-xl font-semibold after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[3px] after:bg-[#142063] after:transition-all after:duration-800 hover:after:w-full pr-4">
+              <span className="cursor-pointer hover:text-xl font-semibold pr-4">
                 {label} <span className="ml-1">▾</span>
               </span>
-              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 translate-y-[-10px] transition-all duration-500 ease-out bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
                 {items.map(([href, name, external]) => (
                   <li key={name}>
                     {external ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
-                      >
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
                         {name}
                       </a>
                     ) : (
-                      <RouterLink
-                        to={href}
-                        className="block px-4 py-2 rounded-md hover:bg-[#142063] hover:text-white hover:font-semibold font-[Barlow]"
-                      >
+                      <RouterLink to={href} className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
                         {name}
                       </RouterLink>
                     )}
@@ -152,7 +149,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Botón Menú Móvil */}
+        {/* Botón móvil */}
         <div className="md:hidden px-2">
           <button onClick={() => setMenuOpen(true)}>
             <Menu size={26} />
@@ -160,77 +157,87 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Sidebar móvil con animaciones y scroll */}
-      <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-[#970C10] z-50 shadow-lg transform transition-all duration-500 ease-in-out ${
-          menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } overflow-y-auto`}
-      >
-        <div className="flex justify-between items-center p-4 border-b text-white">
-          <span className="text-lg font-semibold font-[Poppins] animate-slide-in-right">
-            Menú
-          </span>
-          <button onClick={closeMenu}>
-            <X size={24} />
-          </button>
-        </div>
+      {/* Menú móvil visual con animación */}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/90 z-50 overflow-y-auto px-4 pt-20 pb-10 fade-slide-in">
+          <div className="flex justify-end mb-4">
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                setActiveSection(null);
+              }}
+              className="text-white"
+            >
+              <X size={28} />
+            </button>
+          </div>
 
-        <div className="p-4 space-y-6">
-          {menus.map(({ label, items }, index) => (
-            <div key={label} className="animate-slide-in-right">
-              <p className="text-sm font-bold text-white mb-1">{label}</p>
-              <ul className="space-y-2 ml-2 font-[Barlow] animate-slide-in-left">
-                {items.map(([href, name, external]) => (
-                  <li key={name}>
-                    {external ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={closeMenu}
-                        className="text-sm text-white hover:underline"
-                      >
-                        {name}
-                      </a>
-                    ) : (
-                      <RouterLink
-                        to={href}
-                        onClick={closeMenu}
-                        className="text-sm text-white hover:underline"
-                      >
-                        {name}
-                      </RouterLink>
-                    )}
-                  </li>
-                ))}
+          <div className="grid grid-cols-2 gap-4 text-white">
+            {menus.map(({ label, icon }) => (
+              <button
+                key={label}
+                onClick={() => handleSectionClick(label)}
+                className={`flex flex-col items-center p-4 rounded-xl bg-[#142063] hover:bg-[#1d2b81] transition ${
+                  activeSection === label ? "ring-2 ring-white" : ""
+                }`}
+              >
+                {icon}
+                <span className="mt-2 text-sm">{label}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Submenú dinámico con animación */}
+          {activeSection && (
+            <div className="mt-6 fade-slide-in">
+              <ul className="space-y-2 text-white font-[Barlow]">
+                {menus
+                  .find(menu => menu.label === activeSection)
+                  .items.map(([href, name, external]) => (
+                    <li key={name}>
+                      {external ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMenuOpen(false)}
+                          className="block px-2 py-1 hover:underline"
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        <RouterLink
+                          to={href}
+                          onClick={() => setMenuOpen(false)}
+                          className="block px-2 py-1 hover:underline"
+                        >
+                          {name}
+                        </RouterLink>
+                      )}
+                    </li>
+                  ))}
               </ul>
-              {index < menus.length - 1 && (
-                <hr className="my-4 border-t border-white" />
-              )}
             </div>
-          ))}
+          )}
         </div>
-      </div>
+      )}
 
-      {/* Tailwind animations */}
+      {/* Animaciones */}
       <style>
         {`
-          @keyframes slide-in-right {
-            0% { transform: translateX(100%); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
+          @keyframes fadeSlideIn {
+            0% {
+              opacity: 0;
+              transform: translateX(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateX(0);
+            }
           }
 
-          @keyframes slide-in-left {
-            0% { transform: translateX(-20px); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-          }
-
-          .animate-slide-in-right {
-            animation: slide-in-right 0.5s ease-out forwards;
-          }
-
-          .animate-slide-in-left {
-            animation: slide-in-left 0.5s ease-out forwards;
+          .fade-slide-in {
+            animation: fadeSlideIn 0.5s ease-out forwards;
           }
         `}
       </style>
