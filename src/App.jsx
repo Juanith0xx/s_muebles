@@ -15,6 +15,7 @@ import PHospitalarios from './pages/PHospitalarios';
 import PuertasHPL from './pages/PuertasHPL';
 import PCorporativos from './pages/PCorporativos';
 import ContactForm from './pages/ContactForm';
+import Nosotros from './pages/Nosotros';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -59,7 +60,9 @@ function App() {
         <Route path="/productos/proyectos_clinicos_hospitalarios" element={<PHospitalarios />} />
         <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
         <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
-         <Route path="/contacto/contact" element={<ContactForm />} />
+        <Route path="/contacto/contact" element={<ContactForm />} />
+        <Route path="/nosotros/equipo" element={<Nosotros />} />
+
 
           
         </Routes>

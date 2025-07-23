@@ -26,18 +26,19 @@ const Navbar = () => {
       ],
     },
     {
-      label: "Servicios",
+      label: "Productos",
       items: [
-        ["/servicios/hospitales", "Soluciones para Hospitales"],
-        ["/servicios/clinicas", "Clínicas y Laboratorios"],
-        ["/servicios/corporativos", "Espacios Corporativos"],
+        ["/producto/hospitalario", "Hospitales"],
+        ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos"],
+        ["/producto/interiorismo", "Interiorismo"],
+        ["/productos/integrales", "integrales"],
+        ["/productos/residenciales_hoteles", "Residenciales y Hoteles"],
       ],
     },
     {
       label: "Proyectos",
       items: [
-        ["/proyectos/galeria", "Galería de Proyectos"],
-        ["/proyectos/exitos", "Casos de Éxito"],
+        ["/proyectos/emblematicos", "Proyectos Emblematicos"],
       ],
     },
     {
@@ -163,7 +164,7 @@ const Navbar = () => {
 
       {/* Sidebar móvil con animaciones y scroll */}
       <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-[#142063] z-50 shadow-lg transform transition-all duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-64 bg-[#970C10] z-50 shadow-lg transform transition-all duration-500 ease-in-out ${
           menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         } overflow-y-auto`}
       >

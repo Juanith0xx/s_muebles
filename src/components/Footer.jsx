@@ -11,12 +11,12 @@ import { Link as ScrollLink } from "react-scroll";
 const Footer = () => {
   return (
     <footer className="bg-gray-600 text-white py-12 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-10">
         {/* Logo y descripción */}
         <div className="text-center sm:text-left text-sm">
           <h1 className="!text-3xl font-bold font-[Poppins] mb-2">Sistema Muebles</h1>
           <p className="text-white/90 leading-relaxed font-[Barlow]">
-            SolucionesConstructivas Inteligentes.
+            Soluciones Constructivas Inteligentes.
           </p>
         </div>
 

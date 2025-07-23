@@ -54,7 +54,6 @@ const Home = () => {
                 alt={`Slide ${index + 1}`}
                 className="w-full h-full object-cover object-center transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-black/30 z-10" />
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 px-4">
                 <div className="flex items-center justify-center gap-2 sm:gap-3 bg-[#970C10] hover:bg-red-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full font-semibold text-xs sm:text-sm md:text-base transition duration-300 shadow-lg border border-white max-w-xs mx-auto">
                   <span className="whitespace-pre-line leading-tight text-center">

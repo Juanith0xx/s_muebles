@@ -26,7 +26,7 @@ const ClientesEmblematicos = () => {
         settings: {
           slidesToShow: 2,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "10px",
         },
       },
     ],
