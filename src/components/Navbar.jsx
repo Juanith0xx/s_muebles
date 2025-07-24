@@ -24,15 +24,10 @@ const Navbar = () => {
 
   const menus = [
     {
-      label: "Catálogo",
+      label: "Catálogos",
       icon: <BookOpen size={32} />,
       items: [
-        ["/catalogo/hpl", "Placas y Muebles Fenólicos HPL"],
-        ["/catalogo/krion", "KRION"],
-        ["/catalogo/marcos", "Marcos Telescópicos"],
-        ["/catalogo/puertas", "Puertas"],
-        ["/catalogo/cuarzo", "Superficies de Cuarzo"],
-        ["/catalogo/cortinas", "Cortinas Roller"],
+        ["/catalogo/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
       ],
     },
     {
@@ -50,14 +45,22 @@ const Navbar = () => {
       label: "Proyectos",
       icon: <Building2 size={32} />,
       items: [
-        ["https://www.linkedin.com/company/sistemamuebles/", "Proyectos Emblemáticos", true],
+        [
+          "https://www.linkedin.com/company/sistemamuebles/",
+          "Proyectos Emblemáticos",
+          true,
+        ],
       ],
     },
     {
       label: "Blog",
       icon: <Newspaper size={32} />,
       items: [
-        ["https://www.linkedin.com/company/sistemamuebles/posts/", "Artículos Técnicos", true],
+        [
+          "https://www.linkedin.com/company/sistemamuebles/posts/",
+          "Artículos Técnicos",
+          true,
+        ],
       ],
     },
     {
@@ -66,26 +69,30 @@ const Navbar = () => {
       items: [
         ["/contacto/contact", "Formulario de Contacto"],
         ["https://wa.me/56912345678", "Whatsapp", true],
-        ["https://www.linkedin.com/company/sistemamuebles", "LinkedIn", true],
+        [
+          "https://www.linkedin.com/company/sistemamuebles",
+          "LinkedIn",
+          true,
+        ],
       ],
     },
     {
       label: "Sobre Nosotros",
       icon: <Users size={32} />,
-      items: [
-        ["/nosotros/equipo", "Equipo"],
-        ["/nosotros/fabrica", "Fábrica Propia"],
-        ["/nosotros/certificaciones", "Certificaciones"],
-      ],
+      href: "/nosotros",
     },
   ];
 
-  const handleSectionClick = (label) => {
-    setActiveSection(label === activeSection ? null : label);
+  const handleSectionClick = (menu) => {
+    if (menu.href) {
+      setMenuOpen(false);
+    } else {
+      setActiveSection(menu.label === activeSection ? null : menu.label);
+    }
   };
 
-  const catalogoMenu = menus.find(menu => menu.label === "Catálogo");
-  const otherMenus = menus.filter(menu => menu.label !== "Catálogo");
+  const catalogoMenu = menus.find((menu) => menu.label === "Catálogos");
+  const otherMenus = menus.filter((menu) => menu.label !== "Catálogos");
 
   return (
     <>
@@ -109,11 +116,19 @@ const Navbar = () => {
                 {catalogoMenu.items.map(([href, name, external]) => (
                   <li key={name}>
                     {external ? (
-                      <a href={href} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
+                      <a
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-2 hover:bg-[#142063] hover:text-white"
+                      >
                         {name}
                       </a>
                     ) : (
-                      <RouterLink to={href} className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
+                      <RouterLink
+                        to={href}
+                        className="block px-4 py-2 hover:bg-[#142063] hover:text-white hover:text-base hover:rounded-md transition-all duration-200"
+                      >
                         {name}
                       </RouterLink>
                     )}
@@ -125,26 +140,45 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden md:flex gap-6 text-lg font-[Poppins]">
-          {otherMenus.map(({ label, items }) => (
-            <li className="relative group" key={label}>
-              <span className="cursor-pointer hover:text-xl font-semibold pr-4">
-                {label} <span className="ml-1">▾</span>
-              </span>
-              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
-                {items.map(([href, name, external]) => (
-                  <li key={name}>
-                    {external ? (
-                      <a href={href} target="_blank" rel="noopener noreferrer" className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
-                        {name}
-                      </a>
-                    ) : (
-                      <RouterLink to={href} className="block px-4 py-2 hover:bg-[#142063] hover:text-white">
-                        {name}
-                      </RouterLink>
-                    )}
-                  </li>
-                ))}
-              </ul>
+          {otherMenus.map((menu) => (
+            <li className="relative group" key={menu.label}>
+              {menu.href ? (
+                <RouterLink
+                  to={menu.href}
+                  className="hover:text-xl font-semibold pr-4"
+                >
+                  {menu.label}
+                </RouterLink>
+              ) : (
+                <>
+                  <span className="cursor-pointer hover:text-xl font-semibold pr-4">
+                    {menu.label} <span className="ml-1">▾</span>
+                  </span>
+                  <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+                    {menu.items.map(([href, name, external]) => (
+                      <li key={name}>
+                        {external ? (
+                          <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 hover:bg-[#142063] hover:text-white hover:text-base hover:rounded-md transition-all duration-200"
+                          >
+                            {name}
+                          </a>
+                        ) : (
+                          <RouterLink
+                            to={href}
+                            className="block px-4 py-2 hover:bg-[#142063] hover:text-white hover:text-base hover:rounded-md transition-all duration-200"
+                          >
+                            {name}
+                          </RouterLink>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </li>
           ))}
         </ul>
@@ -159,7 +193,7 @@ const Navbar = () => {
 
       {/* Menú móvil visual con animación */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/90 z-50 overflow-y-auto px-4 pt-20 pb-10 fade-slide-in">
+        <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/70 z-50 overflow-y-auto px-4 pt-20 pb-10 fade-slide-in">
           <div className="flex justify-end mb-4">
             <button
               onClick={() => {
@@ -173,17 +207,29 @@ const Navbar = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-4 text-white">
-            {menus.map(({ label, icon }) => (
-              <button
-                key={label}
-                onClick={() => handleSectionClick(label)}
-                className={`flex flex-col items-center p-4 rounded-xl bg-[#142063] hover:bg-[#1d2b81] transition ${
-                  activeSection === label ? "ring-2 ring-white" : ""
-                }`}
-              >
-                {icon}
-                <span className="mt-2 text-sm">{label}</span>
-              </button>
+            {menus.map((menu) => (
+              <div key={menu.label}>
+                {menu.href ? (
+                  <RouterLink
+                    to={menu.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex flex-col items-center p-4 rounded-xl bg-blue-800 hover:bg-red-500 transition"
+                  >
+                    {menu.icon}
+                    <span className="mt-2 text-sm">{menu.label}</span>
+                  </RouterLink>
+                ) : (
+                  <button
+                    onClick={() => handleSectionClick(menu)}
+                    className={`flex flex-col items-center p-4 rounded-xl bg-blue-800 hover:bg-red-500 transition ${
+                      activeSection === menu.label ? "ring-2 ring-white" : ""
+                    }`}
+                  >
+                    {menu.icon}
+                    <span className="mt-2 text-sm">{menu.label}</span>
+                  </button>
+                )}
+              </div>
             ))}
           </div>
 
@@ -192,8 +238,8 @@ const Navbar = () => {
             <div className="mt-6 fade-slide-in">
               <ul className="space-y-2 text-white font-[Barlow]">
                 {menus
-                  .find(menu => menu.label === activeSection)
-                  .items.map(([href, name, external]) => (
+                  .find((menu) => menu.label === activeSection)
+                  ?.items.map(([href, name, external]) => (
                     <li key={name}>
                       {external ? (
                         <a
@@ -201,7 +247,7 @@ const Navbar = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setMenuOpen(false)}
-                          className="block px-2 py-1 hover:underline"
+                          className="block px-2 py-1 hover:underline font-semibold"
                         >
                           {name}
                         </a>
@@ -209,7 +255,7 @@ const Navbar = () => {
                         <RouterLink
                           to={href}
                           onClick={() => setMenuOpen(false)}
-                          className="block px-2 py-1 hover:underline"
+                          className="block px-2 py-1 hover:underline font-semibold"
                         >
                           {name}
                         </RouterLink>

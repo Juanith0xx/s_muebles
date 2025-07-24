@@ -20,7 +20,7 @@ const Nosotros = () => {
           <p className="text-gray-600">Ser referentes en innovación y excelencia en mobiliario institucional y clínico en toda Latinoamérica.</p>
         </div>
         <div>
-          <h3 className="text-xl font-semibold mb-2">Valores</h3>
+          <h3 className="text-xl font-semibold mb-2">Nuestros Valores</h3>
           <ul className="text-gray-600 list-disc list-inside">
             <li>Compromiso</li>
             <li>Innovación</li>
@@ -32,9 +32,19 @@ const Nosotros = () => {
 
       {/* 3. Historia o Trayectoria */}
       <section>
-        <h2 className="text-2xl font-bold mb-4">Nuestra Historia</h2>
+        <h2 className="text-2xl font-bold mb-4">Transformamos tu visión en un proyecto impecable.</h2>
         <p className="text-gray-600 leading-relaxed">
-          Desde nuestros inicios en 2010, hemos trabajado junto a hospitales, clínicas, laboratorios y empresas para transformar espacios con soluciones a medida. Contamos con una planta propia de fabricación, tecnologías de vanguardia y un equipo humano altamente capacitado.
+          Somos socios estratégicos de arquitectos, constructoras, hoteles, clínicas, hospitales e inmobiliarias, convirtiendo diseños desafiantes en SOLUCIONES CONSTRUCTIVAS INTELIGENTES, precisas y duraderas.
+La ingeniería que aplicamos en nuestra fábrica nos da la experiencia real para un control total de la calidad y el cumplimiento que necesitan nuestros clientes en plazos críticos.
+Te pueden ofrecer materiales “similares”, pero si sabes de mobiliario, puertas, superficies y marcos telescópicos, la decisión de materialidad correcta y sus prestaciones son clave. Nuestra propuesta se basa en:
+•	Compromiso con la Excelencia: “Nuestra palabra vale"– En 23 años hemos construido relaciones que perduran porque cumplimos rigurosamente plazos y especificaciones.
+•	Fortaleza Constructiva: Cada proyecto complejo es una oportunidad para ofrecer soluciones más inteligentes.
+•	Colaboración: El trabajo en equipo de nuestros ingenieros y diseñadores, junto con el requerimiento de los clientes, permite siempre encontrar una mejor solución técnica.
+El desarrollo de soluciones a la medida facilita realizar ingeniería de precisión en el diseño y fabricación con exactitud milimétrica, garantizando encajes perfectos y una funcionalidad, incluso en proyectos de alta complejidad como quirófanos inteligentes y laboratorios.
+Los materiales que usamos resisten el tiempo y evolucionan con las necesidades de los espacios: buscamos lo mejor del mercado: Placas Fenólicas HPL (antibacteriales, resistentes a la humedad y al fuego), Krion® (superficie sólida de alto rendimiento e higiene), puertas fenólicas, marcos telescópicos, superficies de cuarzo y cortinas roller de bajo mantenimiento que se traducen en ahorros significativos a largo plazo.
+Hemos entregado soluciones de alto impacto en proyectos críticos, como el FALP (Fundación Arturo López Pérez) y el Servicio Médico Legal (SML), donde la precisión y el cumplimiento normativo no son negociables. La confianza en nuestro trabajo es nuestro mayor logro y la mejor prueba de nuestro compromiso.
+Estamos aquí para transformar tus espacios donde las personas sanan, trabajan y viven, creando ambientes que resisten el tiempo y se adaptan a los cambios. ¿Tienes un proyecto desafiante en mente? Conversemos y descubramos el valor de una inversión inteligente.
+ 
         </p>
       </section>
 

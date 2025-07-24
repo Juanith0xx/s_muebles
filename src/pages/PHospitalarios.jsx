@@ -12,7 +12,7 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
   {
-    titulo: "Muebles Área Limpia y Sucia",
+    titulo: "Muebles Área Limpia y Área Sucia",
     descripcion: `Mobiliario fabricado con estructura de MDF laminado en ambas caras (HPL 0.8 mm), opción de cubiertas en Krion de 12 mm, zócalo sanitario y bordes anti rebalse. También ofrecemos cubiertas y receptáculos en acero inoxidable con borde sanitario.`,
     imagenes: [
       "/img/hospitalarios/IMG_1381.JPG",

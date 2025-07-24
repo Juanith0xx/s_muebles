@@ -61,7 +61,7 @@ function App() {
         <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
         <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
         <Route path="/contacto/contact" element={<ContactForm />} />
-        <Route path="/nosotros/equipo" element={<Nosotros />} />
+        <Route path="/nosotros/" element={<Nosotros />} />
 
 
           
