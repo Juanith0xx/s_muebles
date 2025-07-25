@@ -19,19 +19,19 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/Portada-Hospitalario.webp",
+      src: "/img/Carrusel/Enfermeria_FALP.webp",
       label: "Proyectos Clínicos Hospitalarios",
       link: "producto/clinicos-hospitalarios",
     },
     {
-      src: "/img/Carrusel/Portada-Puertas.webp",
+      src: "/img/Carrusel/Puertas_HPL.webp",
       label: "Puertas HPL y Marcos Telescópicos",
       link: "/productos/puertas_hpl_marcos_telescopicos",
     },
     {
-      src: "/img/Carrusel/Portada-Interiorismo.webp",
+      src: "/img/Carrusel/Recepcion_Frusan.webp",
       label: "Proyectos Int. Corporativos",
-      link: "/productos/proyectos_int_corporativos",
+      link: "/producto/interiorismo",
     },
     {
       src: "/img/Carrusel/Portada-integrales.webp",
@@ -51,13 +51,15 @@ const Home = () => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative h-[500px] sm:h-[00px] md:h-[700px] overflow-hidden rounded-xl"
+            className="relative h-[500px] sm:h-[500px] md:h-[700px] overflow-hidden rounded-xl"
           >
             <Link to={slide.link}>
               <img
                 src={slide.src}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover object-center transition-all duration-700"
+                 className={`w-full h-full object-cover transition-all duration-700 ${
+    slide.label.includes("Int. Corporativos") ? "object-center" : "object-center"
+  }`}
               />
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 px-4">
                 <div className="flex items-center justify-center gap-2 sm:gap-3 bg-[#970C10] hover:bg-red-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-full font-semibold text-xs sm:text-sm md:text-base transition duration-300 shadow-lg border border-white max-w-xs mx-auto">

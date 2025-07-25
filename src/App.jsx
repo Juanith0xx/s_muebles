@@ -14,9 +14,9 @@ import WhatsAppBubble from './components/WhatsAppBubble';
 import PHospitalarios from './pages/PHospitalarios';
 import Interiorismo from './pages/Interiorismo';
 import PuertasHPL from './pages/PuertasHPL';
-import PCorporativos from './pages/PCorporativos';
 import ContactForm from './pages/ContactForm';
 import Nosotros from './pages/Nosotros';
+import SIntegrales from './pages/SIntegrales';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -61,11 +61,10 @@ function App() {
         <Route path="/producto/clinicos-hospitalarios" element={<PHospitalarios />} />
         <Route path="/producto/interiorismo" element={<Interiorismo />} />
         <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
-        <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
-
-
+        <Route path="/producto/interiorismo" element={<Interiorismo />} />
         <Route path="/contacto/contact" element={<ContactForm />} />
         <Route path="/nosotros/" element={<Nosotros />} />
+        <Route path="/productos/soluciones_integrales" element={<SIntegrales />} />
 
 
 

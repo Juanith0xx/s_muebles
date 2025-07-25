@@ -37,7 +37,7 @@ const Navbar = () => {
         ["/producto/clinicos-hospitalarios", "Clinicos-Hospitalarios"],
         ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
         ["/producto/interiorismo", "Interiorismo Corporativo"],
-        ["/productos/muebles_integrales", "Muebles Integrales"],
+        ["/productos/soluciones_integrales", "Muebles Integrales"],
         ["/productos/residencial_hoteles", "Residencial y Hoteles"],
       ],
     },
@@ -206,32 +206,37 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 text-white">
-            {menus.map((menu) => (
-              <div key={menu.label}>
-                {menu.href ? (
-                  <RouterLink
-                    to={menu.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="flex flex-col items-center p-4 rounded-xl bg-blue-800 hover:bg-red-500 transition"
-                  >
-                    {menu.icon}
-                    <span className="mt-2 text-sm">{menu.label}</span>
-                  </RouterLink>
-                ) : (
-                  <button
-                    onClick={() => handleSectionClick(menu)}
-                    className={`flex flex-col items-center p-4 rounded-xl bg-blue-800 hover:bg-red-500 transition ${
-                      activeSection === menu.label ? "ring-2 ring-white" : ""
-                    }`}
-                  >
-                    {menu.icon}
-                    <span className="mt-2 text-sm">{menu.label}</span>
-                  </button>
-                )}
-              </div>
-            ))}
-          </div>
+         <div className="grid grid-cols-2 gap-4 text-white">
+  {menus.map((menu) => {
+    const commonClasses =
+      "flex flex-col items-center justify-center gap-2 w-full h-28 rounded-xl bg-blue-800 hover:bg-red-500 transition text-sm font-medium";
+
+    return (
+      <div key={menu.label}>
+        {menu.href ? (
+          <RouterLink
+            to={menu.href}
+            onClick={() => setMenuOpen(false)}
+            className={commonClasses}
+          >
+            {menu.icon}
+            <span>{menu.label}</span>
+          </RouterLink>
+        ) : (
+          <button
+            onClick={() => handleSectionClick(menu)}
+            className={`${commonClasses} ${
+              activeSection === menu.label ? "ring-2 ring-white" : ""
+            }`}
+          >
+            {menu.icon}
+            <span>{menu.label}</span>
+          </button>
+        )}
+      </div>
+    );
+  })}
+</div>
 
           {/* Submenú dinámico con animación */}
           {activeSection && (

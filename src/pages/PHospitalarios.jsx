@@ -266,7 +266,7 @@ const PHospitalarios = () => {
           Cuéntanos tus requerimientos y recibe una propuesta personalizada sin costo.
         </p>
         <a
-          href="/contacto"
+          href="/contacto/contact"
           className="inline-block bg-sky-700 text-white font-semibold px-6 py-3 rounded-full  transition-colors"
         >
           Solicitar Cotización

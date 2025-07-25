@@ -55,26 +55,57 @@ const secciones = [
     titulo: "Proyectos Especiales",
     descripcion: `Nuestro departamento de Ingeniería da soluciones constructivas inteligentes para todos los encargos de mobiliario en los mas diversos materiales para las áreas de Hotelería, Oficinas Corporativas, Clínico Hospitalarias y Residenciales.`,
     imagenes: [
-      { src: "/img/Palillajes/Palillaje_Carey.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Consulta_medica_Bupa_Plaza_Norte.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Consulta_medica_Bupa.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Consulta_medica_Bupa2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio_Bio.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio_Bio2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio_Bio3.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio_Bio4.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio _Bio5.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Laboratorio_Bio_Bio6.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/Palillajes/Mueble_apoyo_enfermeria_Bupa.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Box_atencion_VidaIntegra.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Cajas_Movistar.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Estanteria_Gerencia_forus_14-1.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Super_Salud-23.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Area_comun_Salon_Pacific.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Area_descanso_Cinepolis.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/barra_salon_Pacific.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Booth_Estante_Palillaje_forus_07.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Box_atencion_Vidaintegra2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Cajas_Movistar3.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Estanteria_Gerencia_forus_13-1.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Exhibidor_Movistar.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Exhibidor2_Movistar.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/mesa_ameba_Salon_Pacific.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/meson_alimentos_Pacific.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Meson_atencion_Cinepolis2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Mueble_Anfitrion_Movistar.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Super_Salud-12.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Super_Salud-15.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Super_Salud-41.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Totem_Cinepolis.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Jardinera_Krion_Madera_BCI.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Pespecial/Mueble_anfitrion_BCI.webp", descripcion: "mueble de cliente descripcion" },
     ],
   },
   {
     titulo: "Recepciones",
     descripcion: `Nuestra empresa colabora con arquitectos y diseñadores para dar la identidad que cada empresa requiere plasmar a través del mobiliario. En este esquema, proponemos soluciones técnicas que abordan el equipamiento integral de espacios de trabajo.`,
      imagenes: [
-      { src: "/img/lockers/Lockers_ACHS_Los_Andes.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/lockers/Estantes_Falp_2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/lockers/Estantes_Falp.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Banco_de_Chile.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Inv_Norte_Sur.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_movix_6.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Backer_Mackenzie.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Bupa.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Carey.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_CHEP.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Johnson.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason_Detalle.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_McCann-15A.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/recepción_Pacific.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepción_Pacific_detalle.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_penta_01-1.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Penta_Financiero.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Super_Salud-23.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Super_Salud-27.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Vantrust.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_Vantrust2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_We_Work.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Recepcion/Recepcion_We_Work2.webp", descripcion: "mueble de cliente descripcion" },
      ], 
   },
 ];
@@ -129,15 +160,15 @@ const Interiorismo = () => {
         custom={1}
         variants={fadeIn}
       >
-        Soluciones a medida para hospitales, clínicas y laboratorios. Diseñamos
-        muebles resistentes, seguros y sanitariamente óptimos con materiales como
-        Krion, MDF laminado y acero inoxidable.
+        Diseño de espacios corporativos que inspiran productividad y reflejan identidad de marca. Creamos soluciones personalizadas de interiorismo corporativo utilizando materiales de alta calidad como melamina, MDF, vidrio templado y acero, garantizando funcionalidad, elegancia y durabilidad en oficinas, salas de reuniones y espacios comunes.
       </motion.p>
 
       {secciones.map((seccion, index) => {
         const mostrarBotonVerMas =
           seccion.titulo === "Mesas de Reunión" ||
-          seccion.titulo === "Palillajes y Revestimientos";
+          seccion.titulo === "Palillajes y Revestimientos" ||
+          seccion.titulo === "Proyectos Especiales" || 
+          seccion.titulo === "Recepciones";
 
         const imagenesVisibles = mostrarBotonVerMas
           ? seccion.imagenes.slice(0, 4)
@@ -276,13 +307,13 @@ const Interiorismo = () => {
         custom={secciones.length + 1}
       >
         <h3 className="text-2xl sm:text-3xl font-bold mb-3">
-          ¿Tienes un proyecto clínico en mente?
+          ¿Tienes un proyecto de Interiorismo Corporativo en mente?
         </h3>
         <p className="text-base sm:text-lg mb-5">
           Cuéntanos tus requerimientos y recibe una propuesta personalizada sin costo.
         </p>
         <a
-          href="/contacto"
+          href="/contacto/contact"
           className="inline-block bg-sky-700 text-white font-semibold px-6 py-3 rounded-full  transition-colors"
         >
           Solicitar Cotización
