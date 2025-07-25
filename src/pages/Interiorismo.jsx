@@ -11,50 +11,66 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
   {
-    titulo: "Muebles Área Limpia y Área Sucia",
-    descripcion: `Mobiliario fabricado con estructura de MDF laminado en ambas caras (HPL 0.8 mm), opción de cubiertas en Krion de 12 mm, zócalo sanitario y bordes anti rebalse. También ofrecemos cubiertas y receptáculos en acero inoxidable con borde sanitario.`,
+    titulo: "Mesas de Reunión",
+    descripcion: `Mesas de Reunión enchapadas en HPL o en madera barnizadas con Poliuretano (PU) con opciones de base metálica o MDF enchapado y variadas alternativas para canalización eléctrica y de datos. Variedad de terminación en cantos (madera sólida, chaflán o canto recto bicapa.`,
     imagenes: [
-      { src: "/img/hospitalarios/Area_sucia_limpia_Bupa.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Bupa2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Bupa5.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Bupa6.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Bupa9.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia-limpia_Bupa7.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Clinica_Bio_Bio.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Clinica_Bio_Bio1.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Clinica_Bio_Bio2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/hospitalarios/Area_sucia_limpia_Clinica_Bio_Bio3.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_movix_8.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_coloso.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_FL_Smidth.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_Frusan.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_Magnus_Capital.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_McCann.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_movix_3.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_Nestle.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_nestle_18.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_Penta.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_PLink.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_PLink_2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_Plink_7.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunion_PLink3.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Interiorismo/Mesa_Reunon_Octogone.webp", descripcion: "mueble de cliente descripcion" },
     ],
   },
   {
-    titulo: "Estaciones de Enfermería",
-    descripcion: `Diseños estructurados con perfilería metálica electropintada o costillaje de terciado de 18 mm forrado en MDF. Frentes y cubiertas disponibles en HPL de 12 mm o Krion, ideales para zonas de alta exigencia sanitaria.`,
+    titulo: "Palillajes y Revestimientos",
+    descripcion: `Construidos en MDF revestidos en madera o HPL 0,8 mm en variadas especies y colores con elementos de fijación a la vista metálicos u ocultos mediante taquetes de madera en piso y cielo.`,
     imagenes: [
-      { src: "/img/enfermeria/Enfermeria_falp1.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/enfermeria/Enfermeria_falp2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/enfermeria/Enfermeria_postoperatorio_falp.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Carey.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Celosia_horizontar_Fernandez_Wood2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_CHEP_05.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Inv_Norte_Sur.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_CHEP_08.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Fernandez_Wood.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Inv_Norte_Sur.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Nestle.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Revestimiento_Acustico_ACHS.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Revestimiento_acustico_ACHS2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Revestimiento_Transoceanica.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Revestimiento_Transoceanica2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Revestimiento_Vantrust.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Carey2.webp", descripcion: "mueble de cliente descripcion" },
     ],
   },
   {
-    titulo: "Consultas, Box y Laboratorios",
-    descripcion: `Muebles de laboratorio con estructura metálica y cubiertas en Krion de 12 mm, con zócalo sanitario y anti rebalse. Escritorios médicos con faldón perforado, estructura metálica y cubiertas en MDF HPL 0.8 mm. Herrajes marca Hafele de alta calidad.`,
+    titulo: "Proyectos Especiales",
+    descripcion: `Nuestro departamento de Ingeniería da soluciones constructivas inteligentes para todos los encargos de mobiliario en los mas diversos materiales para las áreas de Hotelería, Oficinas Corporativas, Clínico Hospitalarias y Residenciales.`,
     imagenes: [
-      { src: "/img/laboratorio/Box_urgencia_Bupa.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Consulta_medica_Bupa_Plaza_Norte.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Consulta_medica_Bupa.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Consulta_medica_Bupa2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio_Bio.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio_Bio2.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio_Bio3.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio_Bio4.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio _Bio5.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Laboratorio_Bio_Bio6.webp", descripcion: "mueble de cliente descripcion" },
-      { src: "/img/laboratorio/Mueble_apoyo_enfermeria_Bupa.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Palillaje_Carey.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Consulta_medica_Bupa_Plaza_Norte.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Consulta_medica_Bupa.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Consulta_medica_Bupa2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio_Bio.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio_Bio2.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio_Bio3.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio_Bio4.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio _Bio5.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Laboratorio_Bio_Bio6.webp", descripcion: "mueble de cliente descripcion" },
+      { src: "/img/Palillajes/Mueble_apoyo_enfermeria_Bupa.webp", descripcion: "mueble de cliente descripcion" },
     ],
   },
   {
-    titulo: "Estantes y Lockers",
-    descripcion: `Fabricados en MDF laminado (HPL 0.8 mm) con interiores que incluyen barra de colgar, repisas para calzado, bisagras de cierre suave marca Hafele y opción de puertas vidriadas con marco de aluminio marca HBT.`,
+    titulo: "Recepciones",
+    descripcion: `Nuestra empresa colabora con arquitectos y diseñadores para dar la identidad que cada empresa requiere plasmar a través del mobiliario. En este esquema, proponemos soluciones técnicas que abordan el equipamiento integral de espacios de trabajo.`,
      imagenes: [
       { src: "/img/lockers/Lockers_ACHS_Los_Andes.webp", descripcion: "mueble de cliente descripcion" },
       { src: "/img/lockers/Estantes_Falp_2.webp", descripcion: "mueble de cliente descripcion" },
@@ -72,7 +88,7 @@ const fadeIn = {
   }),
 };
 
-const PHospitalarios = () => {
+const Interiorismo = () => {
   const galleryRef = useRef({});
 
   const handleVerMas = (titulo) => {
@@ -103,7 +119,7 @@ const PHospitalarios = () => {
         animate="visible"
         variants={fadeIn}
       >
-        Mobiliario Clínico Hospitalario a Medida
+        Interiorismo Corporativo
       </motion.h1>
 
       <motion.p
@@ -120,8 +136,8 @@ const PHospitalarios = () => {
 
       {secciones.map((seccion, index) => {
         const mostrarBotonVerMas =
-          seccion.titulo === "Muebles Área Limpia y Área Sucia" ||
-          seccion.titulo === "Consultas, Box y Laboratorios";
+          seccion.titulo === "Mesas de Reunión" ||
+          seccion.titulo === "Palillajes y Revestimientos";
 
         const imagenesVisibles = mostrarBotonVerMas
           ? seccion.imagenes.slice(0, 4)
@@ -276,4 +292,4 @@ const PHospitalarios = () => {
   );
 };
 
-export default PHospitalarios
+export default Interiorismo

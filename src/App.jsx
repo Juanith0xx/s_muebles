@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WhatsAppBubble from './components/WhatsAppBubble';
 import PHospitalarios from './pages/PHospitalarios';
+import Interiorismo from './pages/Interiorismo';
 import PuertasHPL from './pages/PuertasHPL';
 import PCorporativos from './pages/PCorporativos';
 import ContactForm from './pages/ContactForm';
@@ -58,10 +59,14 @@ function App() {
         
         /* Paginas de slider de home */
         <Route path="/producto/clinicos-hospitalarios" element={<PHospitalarios />} />
+        <Route path="/producto/interiorismo" element={<Interiorismo />} />
         <Route path="/productos/puertas_hpl_marcos_telescopicos" element={<PuertasHPL />} />
         <Route path="/productos/proyectos_int_corporativos" element={<PCorporativos/>} />
+
+
         <Route path="/contacto/contact" element={<ContactForm />} />
         <Route path="/nosotros/" element={<Nosotros />} />
+
 
 
           
