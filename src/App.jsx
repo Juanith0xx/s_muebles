@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from 'react-helmet-async'; // 👈 Import necesario
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -64,7 +64,9 @@ function App() {
         <Route path="/producto/interiorismo" element={<Interiorismo />} />
         <Route path="/contacto/contact" element={<ContactForm />} />
         <Route path="/nosotros/" element={<Nosotros />} />
-        <Route path="/productos/soluciones_integrales" element={<SIntegrales />} />
+        <Route path="/productos/soluciones_integrales" element={<SIntegrales />} /> 
+        <Route path="/producto/puertas_hpl_marcos" element={<PuertasHPL />} />
+
 
 
 
