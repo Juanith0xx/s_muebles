@@ -133,14 +133,14 @@ const Interiorismo = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
+        <title>Interiorismo Corporativo Personalizado | Sistema Muebles</title>
         <meta
           name="description"
-          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, lockers y más. Diseño funcional y sanitariamente eficiente."
+          content="Diseñamos espacios corporativos que reflejan identidad y fomentan productividad. Soluciones de interiorismo a medida con melamina, MDF, vidrio templado y acero para oficinas, salas de reuniones y áreas comunes."
         />
         <meta
           name="keywords"
-          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, lockers hospitalarios, krion, MDF laminado"
+          content="interiorismo corporativo, diseño de oficinas, espacios modernos, productividad, identidad de marca, salas de reuniones, melamina, vidrio templado, diseño funcional"
         />
       </Helmet>
 

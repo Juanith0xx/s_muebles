@@ -36,7 +36,7 @@ const fadeIn = {
   }),
 };
 
-const PuertasHPL = () => {
+const Residencial_Hoteles = () => {
   const galleryRef = useRef({});
 
   const handleVerMas = (titulo) => {
@@ -50,14 +50,14 @@ const PuertasHPL = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Puertas HPL y Marcos Telescópicos para Clínicas | Sistema Muebles</title>
+        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
         <meta
           name="description"
-          content="Fabricamos puertas HPL y marcos telescópicos para clínicas y hospitales. Diseños a medida, resistentes a la humedad y fáciles de sanitizar. Soluciones ideales para áreas limpias, laboratorios y recintos médicos."
+          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, lockers y más. Diseño funcional y sanitariamente eficiente."
         />
         <meta
           name="keywords"
-          content="puertas HPL, marcos telescópicos, mobiliario hospitalario, puertas para hospitales, puertas sanitarias, puertas resistentes a la humedad, puertas clínicas, áreas limpias, recintos médicos"
+          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, lockers hospitalarios, krion, MDF laminado"
         />
       </Helmet>
 
@@ -241,4 +241,4 @@ const PuertasHPL = () => {
   );
 };
 
-export default PuertasHPL
+export default Residencial_Hoteles

@@ -140,14 +140,14 @@ const SIntegrales = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
+        <title>Soluciones Integrales en Mobiliario para Oficinas, Clínicas y Espacios Comerciales | Sistema Muebles</title>
         <meta
           name="description"
-          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, lockers y más. Diseño funcional y sanitariamente eficiente."
+          content="Diseñamos, fabricamos e instalamos mobiliario personalizado con materiales de alta calidad. Optimizamos oficinas, clínicas y espacios comerciales con soluciones integrales que combinan funcionalidad, estética y durabilidad."
         />
         <meta
           name="keywords"
-          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, lockers hospitalarios, krion, MDF laminado"
+          content="mobiliario personalizado, soluciones integrales, diseño de oficinas, muebles clínicos, espacios comerciales, melamina, vidrio templado, acero, MDF, diseño funcional"
         />
       </Helmet>
 
