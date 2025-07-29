@@ -64,7 +64,6 @@ const AlianzasNoticias = () => {
 
   return (
     <section
-      id="nosotros"
       className="w-full px-4 sm:px-6 md:px-12 py-12 sm:py-16 bg-gray-600"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center lg:text-left">

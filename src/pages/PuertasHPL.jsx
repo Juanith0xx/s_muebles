@@ -11,7 +11,7 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
   {
-    titulo: "Puertas",
+    /*titulo: "Puertas",*/
     descripcion: `Marcos telescópicos metálicos con puertas fenólicas en 3 mm de espesor. 
 Este marco tiene la ventaja de absorber desaplomos en los rasgos de tabiques y muros, con tolerancias de hasta 3 cm. Asimismo, se adaptan a los espesores de tabiques y muros de 12 a 22 cm.
 .`,

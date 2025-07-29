@@ -20,11 +20,11 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Navegación */}
+        {/* Navegación 
         <div className="text-center sm:text-left font-[Poppins] text-sm">
           <h2 className="text-xl font-bold underline mb-3">Navegación</h2>
           <ul className="space-y-2">
-            {["home", "nosotros", "nuestros_clientes"].map((section) => (
+            {["Inicio", "nosotros"].map((section) => (
               <li key={section}>
                 <ScrollLink
                   to={section}
@@ -40,7 +40,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> 
 
         {/* Contacto */}
         <div className="text-center sm:text-left font-[Poppins] text-sm">

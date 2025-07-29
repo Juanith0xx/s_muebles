@@ -10,6 +10,34 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
+    {
+    titulo: "Recepciones",
+    descripcion: `Nuestra empresa colabora con arquitectos y diseñadores para dar la identidad que cada empresa requiere plasmar a través del mobiliario. En este esquema, proponemos soluciones técnicas que abordan el equipamiento integral de espacios de trabajo.`,
+     imagenes: [
+      { src: "/img/Recepcion/Recepcion_Banco_de_Chile.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Inv_Norte_Sur.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason2.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_movix_6.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Backer_Mackenzie.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Bupa.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Carey.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_CHEP.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Johnson.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason_Detalle.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_McCann-15A.webp", descripcion: "" },
+      { src: "/img/Recepcion/recepción_Pacific.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepción_Pacific_detalle.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_penta_01-1.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Penta_Financiero.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Super_Salud-23.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Super_Salud-27.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Vantrust.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Vantrust2.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_We_Work.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_We_Work2.webp", descripcion: "" },
+     ], 
+  },
   {
     titulo: "Mesas de Reunión",
     descripcion: `Mesas de Reunión enchapadas en HPL o en madera barnizadas con Poliuretano (PU) con opciones de base metálica o MDF enchapado y variadas alternativas para canalización eléctrica y de datos. Variedad de terminación en cantos (madera sólida, chaflán o canto recto bicapa.`,
@@ -80,34 +108,7 @@ const secciones = [
       { src: "/img/Pespecial/Mueble_anfitrion_BCI.webp", descripcion: "" },
     ],
   },
-  {
-    titulo: "Recepciones",
-    descripcion: `Nuestra empresa colabora con arquitectos y diseñadores para dar la identidad que cada empresa requiere plasmar a través del mobiliario. En este esquema, proponemos soluciones técnicas que abordan el equipamiento integral de espacios de trabajo.`,
-     imagenes: [
-      { src: "/img/Recepcion/Recepcion_Banco_de_Chile.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Inv_Norte_Sur.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Leg_Mason2.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_movix_6.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Backer_Mackenzie.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Bupa.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Carey.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_CHEP.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Johnson.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Leg_Mason.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Leg_Mason_Detalle.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_McCann-15A.webp", descripcion: "" },
-      { src: "/img/Recepcion/recepción_Pacific.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepción_Pacific_detalle.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_penta_01-1.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Penta_Financiero.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Super_Salud-23.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Super_Salud-27.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Vantrust.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Vantrust2.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_We_Work.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_We_Work2.webp", descripcion: "" },
-     ], 
-  },
+
 ];
 
 const fadeIn = {

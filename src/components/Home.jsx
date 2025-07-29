@@ -30,7 +30,7 @@ const Home = () => {
     },
     {
       src: "/img/Carrusel/Recepcion_Frusan.webp",
-      label: "Proyectos Int. Corporativos",
+      label: "Interiorismo Corporativo",
       link: "/producto/interiorismo",
     },
     {

@@ -37,8 +37,8 @@ const Navbar = () => {
         ["/producto/clinicos-hospitalarios", "Clinicos-Hospitalarios"],
         ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
         ["/producto/interiorismo", "Interiorismo Corporativo"],
-        ["/productos/soluciones_integrales", "Muebles Integrales"],
-        ["/productos/residencial_hoteles", "Residencial y Hoteles"],
+        ["/productos/soluciones_integrales", "Soluciones Integrales"],
+        ["/productos/residencial_hoteles", "Recidencial y Hotelero"],
       ],
     },
     {

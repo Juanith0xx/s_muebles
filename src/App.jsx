@@ -43,10 +43,10 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <div id="home">
+              <div id="Inicio">
                 <Home />
               </div>
-              <div id="alianzas">
+              <div>
                 <AlianzasNoticias />
               </div>
               <div>
