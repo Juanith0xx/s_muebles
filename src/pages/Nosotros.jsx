@@ -1,3 +1,7 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const Nosotros = () => {
   return (
     <div className="min-h-screen pt-24 px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto space-y-16 text-gray-800">
@@ -21,32 +25,94 @@ const Nosotros = () => {
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Nuestros Valores</h3>
-          <ul className="text-gray-600 list-disc list-inside">
-            <li>Compromiso</li>
-            <li>Innovación</li>
-            <li>Responsabilidad</li>
-            <li>Trabajo en equipo</li>
+          <ul className="text-gray-600 list-disc list-inside space-y-1">
+            <li className="leading-relaxed">Compromiso</li>
+            <li className="leading-relaxed">Innovación</li>
+            <li className="leading-relaxed">Responsabilidad</li>
+            <li className="leading-relaxed">Trabajo en equipo</li>
           </ul>
         </div>
       </section>
+
 
       {/* 3. Historia o Trayectoria */}
       <section>
         <h2 className="text-2xl font-bold mb-4">Transformamos tu visión en un proyecto impecable.</h2>
         <p className="text-gray-600 leading-relaxed">
-          Somos socios estratégicos de arquitectos, constructoras, hoteles, clínicas, hospitales e inmobiliarias, convirtiendo diseños desafiantes en SOLUCIONES CONSTRUCTIVAS INTELIGENTES, precisas y duraderas.
-La ingeniería que aplicamos en nuestra fábrica nos da la experiencia real para un control total de la calidad y el cumplimiento que necesitan nuestros clientes en plazos críticos.
-Te pueden ofrecer materiales “similares”, pero si sabes de mobiliario, puertas, superficies y marcos telescópicos, la decisión de materialidad correcta y sus prestaciones son clave. Nuestra propuesta se basa en:
-•	Compromiso con la Excelencia: “Nuestra palabra vale"– En 23 años hemos construido relaciones que perduran porque cumplimos rigurosamente plazos y especificaciones.
-•	Fortaleza Constructiva: Cada proyecto complejo es una oportunidad para ofrecer soluciones más inteligentes.
-•	Colaboración: El trabajo en equipo de nuestros ingenieros y diseñadores, junto con el requerimiento de los clientes, permite siempre encontrar una mejor solución técnica.
-El desarrollo de soluciones a la medida facilita realizar ingeniería de precisión en el diseño y fabricación con exactitud milimétrica, garantizando encajes perfectos y una funcionalidad, incluso en proyectos de alta complejidad como quirófanos inteligentes y laboratorios.
-Los materiales que usamos resisten el tiempo y evolucionan con las necesidades de los espacios: buscamos lo mejor del mercado: Placas Fenólicas HPL (antibacteriales, resistentes a la humedad y al fuego), Krion® (superficie sólida de alto rendimiento e higiene), puertas fenólicas, marcos telescópicos, superficies de cuarzo y cortinas roller de bajo mantenimiento que se traducen en ahorros significativos a largo plazo.
-Hemos entregado soluciones de alto impacto en proyectos críticos, como el FALP (Fundación Arturo López Pérez) y el Servicio Médico Legal (SML), donde la precisión y el cumplimiento normativo no son negociables. La confianza en nuestro trabajo es nuestro mayor logro y la mejor prueba de nuestro compromiso.
-Estamos aquí para transformar tus espacios donde las personas sanan, trabajan y viven, creando ambientes que resisten el tiempo y se adaptan a los cambios. ¿Tienes un proyecto desafiante en mente? Conversemos y descubramos el valor de una inversión inteligente.
- 
+          Fabricamos soluciones constructivas inteligentes en mobiliario, puertas y superficies para hoteles, residencias e inmobiliarias. Aplicamos ingeniería de precisión y materiales certificados como HPL, Krion® y cuarzo para proyectos complejos, exigentes y personalizados. Nuestra experiencia de 23 años, compromiso con la calidad y cumplimiento de plazos críticos nos posiciona como socios estratégicos para arquitectos, constructoras e instituciones. Creamos espacios duraderos, higiénicos y funcionales que evolucionan con el uso y resisten el tiempo.
         </p>
       </section>
+
+   <section>
+  <h2 className="text-2xl font-bold mb-4">Nuestra Fábrica</h2>
+  <p className="text-gray-600 leading-relaxed mb-8">
+    Contamos con una fábrica equipada para desarrollar soluciones constructivas en mobiliario, puertas y superficies. Aplicamos ingeniería de precisión y utilizamos materiales certificados como HPL, Krion® y cuarzo, garantizando funcionalidad, durabilidad e higiene en cada proyecto.
+  </p>
+
+  {/* Video local desde /public */}
+  <video
+    controls
+    className="w-full h-auto rounded-lg shadow-lg mb-12"
+    src="/other/nuestra-fabrica.mp4"
+    type="video/mp4"
+  >
+    Tu navegador no admite el elemento de video.
+  </video>
+
+  {/* Galería de fotos */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <img src="/img/Nosotros/CNC_Taller.JPG" className="rounded-lg shadow-md object-cover" />
+    <img src="/img/Nosotros/Maquinas_Taller.JPG" className="rounded-lg shadow-md object-cover" />
+    <img src="/img/Nosotros/Taller.JPG" className="rounded-lg shadow-md object-cover" />
+  </div>
+</section> 
+
+<section className="mt-20">
+  <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4 font-[Poppins]">
+    Alianzas
+  </h2>
+  <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
+    Empresas líderes que eligieron nuestras soluciones
+  </p>
+
+  <Slider
+    dots={false}
+    arrows={false}
+    infinite={true}
+    autoplay={true}
+    autoplaySpeed={2000}
+    speed={1200}
+    slidesToShow={6}
+    slidesToScroll={1}
+    cssEase="ease-in-out"
+    responsive={[
+      { breakpoint: 1280, settings: { slidesToShow: 5 } },
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 640, settings: { slidesToShow: 2 } },
+    ]}
+  >
+    {[
+      { src: "/img/Clientes/nestle.png", alt: "Nestlé" },
+      { src: "/img/Clientes/falp.png", alt: "FALP" },
+      { src: "/img/Clientes/CCHC.png", alt: "CCHC" },
+      { src: "/img/Clientes/ACHS.png", alt: "ACHS" },
+      { src: "/img/Clientes/farmacia_ahumada.png", alt: "Ahumada" },
+      { src: "/img/Clientes/BCG.png", alt: "BCG" },
+    ].map((logo, index) => (
+      <div key={index} className="flex justify-center items-center px-4">
+        <div className="w-32 h-20 sm:w-36 sm:h-24 md:w-40 md:h-28 flex items-center justify-center">
+          <img
+            src={logo.src}
+            alt={logo.alt}
+            className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 transition duration-300 ease-out"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    ))}
+  </Slider>
+</section>
 
       {/* 4. Equipo humano */}
       {/*
