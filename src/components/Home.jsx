@@ -41,7 +41,7 @@ const Home = () => {
     {
       src: "/img/Carrusel/Portada-Residencial.webp",
       label: "Residencial y Hotelero",
-      link: "/productos/residensial_hotelero",
+      link: "/productos/residencial_hoteles",
     },
   ];
 

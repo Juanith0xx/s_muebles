@@ -11,16 +11,31 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
   {
-    titulo: "Puertas",
-    descripcion: `Marcos telescópicos metálicos con puertas fenólicas en 3 mm de espesor. 
-Este marco tiene la ventaja de absorber desaplomos en los rasgos de tabiques y muros, con tolerancias de hasta 3 cm. Asimismo, se adaptan a los espesores de tabiques y muros de 12 a 22 cm.
+    titulo: "Hoteles",
+    descripcion: `Hemos realizado habilitaciones para Hoteles Mandarin Oriental, Courtyard y Novapark. En ellos se destacan trabajos realizados para habitaciones con mobiliario y puertas, Revestimientos enchapados para Hall de Acceso y áreas de Lobby y Restaurantes.
 .`,
     imagenes: [
-      { src: "/img/Puertas_HPL/Puerta_Marco_telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Puerta_doble_con_Marco_telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Marco_Telescopico_SAR_Santa_Anselma.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Bisagras_Marco_Telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Bisagras_Marco_Telescopico_SAR_Santa_Anselma.webp", descripcion: "" },
+      { src: "/img/Hoteles/Bar_Lobby_Courtyard.webp", descripcion: "" },
+      { src: "/img/Hoteles/Lobby_Courtyard.webp", descripcion: "" },
+      { src: "/img/Hoteles/Pullman_Lobby_Courtyard.webp", descripcion: "" },
+      { src: "/img/Hoteles/Sala_de_conferencias_Courtyard.webp", descripcion: "" },
+      { src: "/img/Hoteles/Bar_Lobby_Courtyard2.webp", descripcion: "" },
+      { src: "/img/Hoteles/Pullman_Lobby_Courtyard2.webp", descripcion: "" },
+
+    ],
+  },
+   {
+    titulo: "Residencial",
+    descripcion: `Realizamos proyectos a la medida para Condominios y Edificios Habitacionales. Estos incluyen muebles de cocina con opciones de cubierta en piedras, cuarzos, Krion y fenólicos y para Closets y Vanitorios en terminaciones de chapa barnizada y laminado.
+.`,
+    imagenes: [
+      { src: "/img/Residencial/Suite_1_Mandarin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Suite_5_con_Filigrana_Kitchenette.webp", descripcion: "" },
+      { src: "/img/Residencial/Suite_2_Mandarin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Suite_4_Mandarin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Suite_3_Mandarin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Puertas_Marcos_Mandrin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Endolados_Revestimientos_Mandarin_Oriental.webp", descripcion: "" },
 
     ],
   },
@@ -50,14 +65,14 @@ const Residencial_Hoteles = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
+        <title>Mobiliario para Hoteles y Residencias | Sistema Muebles</title>
         <meta
           name="description"
-          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, lockers y más. Diseño funcional y sanitariamente eficiente."
+          content="Diseñamos y fabricamos muebles a medida para hoteles y proyectos residenciales. Calidad, funcionalidad y estilo en cada pieza. Solicita tu propuesta personalizada."
         />
         <meta
           name="keywords"
-          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, lockers hospitalarios, krion, MDF laminado"
+          content="muebles para hoteles, mobiliario residencial, diseño interior hotelero, muebles a medida, mobiliario moderno, decoración hotel, muebles para departamentos, MDF laminado, melamina premium"
         />
       </Helmet>
 
@@ -67,7 +82,7 @@ const Residencial_Hoteles = () => {
         animate="visible"
         variants={fadeIn}
       >
-        Puertas HPL y Marcos Telescopicos
+        Residencial y Hoteleros
       </motion.h1>
 
       <motion.p
@@ -77,13 +92,13 @@ const Residencial_Hoteles = () => {
         custom={1}
         variants={fadeIn}
       >
-       Puertas HPL resistentes, higiénicas y duraderas. Ideales para clínicas, hospitales y laboratorios. Fabricación a medida con diseños funcionales y modernos con Marcos telescópicos de alta calidad, ajustables y duraderos. Solución ideal para puertas en muros de distintos espesores. Instalación limpia y precisa.
+       Muebles a medida para hoteles y espacios residenciales. Resistentes, funcionales y elegantes, fabricados con materiales de alta durabilidad. Diseños modernos para habitaciones, recepciones y áreas comunes. Instalación precisa y acabados de nivel profesional.
       </motion.p>
 
       {secciones.map((seccion, index) => {
         const mostrarBotonVerMas =
-          seccion.titulo === "Escritorios y Estaciones" ||
-          seccion.titulo === "Kitchenette" ||
+          seccion.titulo === "Hoteles" ||
+          seccion.titulo === "Residencial" ||
           seccion.titulo === "Krion" || 
           seccion.titulo === "Muebles Fenólicos" ||
           seccion.titulo === "Puertas";
@@ -225,7 +240,7 @@ const Residencial_Hoteles = () => {
         custom={secciones.length + 1}
       >
         <h3 className="text-2xl sm:text-3xl font-bold mb-3">
-          ¿Buscas una solución integral en puertas HPL y marcos telescópicos para tu empresa, clínica o institución?
+          ¿Buscas una solución integral en mobiliario a medida para tu hotel o proyecto residencial?
         </h3>
         <p className="text-base sm:text-lg mb-5">
           Cuéntanos tus requerimientos y recibe una propuesta personalizada sin costo.
