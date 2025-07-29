@@ -7,13 +7,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Poppins: ['Poppins', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
-        noto: ['"Noto Sans"', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        source: ['"Source Sans 3"', 'sans-serif'],
+        barlow: ['Barlow', 'sans-serif'],
       },
       animation: {
         'gradient-x': 'gradient-x 6s ease infinite',
-        'fall': 'fall linear infinite', // ⬅️ Añadido
+        'fall': 'fall linear infinite',
+        'fadeInLeft': 'fadeInLeft 0.8s ease-out forwards',
       },
       keyframes: {
         'gradient-x': {
@@ -24,7 +26,7 @@ export default {
             'background-position': '100% 50%',
           },
         },
-        fall: { // ⬅️ Añadido
+        fall: {
           '0%': {
             transform: 'translateY(-100%)',
             opacity: '1',
@@ -34,11 +36,24 @@ export default {
             opacity: '0',
           },
         },
+        fadeInLeft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
       },
       backgroundSize: {
         '200%': '200% 200%',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar'),
+  ],
 };
