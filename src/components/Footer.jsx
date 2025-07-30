@@ -49,10 +49,10 @@ const Footer = () => {
         <li className="flex justify-center sm:justify-centar items-left gap-2">
           <FaClock /> Lunes a Viernes: 9:00 - 18:00
         </li>
-        <li className="flex justify-end sm:justify-center items-left gap-2">
+        <li className="flex justify-center sm:justify-centar items-left gap-2">
           <FaClock /> Sábados: Cerrado
         </li>
-        <li className="flex justify-end sm:justify-center items-center gap-2">
+        <li className="flex justify-center sm:justify-centar items-left gap-2">
           <FaClock /> Domingos: Cerrado
         </li>
       </ul>

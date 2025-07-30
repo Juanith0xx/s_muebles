@@ -186,7 +186,7 @@ const Navbar = () => {
         {/* Botón móvil */}
         <div className="md:hidden px-2">
           <button onClick={() => setMenuOpen(true)}>
-            <Menu size={26} />
+            <Menu size={22} />
           </button>
         </div>
       </nav>
@@ -202,7 +202,7 @@ const Navbar = () => {
               }}
               className="text-white"
             >
-              <X size={28} />
+              <X size={24} />
             </button>
           </div>
 
