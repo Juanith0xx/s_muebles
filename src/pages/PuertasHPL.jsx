@@ -24,8 +24,8 @@ Este marco tiene la ventaja de absorber desaplomos en los rasgos de tabiques y m
       { src: "/img/Puertas_HPL/Marco_Telescopico_2.webp", descripcion: "" },
       { src: "/img/Puertas_HPL/Marco_Telescopico.webp", descripcion: "" },      
       { src: "/img/Puertas_HPL/Puerta_HPL_cerradura.webp", descripcion: "" }, 
-      { src: "/img/Puertas_HPL/Puerta_HPL_Marco telescopico.webp", descripcion: "" }, 
-      { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescopico.webp", descripcion: "" }, 
+      { src: "/img/Puertas_HPL/Puertas_HPL_marcos_telescopicos.webp", descripcion: "" }, 
+       { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescopico.webp", descripcion: "" },
     ],
   },
   
@@ -46,7 +46,7 @@ const PuertasHPL = () => {
   const handleVerMas = (titulo) => {
     setTimeout(() => {
       if (galleryRef.current[titulo]) {
-        galleryRef.current[titulo].openGallery(4);
+        galleryRef.current[titulo].openGallery(6);
       }
     }, 100);
   };
@@ -89,11 +89,11 @@ const PuertasHPL = () => {
         seccion.titulo === "Puertas";
 
         const imagenesVisibles = mostrarBotonVerMas
-          ? seccion.imagenes.slice(0, 4)
+          ? seccion.imagenes.slice(0, 6)
           : seccion.imagenes;
 
         const imagenesOcultas = mostrarBotonVerMas
-          ? seccion.imagenes.slice(4)
+          ? seccion.imagenes.slice(6)
           : [];
 
         const esCentrada =
@@ -103,116 +103,72 @@ const PuertasHPL = () => {
 
         return (
           <motion.section
-            key={index}
-            className={`mb-20 flex flex-col ${
-              index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-            } items-center gap-10`}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            custom={index + 1}
-          >
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#011E31] font-[Poppins] dark:text-sky-400 mb-4">
-                {seccion.titulo}
-              </h2>
-              <p className="text-sm sm:text-base font-barlow text-gray-700 dark:text-gray-300 leading-relaxed">
-                {seccion.descripcion}
-              </p>
-            </div>
+  key={index}
+  className="mb-20 flex flex-col items-center gap-10"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ diez: true }}
+  variants={fadeIn}
+  custom={index + 1}
+>
+  <div className="max-w-4xl mx-auto text-center px-4">
+    <h2 className="text-2xl sm:text-3xl font-semibold text-[#011E31] font-[Poppins] dark:text-sky-400 mb-4">
+      {seccion.titulo}
+    </h2>
+    <p className="text-sm sm:text-base font-barlow text-gray-700 dark:text-gray-300 leading-relaxed">
+      {seccion.descripcion}
+    </p>
+  </div>
 
-            <div className="w-full lg:w-1/2">
-              <LightGallery
-                speed={500}
-                plugins={[lgThumbnail, lgZoom]}
-                elementClassNames={
-                  esCentrada
-                    ? "grid grid-cols-2 grid-rows-2 gap-5"
-                    : `grid gap-5 ${
-                        imagenesVisibles.length === 3
-                          ? "grid-cols-2"
-                          : "grid-cols-1 sm:grid-cols-2"
-                      }`
-                }
-                onInit={(ref) => {
-                  galleryRef.current[seccion.titulo] = ref.instance;
-                }}
-              >
-                {esCentrada ? (
-                  <>
-                    {imagenesVisibles.slice(0, 2).map((img, i) => (
-                      <a
-                        key={i}
-                        href={img.src}
-                        data-sub-html={`<p>${img.descripcion}</p>`}
-                        className="block rounded-xl overflow-hidden shadow-md"
-                      >
-                        <img
-                          src={img.src}
-                          alt={`${seccion.titulo} - Foto ${i + 1}`}
-                          loading="lazy"
-                          className="w-full h-64 object-cover brightness-105 hover:scale-105 transition-transform duration-300"
-                        />
-                      </a>
-                    ))}
-                    <a
-                      href={imagenesVisibles[2].src}
-                      data-sub-html={`<p>${imagenesVisibles[2].descripcion}</p>`}
-                      className="col-span-2 flex justify-center"
-                    >
-                      <img
-                        src={imagenesVisibles[2].src}
-                        alt={`${seccion.titulo} - Foto 3`}
-                        loading="lazy"
-                        className="w-1/2 h-64 object-cover rounded-xl shadow-md brightness-105 hover:scale-105 transition-transform duration-300"
-                      />
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    {imagenesVisibles.map((img, i) => (
-                      <a
-                        key={i}
-                        href={img.src}
-                        data-sub-html={`<p>${img.descripcion}</p>`}
-                        className="block rounded-xl overflow-hidden shadow-md"
-                      >
-                        <img
-                          src={img.src}
-                          alt={`${seccion.titulo} - Foto ${i + 1}`}
-                          loading="lazy"
-                          className="w-full h-64 object-cover brightness-105 hover:scale-105 transition-transform duration-300"
-                        />
-                      </a>
-                    ))}
-                  </>
-                )}
+  <div className="w-full">
+    <LightGallery
+      speed={500}
+      plugins={[lgThumbnail, lgZoom]}
+      elementClassNames="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
+      onInit={(ref) => {
+        galleryRef.current[seccion.titulo] = ref.instance;
+      }}
+    >
+      {imagenesVisibles.map((img, i) => (
+        <a
+          key={i}
+          href={img.src}
+          data-sub-html={`<p>${img.descripcion}</p>`}
+          className="block rounded-xl overflow-hidden shadow-md"
+        >
+          <img
+            src={img.src}
+            alt={`${seccion.titulo} - Foto ${i + 1}`}
+            loading="lazy"
+            className="w-full h-64 object-cover brightness-105 hover:scale-105 transition-transform duration-300"
+          />
+        </a>
+      ))}
+      {imagenesOcultas.map((img, i) => (
+        <a
+          key={`hidden-${i}`}
+          href={img.src}
+          data-sub-html={`<p>${img.descripcion}</p>`}
+          className="hidden"
+        >
+          <img src={img.src} alt={`Oculta - ${i + 5}`} loading="lazy" />
+        </a>
+      ))}
+    </LightGallery>
 
-                {imagenesOcultas.map((img, i) => (
-                  <a
-                    key={`hidden-${i}`}
-                    href={img.src}
-                    data-sub-html={`<p>${img.descripcion}</p>`}
-                    className="hidden"
-                  >
-                    <img src={img.src} alt={`Oculta - ${i + 5}`} loading="lazy" />
-                  </a>
-                ))}
-              </LightGallery>
+    {mostrarBotonVerMas && imagenesOcultas.length > 0 && (
+      <div className="text-center mt-6">
+        <button
+          onClick={() => handleVerMas(seccion.titulo)}
+          className="bg-[#011E31] text-white px-5 py-2 rounded-full hover:bg-sky-700 transition"
+        >
+          Ver más
+        </button>
+      </div>
+    )}
+  </div>
+</motion.section>
 
-              {mostrarBotonVerMas && imagenesOcultas.length > 0 && (
-                <div className="text-center mt-4">
-                  <button
-                    onClick={() => handleVerMas(seccion.titulo)}
-                    className="bg-[#011E31] text-white px-5 py-2 rounded-full hover:bg-sky-700 transition"
-                  >
-                    Ver más
-                  </button>
-                </div>
-              )}
-            </div>
-          </motion.section>
         );
       })}
 

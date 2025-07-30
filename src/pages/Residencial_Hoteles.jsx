@@ -82,7 +82,7 @@ const Residencial_Hoteles = () => {
         animate="visible"
         variants={fadeIn}
       >
-        Residencial y Hoteleros
+        Residencial y Hotelero
       </motion.h1>
 
       <motion.p
