@@ -11,17 +11,21 @@ import lgZoom from "lightgallery/plugins/zoom";
 
 const secciones = [
   {
-    /*titulo: "Puertas",*/
+    titulo: "Puertas",
     descripcion: `Marcos telescópicos metálicos con puertas fenólicas en 3 mm de espesor. 
 Este marco tiene la ventaja de absorber desaplomos en los rasgos de tabiques y muros, con tolerancias de hasta 3 cm. Asimismo, se adaptan a los espesores de tabiques y muros de 12 a 22 cm.
 .`,
     imagenes: [
-      { src: "/img/Puertas_HPL/Puerta_Marco_telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Puerta_doble_con_Marco_telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Marco_Telescopico_SAR_Santa_Anselma.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Bisagras_Marco_Telescopico.webp", descripcion: "" },
-      { src: "/img/Puertas_HPL/Bisagras_Marco_Telescopico_SAR_Santa_Anselma.webp", descripcion: "" },
-
+      { src: "/img/Puertas_HPL/Puerta_doble_hoja_marco_telescopico.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Puertas_con_marcos_telescopicos.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescpico_2.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Puertas_HPL_marcos_telescopicos.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Bisagra_Marco_Telescopico.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Marco_Telescopico_2.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Marco_Telescopico.webp", descripcion: "" },      
+      { src: "/img/Puertas_HPL/Puerta_HPL_cerradura.webp", descripcion: "" }, 
+      { src: "/img/Puertas_HPL/Puerta_HPL_Marco telescopico.webp", descripcion: "" }, 
+      { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescopico.webp", descripcion: "" }, 
     ],
   },
   
@@ -82,11 +86,7 @@ const PuertasHPL = () => {
 
       {secciones.map((seccion, index) => {
         const mostrarBotonVerMas =
-          seccion.titulo === "Escritorios y Estaciones" ||
-          seccion.titulo === "Kitchenette" ||
-          seccion.titulo === "Krion" || 
-          seccion.titulo === "Muebles Fenólicos" ||
-          seccion.titulo === "Puertas";
+        seccion.titulo === "Puertas";
 
         const imagenesVisibles = mostrarBotonVerMas
           ? seccion.imagenes.slice(0, 4)

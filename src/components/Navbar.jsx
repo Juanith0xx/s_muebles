@@ -112,7 +112,7 @@ const Navbar = () => {
               <span className="cursor-pointer hover:text-xl font-semibold pr-4">
                 {catalogoMenu.label} <span className="ml-1">▾</span>
               </span>
-              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+              <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-70 z-10">
                 {catalogoMenu.items.map(([href, name, external]) => (
                   <li key={name}>
                     {external ? (
@@ -154,7 +154,7 @@ const Navbar = () => {
                   <span className="cursor-pointer hover:text-xl font-semibold pr-4">
                     {menu.label} <span className="ml-1">▾</span>
                   </span>
-                  <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 transition bg-white text-gray-800 shadow-lg mt-2 rounded-md py-2 px-2 w-68 z-10">
+                  <ul className="absolute opacity-0 invisible group-hover:visible group-hover:opacity-300 transition bg-white text-gray-800 shadow-lg mt-6 rounded-md py-2 px-2 w-74 z-12">
                     {menu.items.map(([href, name, external]) => (
                       <li key={name}>
                         {external ? (

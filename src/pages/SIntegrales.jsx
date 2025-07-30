@@ -22,18 +22,24 @@ const secciones = [
     titulo: "Escritorios y Estaciones",
     descripcion: `Realizamos proyectos a la medida de los requerimientos, sin importar el tipo de materialidad y diseño, logrando de esta forma personalizar el mobiliario, dando identidad propia a cada cliente.`,
     imagenes: [
-      { src: "/img/Escritorios/Escritorio_Gerencia_Vantrust.webp", descripcion: "" },
+      
+
       { src: "/img/Escritorios/Estaciones_de trabajo_Movix_5.webp", descripcion: "" },
-      { src: "/img/Escritorios/Mesa_de_dinero_Legg_Mason.webp", descripcion: "" },
+      { src: "/img/Escritorios/Estaciones_U_McCann-31.webp", descripcion: "" }, 
       { src: "/img/Escritorios/Escritorio_Claro_Asociados.webp", descripcion: "" },
-      { src: "/img/Escritorios/Escritorio_coloso_7.webp", descripcion: "" },
-      { src: "/img/Escritorios/Escritorio_Gerencia_McCann-40.webp", descripcion: "" },
+      { src: "/img/Escritorios/Escritorio_Gerencia_Vantrust.webp", descripcion: "" },
       { src: "/img/Escritorios/Escritorio_Gerencia_Vantrust_2.webp", descripcion: "" },
       { src: "/img/Escritorios/Escritorio_Gerencia_Vantrust2.webp", descripcion: "" },
+      { src: "/img/Escritorios/Escritorio_coloso_7.webp", descripcion: "" },
+      { src: "/img/Escritorios/Escritorio_Gerencia_McCann-40.webp", descripcion: "" },
+      { src: "/img/Escritorios/Mesa_de_dinero_Legg_Mason.webp", descripcion: "" },
+      { src: "/img/Escritorios/Mesa_dinero_Legg_Mason_detalle.webp", descripcion: "" },    
       { src: "/img/Escritorios/Escritorio_Norte_Sur.webp", descripcion: "" },
       { src: "/img/Escritorios/Escritorio_Secretaria_Gerencia_Nestle.webp", descripcion: "" },
+      { src: "/img/Escritorios/Escritorio_NESTLE_detalle.webp", descripcion: "" },
       { src: "/img/Escritorios/Escritorios.webp", descripcion: "" },
       { src: "/img/Escritorios/Estaciones_de_trabajo.webp", descripcion: "" },
+      { src: "/img/Escritorios/Estaciones_Frusan.webp", descripcion: "" },
     ],
   },
   {

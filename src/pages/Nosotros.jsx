@@ -18,7 +18,7 @@ const Nosotros = () => {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
           <h3 className="text-xl font-semibold mb-2">Nuestra Misión</h3>
-          <p className="text-gray-600">Brindar soluciones funcionales, seguras y estéticas que mejoren los espacios de trabajo y salud de nuestros clientes.</p>
+          <p className="text-gray-600">Brindar soluciones funcionales, seguras y estéticas que mejoren los espacios de trabajo y salud de nuestros Alianzas.</p>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-2">Nuestra Visión</h3>
@@ -69,7 +69,7 @@ const Nosotros = () => {
 </section> 
 
 <section className="mt-20">
-  <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4 font-[Poppins]">
+  <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4 !font-[Poppins]">
     Alianzas
   </h2>
   <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
@@ -83,7 +83,7 @@ const Nosotros = () => {
     autoplay={true}
     autoplaySpeed={2000}
     speed={1200}
-    slidesToShow={6}
+    slidesToShow={5}
     slidesToScroll={1}
     cssEase="ease-in-out"
     responsive={[
@@ -94,12 +94,11 @@ const Nosotros = () => {
     ]}
   >
     {[
-      { src: "/img/Clientes/nestle.png", alt: "Nestlé" },
-      { src: "/img/Clientes/falp.png", alt: "FALP" },
-      { src: "/img/Clientes/CCHC.png", alt: "CCHC" },
-      { src: "/img/Clientes/ACHS.png", alt: "ACHS" },
-      { src: "/img/Clientes/farmacia_ahumada.png", alt: "Ahumada" },
-      { src: "/img/Clientes/BCG.png", alt: "BCG" },
+      { src: "/img/Alianzas/Logo_Hafele.png", alt: "Hafele" },
+      { src: "/img/Alianzas/Logo_Porcelanosa.png", alt: "Porcelanosa" },
+      { src: "/img/Alianzas/Logo_Abet_Laminati.png", alt: "Abet Laminati" },
+      { src: "/img/Alianzas/Logo_Robfu.png", alt: "Robfu" },
+      { src: "/img/Alianzas/Logo_merino.png", alt: "Merino" },
     ].map((logo, index) => (
       <div key={index} className="flex justify-center items-center px-4">
         <div className="w-32 h-20 sm:w-36 sm:h-24 md:w-40 md:h-28 flex items-center justify-center">

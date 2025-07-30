@@ -18,6 +18,7 @@ import ContactForm from './pages/ContactForm';
 import Nosotros from './pages/Nosotros';
 import SIntegrales from './pages/SIntegrales';
 import Residencial_Hoteles from './pages/Residencial_Hoteles';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -37,7 +38,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        {/* Botón opcional para cambiar tema */}
+        <ScrollToTop />
         <Navbar />
         <WhatsAppBubble />
         <Routes>
@@ -69,10 +70,6 @@ function App() {
         <Route path="/producto/puertas_hpl_marcos" element={<PuertasHPL />} /> 
         <Route path="/productos/residencial_hoteles" element={<Residencial_Hoteles />} />
 
-
-
-
-          
         </Routes>
           <Footer />
       </Router>

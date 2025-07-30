@@ -16,8 +16,9 @@ const secciones = [
      imagenes: [
       { src: "/img/Recepcion/Recepcion_Banco_de_Chile.webp", descripcion: "" },
       { src: "/img/Recepcion/Recepcion_Inv_Norte_Sur.webp", descripcion: "" },
-      { src: "/img/Recepcion/Recepcion_Leg_Mason2.webp", descripcion: "" },
       { src: "/img/Recepcion/Recepcion_movix_6.webp", descripcion: "" },
+      { src: "/img/Recepcion/Recepcion_Leg_Mason2.webp", descripcion: "" }, 
+      { src: "/img/Recepcion/Recepcion_Leg_Mason_Detalle.webp", descripcion: "" },      
       { src: "/img/Recepcion/Recepcion_Backer_Mackenzie.webp", descripcion: "" },
       { src: "/img/Recepcion/Recepcion_Bupa.webp", descripcion: "" },
       { src: "/img/Recepcion/Recepcion_Carey.webp", descripcion: "" },
