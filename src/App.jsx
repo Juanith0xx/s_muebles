@@ -17,8 +17,9 @@ import PuertasHPL from './pages/PuertasHPL';
 import ContactForm from './pages/ContactForm';
 import Nosotros from './pages/Nosotros';
 import SIntegrales from './pages/SIntegrales';
-import Residencial_Hoteles from './pages/Residencial_Hoteles';
+import Residencial_Hoteles from './pages/Residencial_Hoteles';  
 import ScrollToTop from './components/ScrollToTop';
+import PEmblematicos from './pages/PEmblematicos';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -68,7 +69,8 @@ function App() {
         <Route path="/nosotros/" element={<Nosotros />} />
         <Route path="/productos/soluciones_integrales" element={<SIntegrales />} /> 
         <Route path="/producto/puertas_hpl_marcos" element={<PuertasHPL />} /> 
-        <Route path="/productos/residencial_hoteles" element={<Residencial_Hoteles />} />
+        <Route path="/productos/residencial_hoteles" element={<Residencial_Hoteles />} /> 
+        <Route path="/proyectos/proyectos_emblematicos" element={<PEmblematicos />} />
 
         </Routes>
           <Footer />

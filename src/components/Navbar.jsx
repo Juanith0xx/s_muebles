@@ -44,12 +44,8 @@ const Navbar = () => {
     {
       label: "Proyectos",
       icon: <Building2 size={32} />,
-      items: [
-        [
-          "https://www.linkedin.com/company/sistemamuebles/",
-          "Proyectos Emblemáticos",
-          true,
-        ],
+      items:[
+          ["/proyectos/proyectos_emblematicos", "Proyectos Emblematicos"],
       ],
     },
     {
