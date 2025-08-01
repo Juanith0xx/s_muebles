@@ -23,5 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-echo "public/other/nuestra-fabrica.mp4" >> .gitignore
 

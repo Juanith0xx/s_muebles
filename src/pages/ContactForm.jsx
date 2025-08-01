@@ -18,29 +18,28 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const categoriaCorreoMap = {
-    "Cotización Puertas": "puertas@sistemamuebles.cl",
-    "Cotización Soluciones Hospitales": "hospitales@sistemamuebles.cl",
-    "Cotización Espacios Corporativos": "corporativos@sistemamuebles.cl",
-    "Otras consultas": "operaciones@sistemamuebles.cl",
+    "Cotización Puertas": ["gbruna@sistemamuebles.cl", "clanz@sistemamuebles.cl"],
+    "Cotización Soluciones Hospitales": ["josefina@sistemamuebles.cl", "clanz@sistemamuebles.cl"],
+    "Cotización Espacios Corporativos": ["clanz@sistemamuebles.cl"],
+    "Otras consultas": ["clanz@sistemamuebles.cl"],
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const correoDestino = categoriaCorreoMap[formData.categoria] || "contacto@sistemamuebles.cl";
+    const correosDestino = categoriaCorreoMap[formData.categoria] || ["contacto@sistemamuebles.cl"];
 
-    const datosParaEmail = {
-      ...formData,
-      to_email: correoDestino,
-    };
-
-    emailjs
-      .send(
-        "service_p1d87o5",          // ID del servicio
-        "template_8sj05kw",         // ID de la plantilla
-        datosParaEmail,
-        "kEfgki1uhnRq31pjs"         // clave pública
+    // Enviar a cada destinatario individualmente
+    Promise.all(
+      correosDestino.map((correo) =>
+        emailjs.send(
+          "service_c60cjid",          // ID del servicio
+          "template_94holaf",         // ID de la plantilla
+          { ...formData, to_email: correo },
+          "kEfgki1uhnRq31pjs"         // clave pública
+        )
       )
+    )
       .then(() => {
         setEnviado(true);
         setFormData({
@@ -69,7 +68,6 @@ const ContactForm = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Nombre */}
           <input
             type="text"
             name="nombre"
@@ -80,7 +78,6 @@ const ContactForm = () => {
             className="input-field"
           />
 
-          {/* Correo */}
           <input
             type="email"
             name="email"
@@ -91,7 +88,6 @@ const ContactForm = () => {
             className="input-field"
           />
 
-          {/* Teléfono */}
           <input
             type="tel"
             name="telefono"
@@ -102,7 +98,6 @@ const ContactForm = () => {
             className="input-field"
           />
 
-          {/* Categoría */}
           <select
             name="categoria"
             value={formData.categoria}
@@ -117,7 +112,6 @@ const ContactForm = () => {
             <option value="Otras consultas">Otras consultas</option>
           </select>
 
-          {/* Mensaje */}
           <textarea
             name="mensaje"
             rows="5"
@@ -128,7 +122,6 @@ const ContactForm = () => {
             className="input-field"
           />
 
-          {/* Botón */}
           <button type="submit" className="submit-button">
             Enviar mensaje <FiChevronRight className="ml-2" />
           </button>
@@ -146,7 +139,6 @@ const ContactForm = () => {
         )}
       </div>
 
-      {/* Estilos personalizados */}
       <style>{`
         .input-field {
           width: 100%;
