@@ -161,6 +161,7 @@ const PHospitalarios = () => {
               <LightGallery
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
+                download={false}
                 elementClassNames={
                   esCentrada
                     ? "grid grid-cols-2 grid-rows-2 gap-5"

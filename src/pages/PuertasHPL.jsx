@@ -115,6 +115,7 @@ const PuertasHPL = () => {
               <LightGallery
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
+                download={false}
                 elementClassNames="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
                 onInit={(ref) => {
                   galleryRef.current[seccion.titulo] = ref.instance;
