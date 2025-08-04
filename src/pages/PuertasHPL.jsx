@@ -25,10 +25,9 @@ Este marco tiene la ventaja de absorber desaplomos en los rasgos de tabiques y m
       { src: "/img/Puertas_HPL/Marco_Telescopico.webp", descripcion: "" },      
       { src: "/img/Puertas_HPL/Puerta_HPL_cerradura.webp", descripcion: "" }, 
       { src: "/img/Puertas_HPL/Puertas_HPL_marcos_telescopicos.webp", descripcion: "" }, 
-       { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescopico.webp", descripcion: "" },
+      { src: "/img/Puertas_HPL/Puerta_plomada_marco_telescopico.webp", descripcion: "" },
     ],
   },
-  
 ];
 
 const fadeIn = {
@@ -71,7 +70,7 @@ const PuertasHPL = () => {
         animate="visible"
         variants={fadeIn}
       >
-        Puertas HPL y Marcos Telescopicos
+        Puertas HPL y Marcos Telescópicos
       </motion.h1>
 
       <motion.p
@@ -81,12 +80,11 @@ const PuertasHPL = () => {
         custom={1}
         variants={fadeIn}
       >
-       Puertas HPL resistentes, higiénicas y duraderas. Ideales para clínicas, hospitales y laboratorios. Fabricación a medida con diseños funcionales y modernos con Marcos telescópicos de alta calidad, ajustables y duraderos. Solución ideal para puertas en muros de distintos espesores. Instalación limpia y precisa.
+        Puertas HPL resistentes, higiénicas y duraderas. Ideales para clínicas, hospitales y laboratorios. Fabricación a medida con diseños funcionales y modernos con Marcos telescópicos de alta calidad, ajustables y duraderos. Solución ideal para puertas en muros de distintos espesores. Instalación limpia y precisa.
       </motion.p>
 
       {secciones.map((seccion, index) => {
-        const mostrarBotonVerMas =
-        seccion.titulo === "Puertas";
+        const mostrarBotonVerMas = seccion.titulo === "Puertas";
 
         const imagenesVisibles = mostrarBotonVerMas
           ? seccion.imagenes.slice(0, 6)
@@ -96,79 +94,71 @@ const PuertasHPL = () => {
           ? seccion.imagenes.slice(6)
           : [];
 
-        const esCentrada =
-          (seccion.titulo === "Estaciones de Enfermería" ||
-            seccion.titulo === "Estantes y Lockers") &&
-                    imagenesVisibles.length === 3;
-
         return (
           <motion.section
-  key={index}
-  className="mb-20 flex flex-col items-center gap-10"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ diez: true }}
-  variants={fadeIn}
-  custom={index + 1}
->
-  <div className="max-w-4xl mx-auto text-center px-4">
-    <h2 className="text-2xl sm:text-3xl font-semibold text-[#011E31] font-[Poppins] dark:text-sky-400 mb-4">
-      {seccion.titulo}
-    </h2>
-    <p className="text-sm sm:text-base font-barlow text-gray-700 dark:text-gray-300 leading-relaxed">
-      {seccion.descripcion}
-    </p>
-  </div>
+            key={index}
+            className="mb-20 flex flex-col items-center gap-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ diez: true }}
+            variants={fadeIn}
+            custom={index + 1}
+          >
+            <div className="max-w-4xl mx-auto text-center px-4">
+              <h2 className="sr-only">{seccion.titulo}</h2>
+              <p className="text-sm sm:text-base font-barlow text-gray-700 dark:text-gray-300 leading-relaxed">
+                {seccion.descripcion}
+              </p>
+            </div>
 
-  <div className="w-full">
-    <LightGallery
-      speed={500}
-      plugins={[lgThumbnail, lgZoom]}
-      elementClassNames="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
-      onInit={(ref) => {
-        galleryRef.current[seccion.titulo] = ref.instance;
-      }}
-    >
-      {imagenesVisibles.map((img, i) => (
-        <a
-          key={i}
-          href={img.src}
-          data-sub-html={`<p>${img.descripcion}</p>`}
-          className="block rounded-xl overflow-hidden shadow-md"
-        >
-          <img
-            src={img.src}
-            alt={`${seccion.titulo} - Foto ${i + 1}`}
-            loading="lazy"
-            className="w-full h-64 object-cover brightness-105 hover:scale-105 transition-transform duration-300"
-          />
-        </a>
-      ))}
-      {imagenesOcultas.map((img, i) => (
-        <a
-          key={`hidden-${i}`}
-          href={img.src}
-          data-sub-html={`<p>${img.descripcion}</p>`}
-          className="hidden"
-        >
-          <img src={img.src} alt={`Oculta - ${i + 5}`} loading="lazy" />
-        </a>
-      ))}
-    </LightGallery>
+            <div className="w-full">
+              <LightGallery
+                speed={500}
+                plugins={[lgThumbnail, lgZoom]}
+                elementClassNames="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
+                onInit={(ref) => {
+                  galleryRef.current[seccion.titulo] = ref.instance;
+                }}
+              >
+                {imagenesVisibles.map((img, i) => (
+                  <a
+                    key={i}
+                    href={img.src}
+                    data-sub-html={`<p>${img.descripcion}</p>`}
+                    className="block rounded-xl overflow-hidden shadow-md"
+                  >
+                    <img
+                      src={img.src}
+                      alt={`${seccion.titulo} - Foto ${i + 1}`}
+                      loading="lazy"
+                      className="w-full h-64 object-cover brightness-105 hover:scale-105 transition-transform duration-300"
+                    />
+                  </a>
+                ))}
+                {imagenesOcultas.map((img, i) => (
+                  <a
+                    key={`hidden-${i}`}
+                    href={img.src}
+                    data-sub-html={`<p>${img.descripcion}</p>`}
+                    className="hidden"
+                  >
+                    <img src={img.src} alt={`Oculta - ${i + 5}`} loading="lazy" />
+                  </a>
+                ))}
+              </LightGallery>
 
-    {mostrarBotonVerMas && imagenesOcultas.length > 0 && (
-      <div className="text-center mt-6">
-        <button
-          onClick={() => handleVerMas(seccion.titulo)}
-          className="bg-[#011E31] text-white px-5 py-2 rounded-full hover:bg-sky-700 transition"
-        >
-          Ver más
-        </button>
-      </div>
-    )}
-  </div>
-</motion.section>
-
+              {mostrarBotonVerMas && imagenesOcultas.length > 0 && (
+                <div className="text-center mt-6">
+                  <button
+                    onClick={() => handleVerMas(seccion.titulo)}
+                    className="bg-[#011E31] text-white px-5 py-2 rounded-full hover:bg-sky-700 transition"
+                  >
+                    Ver más
+                  </button>
+                </div>
+              )}
+            </div>
+          </motion.section>
         );
       })}
 
@@ -197,4 +187,4 @@ const PuertasHPL = () => {
   );
 };
 
-export default PuertasHPL
+export default PuertasHPL;
