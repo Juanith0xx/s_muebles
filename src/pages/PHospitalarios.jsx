@@ -89,11 +89,11 @@ const PHospitalarios = () => {
         <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
         <meta
           name="description"
-          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, lockers y más. Diseño funcional y sanitariamente eficiente."
+          content="Muebles para clínicas, hospitales y laboratorios. Estaciones de enfermería, áreas limpias, lockers y más. Diseño funcional y cumplimiento sanitario."
         />
         <meta
           name="keywords"
-          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, lockers hospitalarios, krion, MDF laminado"
+          content="mobiliario clínico, muebles hospitalarios, estaciones de enfermería, lockers sanitarios, muebles para laboratorios"
         />
       </Helmet>
 

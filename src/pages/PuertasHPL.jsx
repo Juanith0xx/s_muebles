@@ -56,11 +56,11 @@ const PuertasHPL = () => {
         <title>Puertas HPL y Marcos Telescópicos para Clínicas | Sistema Muebles</title>
         <meta
           name="description"
-          content="Fabricamos puertas HPL y marcos telescópicos para clínicas y hospitales. Diseños a medida, resistentes a la humedad y fáciles de sanitizar. Soluciones ideales para áreas limpias, laboratorios y recintos médicos."
+          content="Puertas HPL y marcos telescópicos diseñados para clínicas y hospitales. Resistentes a la humedad, sanitizables y fabricados a medida para áreas críticas y recintos médicos."
         />
         <meta
           name="keywords"
-          content="puertas HPL, marcos telescópicos, mobiliario hospitalario, puertas para hospitales, puertas sanitarias, puertas resistentes a la humedad, puertas clínicas, áreas limpias, recintos médicos"
+          content="puertas HPL, marcos telescópicos, puertas clínicas, puertas hospitalarias, puertas sanitarias, áreas limpias, mobiliario médico"
         />
       </Helmet>
 

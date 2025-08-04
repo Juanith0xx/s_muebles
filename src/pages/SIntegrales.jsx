@@ -149,11 +149,11 @@ const SIntegrales = () => {
         <title>Soluciones Integrales en Mobiliario para Oficinas, Clínicas y Espacios Comerciales | Sistema Muebles</title>
         <meta
           name="description"
-          content="Diseñamos, fabricamos e instalamos mobiliario personalizado con materiales de alta calidad. Optimizamos oficinas, clínicas y espacios comerciales con soluciones integrales que combinan funcionalidad, estética y durabilidad."
+          content="Diseño y fabricación de muebles para oficinas: escritorios, salas de reunión, estaciones de trabajo y más. Estilo moderno y funcionalidad."
         />
         <meta
           name="keywords"
-          content="mobiliario personalizado, soluciones integrales, diseño de oficinas, muebles clínicos, espacios comerciales, melamina, vidrio templado, acero, MDF, diseño funcional"
+          content="muebles de oficina, estaciones de trabajo, escritorios modernos, salas de reuniones, mobiliario corporativo"
         />
       </Helmet>
 
