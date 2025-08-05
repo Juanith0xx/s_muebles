@@ -15,29 +15,7 @@ const noticias = [
     imagen: "/img/expo-construye.jpg",
     link: "/noticias/expo-construye-2025",
   },
-  {
-    titulo: "Nueva alianza estratégica con Porcelanosa",
-    descripcion:
-      "Nos unimos a Porcelanosa para integrar superficies de alta gama en nuestros proyectos, elevando calidad y diseño.",
-    imagen: "/img/alianza-porcelanosa.jpg",
-    link: "/noticias/alianza-porcelanosa",
-  },
-  {
-    titulo: "Nueva alianza estratégica con Porcelanosa",
-    descripcion:
-      "Nos unimos a Porcelanosa para integrar superficies de alta gama en nuestros proyectos, elevando calidad y diseño.",
-    imagen: "/img/alianza-porcelanosa.jpg",
-    link: "/noticias/alianza-porcelanosa",
-  },
-];
-
-const alianzas = [
-  { nombre: "Häfele", url: "https://www.hafele.cl" },
-  { nombre: "Porcelanosa", url: "https://www.porcelanosa.com" },
-  { nombre: "Abet Laminati", url: "https://laminati.cl/" },
-  { nombre: "Robfu", url: "https://www.robfu.com" },
-  { nombre: "Merino", url: "https://www.merinolaminates.com" },
-  { nombre: "Cabinarent", url: "https://www.cabinarent.cl" },
+ 
 ];
 
 const AlianzasNoticias = () => {
@@ -67,37 +45,24 @@ const AlianzasNoticias = () => {
       className="w-full px-4 sm:px-6 md:px-12 py-12 sm:py-16 bg-gray-600"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center lg:text-left">
-        {/* Alianzas */}
-        <div
-          ref={alianzasRef}
-          className={`w-full lg:w-1/2 transition-opacity duration-700 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6">
-            Alianzas
-          </h2>
-          <ul className="text-white text-lg sm:text-xl lg:text-2xl font-[Barlow] space-y-4">
-            {alianzas.map(({ nombre, url }, index) => (
-              <li
-                key={nombre}
-                style={{ transitionDelay: `${index * 150}ms` }}
-                className={`transition-all duration-700 ease-out ${
-                  visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                }`}
-              >
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:font-semibold"
-                >
-                  {nombre}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+  
+       {/* Alianzas con imagen centrada */}
+<div
+  ref={alianzasRef}
+  className={`w-full lg:w-1/2 flex flex-col items-center justify-center text-center transition-opacity duration-700 ${
+    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+  }`}
+>
+  <img
+    src="/img/Nosotros.webp"
+    alt="Alianzas estratégicas"
+    className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto rounded-xl shadow-lg mb-6"
+    loading="lazy"
+  />
+  <p className="text-white text-base sm:text-lg font-[Barlow] max-w-md">
+    Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
+  </p>
+</div>
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
@@ -113,7 +78,7 @@ const AlianzasNoticias = () => {
                 {/* Overlay animado desde abajo */}
                 <div className="absolute bottom-0 left-0 w-full h-0 bg-[#142063] opacity-90 transition-all duration-500 ease-in-out group-hover:h-full z-10" />
 
-                <figure className="relative w-full h-44 overflow-hidden z-20">
+                <figure className="relative w-full h-24 overflow-hidden z-20">
                   <img
                     src={noticia.imagen}
                     alt={noticia.titulo}
@@ -139,6 +104,15 @@ const AlianzasNoticias = () => {
               </article>
             ))}
           </div>
+          {/* Botón "Ver más noticias" */}
+        <div className="mt-8 text-center">
+        <a
+        href="http://localhost:5173/noticias"
+        className="inline-block px-6 py-3 bg-[#d33834] text-white font-semibold rounded-full shadow-md hover:bg-[#b72c2a] transition-colors duration-300"
+        >
+             Ver más noticias
+        </a>
+        </div>
         </div>
       </div>
     </section>

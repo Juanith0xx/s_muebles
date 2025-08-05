@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules"; // 1. Importar Autoplay
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,44 +8,59 @@ import "swiper/css/navigation";
 const proyectos = [
   {
     id: 1,
-    title: "Proyecto CCHC",
+    title: "Proyecto Vantrunst",
     description: "Diseño clínico modular con integración de Häfele y Cabinarent.",
-    image: "/img/Emblematicos/CCHC/cchc_1.jpg",
-    link: "/proyectos/cchc",
+    image: "/img/Emblematicos/Vantrust/Escritorio_Gerencia_1_Vantrust.webp",
+    link: "/proyectos/proyectos_emblematicos",
   },
   {
     id: 2,
-    title: "COK",
+    title: "FALP",
     description: "Proyecto de remodelación interior en estilo moderno.",
-    image: "/img/Emblematicos/COK/cok_1.jpg",
-    link: "/proyectos/COK",
+    image: "/img/Emblematicos/FALP/Estacion_Enfermeria_6_FALP.webp",
+    link: "/proyectos/proyectos_emblematicos",
   },
   {
     id: 3,
-    title: "Correa & Gubbins",
+    title: "CCHC",
     description: "Proyecto de remodelación interior en estilo moderno.",
-    image: "/img/Emblematicos/CyG/c&b_1.webp",
+    image: "/img/Emblematicos/CCHC/Meson_Krion_Cafeteria_CCHC.webp",
     link: "/proyectos/Correa&Gubbins",
   },
   {
     id: 4,
-    title: "FALP",
+    title: "Hotel Mandarin Oriente",
     description: "Solución industrial eficiente con estructura desmontable.",
-    image: "/img/Emblematicos/FALP/falp_1.jpg",
+    image: "/img/Emblematicos/H_Mandarin/Suite_1_Mandarin_Oriental.webp",
+    link: "/proyectos/proyectos_emblematicos",
+  },
+  {
+    id: 5,
+    title: "COK",
+    description: "Solución industrial eficiente con estructura desmontable.",
+    image: "/img/Emblematicos/COK/Cielo_COK.webp",
+    link: "/proyectos/proyectos_emblematicos",
+  },
+  {
+    id: 6,
+    title: "Correa & Gubbins",
+    description: "Solución industrial eficiente con estructura desmontable.",
+    image: "/img/Emblematicos/CG/Recepcion-2-correagubbins.webp",
     link: "/proyectos/Falp",
   },
 ];
 
 const ProyectosEmblematicos = () => {
   return (
-    <section id="proyectos-emblematicos" className="px-6 py-12 bg-[#011E31] mt-10 ">
+    <section id="proyectos-emblematicos" className="px-6 py-12 bg-gray-600 mt-10 ">
       <h2 className="text-xl md:text-4xl font-bold text-white text-left mb-10 font-[Poppins]">
         Proyectos Emblemáticos
       </h2>
 
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]} // 2. Agregar Autoplay aquí
         navigation
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // 3. Activar autoplay
         spaceBetween={30}
         slidesPerView={1}
         breakpoints={{

@@ -62,6 +62,7 @@ function App() {
             <>
               <div id="Inicio"><Home /></div>
               <AlianzasNoticias />
+              <ProyectosEmblematicos />
               <ClientesEmblematicos />
             </>
           } />

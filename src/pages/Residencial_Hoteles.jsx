@@ -29,13 +29,13 @@ const secciones = [
     descripcion: `Realizamos proyectos a la medida para Condominios y Edificios Habitacionales. Estos incluyen muebles de cocina con opciones de cubierta en piedras, cuarzos, Krion y fenólicos y para Closets y Vanitorios en terminaciones de chapa barnizada y laminado.
 .`,
     imagenes: [
-      { src: "/img/Residencial/Suite_1_Mandarin_Oriental.webp", descripcion: "" },
-      { src: "/img/Residencial/Suite_5_con_Filigrana_Kitchenette.webp", descripcion: "" },
-      { src: "/img/Residencial/Suite_2_Mandarin_Oriental.webp", descripcion: "" },
-      { src: "/img/Residencial/Suite_4_Mandarin_Oriental.webp", descripcion: "" },
-      { src: "/img/Residencial/Suite_3_Mandarin_Oriental.webp", descripcion: "" },
-      { src: "/img/Residencial/Puertas_Marcos_Mandrin_Oriental.webp", descripcion: "" },
-      { src: "/img/Residencial/Endolados_Revestimientos_Mandarin_Oriental.webp", descripcion: "" },
+      { src: "/img/Residencial/Cocina_Pedro_Rico.webp", descripcion: "" },
+      { src: "/img/Residencial/Murales_Pedro_rico.webp", descripcion: "" },
+      { src: "/img/Residencial/Closet_Pedro_Rico.webp", descripcion: "" },
+      { src: "/img/Residencial/Lavaplatos_Pedro_Rico.webp", descripcion: "" },
+      { src: "/img/Residencial/Cocina_2.webp", descripcion: "" },
+      { src: "/img/Residencial/Closet_cocina_Pedro_Rico.webp", descripcion: "" },
+      { src: "/img/Residencial/Closet_2_Pedro_Rico.jpg", descripcion: "" },
 
     ],
   },
