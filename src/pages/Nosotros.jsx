@@ -72,8 +72,8 @@ const Nosotros = () => {
   <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200 mb-4 !font-[Poppins]">
     Alianzas
   </h2>
-  <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
-    Empresas líderes que eligieron nuestras soluciones
+  <p className="font-[Barlow] text-center text-base text-gray-500 dark:text-gray-400 mb-8">
+    Marcas líderes que han depositado su confianza en nuestra experiencia y calidad.
   </p>
 
   <Slider
