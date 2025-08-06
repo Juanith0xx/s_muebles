@@ -2,4 +2,8 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
+# Sitemap principal
 Sitemap: https://sistemamuebles.cl/sitemap.xml
+
+# Recomendaciones adicionales
+Host: https://sistemamuebles.cl

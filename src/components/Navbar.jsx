@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import {
-  Menu,
+Menu,
   X,
-  BookOpen,
-  Package,
-  Building2,
-  Newspaper,
-  Phone,
-  Users,
+  Library,
+  Boxes,
+  Landmark,
+  PenLine,
+  MessageCircle,
+  UserSquare,
 } from "lucide-react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -23,61 +23,60 @@ const Navbar = () => {
   }, [menuOpen]);
 
   const menus = [
-    {
-      label: "Catálogos",
-      icon: <BookOpen size={32} />,
-      items: [
-        ["/catalogo/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
+  {
+    label: "Catálogos",
+    icon: <Library size={24} />,
+    items: [
+      ["/catalogo/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
+    ],
+  },
+  {
+    label: "Productos",
+    icon: <Boxes size={24} />,
+    items: [
+      ["/producto/clinicos-hospitalarios", "Clínicos-Hospitalarios"],
+      ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
+      ["/producto/interiorismo", "Interiorismo Corporativo"],
+      ["/productos/soluciones_integrales", "Soluciones Integrales"],
+      ["/productos/residencial_hoteles", "Residencial y Hotelero"],
+    ],
+  },
+  {
+    label: "Proyectos",
+    icon: <Landmark size={24} />,
+    items: [
+      ["/proyectos/proyectos_emblematicos", "Proyectos Emblemáticos"],
+    ],
+  },
+  {
+    label: "Blog",
+    icon: <PenLine size={24} />,
+    items: [
+      [
+        "https://www.linkedin.com/company/sistemamuebles/posts/",
+        "Artículos Técnicos",
+        true,
       ],
-    },
-    {
-      label: "Productos",
-      icon: <Package size={32} />,
-      items: [
-        ["/producto/clinicos-hospitalarios", "Clinicos-Hospitalarios"],
-        ["/producto/puertas_hpl_marcos", "Puertas HPL y Marcos Telescópicos"],
-        ["/producto/interiorismo", "Interiorismo Corporativo"],
-        ["/productos/soluciones_integrales", "Soluciones Integrales"],
-        ["/productos/residencial_hoteles", "Residencial y Hotelero"],
+    ],
+  },
+  {
+    label: "Contacto",
+    icon: <MessageCircle size={24} />,
+    items: [
+      ["/contacto/contact", "Formulario de Contacto"],
+      ["https://wa.me/56912345678", "Whatsapp", true],
+      [
+        "https://www.linkedin.com/company/sistemamuebles",
+        "LinkedIn",
+        true,
       ],
-    },
-    {
-      label: "Proyectos",
-      icon: <Building2 size={32} />,
-      items:[
-          ["/proyectos/proyectos_emblematicos", "Proyectos Emblematicos"],
-      ],
-    },
-    {
-      label: "Blog",
-      icon: <Newspaper size={32} />,
-      items: [
-        [
-          "https://www.linkedin.com/company/sistemamuebles/posts/",
-          "Artículos Técnicos",
-          true,
-        ],
-      ],
-    },
-    {
-      label: "Contacto",
-      icon: <Phone size={32} />,
-      items: [
-        ["/contacto/contact", "Formulario de Contacto"],
-        ["https://wa.me/56912345678", "Whatsapp", true],
-        [
-          "https://www.linkedin.com/company/sistemamuebles",
-          "LinkedIn",
-          true,
-        ],
-      ],
-    },
-    {
-      label: "Sobre Nosotros",
-      icon: <Users size={32} />,
-      href: "/nosotros",
-    },
-  ];
+    ],
+  },
+  {
+    label: "Sobre Nosotros",
+    icon: <UserSquare size={24} />,
+    href: "/nosotros",
+  },  ];
 
   const handleSectionClick = (menu) => {
     if (menu.href) {
@@ -189,85 +188,74 @@ const Navbar = () => {
 
       {/* Menú móvil visual con animación */}
       {menuOpen && (
-        <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/70 z-50 overflow-y-auto px-4 pt-20 pb-10 fade-slide-in">
-          <div className="flex justify-end mb-4">
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-                setActiveSection(null);
-              }}
-              className="text-white"
-            >
-              <X size={24} />
-            </button>
-          </div>
+  <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/70 z-50 overflow-y-auto fade-slide-in">
+    <div className="flex justify-end p-4">
+      <button
+        onClick={() => {
+          setMenuOpen(false);
+          setActiveSection(null);
+        }}
+        className="text-white"
+      >
+        <X size={24} />
+      </button>
+    </div>
 
-         <div className="grid grid-cols-2 gap-4 text-white">
-  {menus.map((menu) => {
-    const commonClasses =
-      "flex flex-col items-center justify-center gap-2 w-full h-28 rounded-xl bg-blue-800 hover:bg-red-500 transition text-sm font-medium";
+    <div className="flex h-full">
+      {/* Submenú dinámico a la izquierda */}
+      <div className="flex-1 px-6 pt-6 text-white font-[Barlow]">
+        {activeSection && (
+          <ul className="space-y-3">
+            {menus
+              .find((menu) => menu.label === activeSection)
+              ?.items.map(([href, name, external]) => (
+                <li key={name}>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMenuOpen(false)}
+                      className="block px-2 py-1 hover:underline font-semibold"
+                    >
+                      {name}
+                    </a>
+                  ) : (
+                    <RouterLink
+                      to={href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block px-2 py-1 hover:underline font-semibold"
+                    >
+                      {name}
+                    </RouterLink>
+                  )}
+                </li>
+              ))}
+          </ul>
+        )}
+      </div>
 
-    return (
-      <div key={menu.label}>
-        {menu.href ? (
-          <RouterLink
-            to={menu.href}
-            onClick={() => setMenuOpen(false)}
-            className={commonClasses}
-          >
-            {menu.icon}
-            <span>{menu.label}</span>
-          </RouterLink>
-        ) : (
+      {/* Íconos laterales a la derecha con nombres */}
+      <div className="flex flex-col gap-4 w-24 items-center pt-4 pr-2">
+        {menus.map((menu) => (
           <button
+            key={menu.label}
             onClick={() => handleSectionClick(menu)}
-            className={`${commonClasses} ${
+            className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
               activeSection === menu.label ? "ring-2 ring-white" : ""
             }`}
           >
-            {menu.icon}
-            <span>{menu.label}</span>
+            <div className="text-white">{menu.icon}</div>
+            <span className="text-white text-xs mt-1 text-center leading-tight">
+              {menu.label}
+            </span>
           </button>
-        )}
+        ))}
       </div>
-    );
-  })}
-</div>
+    </div>
+  </div>
+)}
 
-          {/* Submenú dinámico con animación */}
-          {activeSection && (
-            <div className="mt-6 fade-slide-in">
-              <ul className="space-y-2 text-white font-[Barlow]">
-                {menus
-                  .find((menu) => menu.label === activeSection)
-                  ?.items.map(([href, name, external]) => (
-                    <li key={name}>
-                      {external ? (
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={() => setMenuOpen(false)}
-                          className="block px-2 py-1 hover:underline font-semibold"
-                        >
-                          {name}
-                        </a>
-                      ) : (
-                        <RouterLink
-                          to={href}
-                          onClick={() => setMenuOpen(false)}
-                          className="block px-2 py-1 hover:underline font-semibold"
-                        >
-                          {name}
-                        </RouterLink>
-                      )}
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
 
       {/* Animaciones */}
       <style>
