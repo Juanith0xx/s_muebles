@@ -136,17 +136,23 @@ const PEmblematicos = () => {
 
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
-      <Helmet>
-        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Muebles clínicos y hospitalarios a medida. Estaciones de enfermería, laboratorios, áreas limpias, Emblematicos Vanstrust/y más. Diseño funcional y sanitariamente eficiente."
-        />
-        <meta
-          name="keywords"
-          content="mobiliario hospitalario, estaciones de enfermería, muebles para clínicas, mobiliario médico, Emblematicos Vanstrust/hospitalarios, krion, MDF laminado"
-        />
-      </Helmet>
+     <Helmet>
+  <title>Proyectos Emblemáticos en Mobiliario Clínico | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Descubre nuestros proyectos emblemáticos en mobiliario clínico y hospitalario a medida. Soluciones para estaciones de enfermería, laboratorios, áreas limpias y más, con diseño funcional, durabilidad y eficiencia sanitaria."
+  />
+  <meta
+    name="keywords"
+    content="mobiliario clínico, muebles hospitalarios, estaciones de enfermería, diseño sanitario, laboratorios, áreas limpias, proyectos emblemáticos, Vanstrust, krion, HPL, MDF laminado, soluciones modulares"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Proyectos Emblemáticos en Mobiliario Clínico | Sistema Muebles" />
+  <meta property="og:description" content="Explora nuestros proyectos destacados en mobiliario clínico personalizado, con materiales premium y diseño funcional para entornos sanitarios." />
+  <meta property="og:image" content="https://tusitioweb.cl/img/emblematicos.jpg" />
+  <meta property="og:url" content="https://tusitioweb.cl/proyectos-emblematicos" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"

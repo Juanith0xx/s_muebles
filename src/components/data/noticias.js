@@ -24,5 +24,8 @@ Aplicamos esta visión en sectores como hospitales, laboratorios, espacios corpo
 Utilizamos materiales de alta gama como KRION®, HPL (fenólicos) y marcos telescópicos, que aseguran durabilidad, estética y funcionalidad. Además, nuestras soluciones modulares están pensadas para evolucionar junto a los espacios que habitan, ya sea en hospitales, laboratorios, oficinas o viviendas.
 
 Elegirnos significa apostar por la calidad, la innovación y la confianza. Porque en cada proyecto, construimos más que muebles: construimos relaciones duraderas.`
-}
+},
+
+
+
 ];
