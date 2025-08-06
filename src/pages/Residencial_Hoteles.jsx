@@ -65,16 +65,23 @@ const Residencial_Hoteles = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Mobiliario para Hoteles y Residencias | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Diseñamos y fabricamos muebles a medida para hoteles y proyectos residenciales. Calidad, funcionalidad y estilo en cada pieza. Solicita tu propuesta personalizada."
-        />
-        <meta
-          name="keywords"
-          content="muebles para hoteles, mobiliario residencial, diseño interior hotelero, muebles a medida, mobiliario moderno, decoración hotel, muebles para departamentos, MDF laminado, melamina premium"
-        />
-      </Helmet>
+  <title>Mobiliario Hotelero y Residencial a Medida | Diseño Moderno | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Creamos mobiliario moderno y funcional para hoteles, residencias y departamentos. Diseño personalizado con melamina premium, MDF laminado y acabados de alta calidad. Soluciones elegantes para habitaciones, recepciones y espacios comunes."
+  />
+  <meta
+    name="keywords"
+    content="muebles para hoteles, mobiliario residencial, diseño interior hotelero, muebles modernos, decoración hotel, muebles para departamentos, mobiliario a medida, melamina premium, MDF laminado, diseño personalizado, habitaciones de hotel"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Mobiliario Hotelero y Residencial a Medida | Diseño Moderno | Sistema Muebles" />
+  <meta property="og:description" content="Soluciones de mobiliario elegante y funcional para hoteles y residencias. Diseño a medida con materiales premium." />
+  <meta property="og:image" content="https://sistemamuebles.cl/img/mobiliario-hotelero.jpg" />
+  <meta property="og:url" content="https://sistemamuebles.cl/mobiliario-hotelero" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"

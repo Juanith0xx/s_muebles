@@ -150,7 +150,7 @@ const PEmblematicos = () => {
   <meta property="og:title" content="Proyectos Emblemáticos en Mobiliario Clínico | Sistema Muebles" />
   <meta property="og:description" content="Explora nuestros proyectos destacados en mobiliario clínico personalizado, con materiales premium y diseño funcional para entornos sanitarios." />
   <meta property="og:image" content="https://tusitioweb.cl/img/emblematicos.jpg" />
-  <meta property="og:url" content="https://tusitioweb.cl/proyectos-emblematicos" />
+  <meta property="og:url" content="https://sistemamuebles.cl/proyectos-emblematicos" />
   <meta name="twitter:card" content="summary_large_image" />
 </Helmet>
 

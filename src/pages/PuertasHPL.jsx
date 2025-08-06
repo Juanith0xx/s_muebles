@@ -52,17 +52,24 @@ const PuertasHPL = () => {
 
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
-      <Helmet>
-        <title>Puertas HPL y Marcos Telescópicos para Clínicas | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Puertas HPL y marcos telescópicos diseñados para clínicas y hospitales. Resistentes a la humedad, sanitizables y fabricados a medida para áreas críticas y recintos médicos."
-        />
-        <meta
-          name="keywords"
-          content="puertas HPL, marcos telescópicos, puertas clínicas, puertas hospitalarias, puertas sanitarias, áreas limpias, mobiliario médico"
-        />
-      </Helmet>
+     <Helmet>
+  <title>Puertas HPL Sanitarias y Marcos Telescópicos para Áreas Médicas | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Fabricamos puertas HPL y marcos telescópicos a medida para clínicas, hospitales y laboratorios. Soluciones sanitarias resistentes a la humedad, fáciles de limpiar y aptas para áreas críticas como pabellones, salas de procedimientos y zonas limpias."
+  />
+  <meta
+    name="keywords"
+    content="puertas HPL, puertas sanitarias, marcos telescópicos, puertas hospitalarias, puertas clínicas, áreas críticas, zonas limpias, mobiliario médico, diseño sanitario, puertas resistentes a la humedad"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Puertas HPL Sanitarias y Marcos Telescópicos para Áreas Médicas | Sistema Muebles" />
+  <meta property="og:description" content="Soluciones sanitarias en puertas HPL y marcos telescópicos para clínicas y hospitales. Diseño funcional, higiénico y resistente." />
+  <meta property="og:image" content="https://sistemamuebles.cl/img/puertas-hpl.jpg" />
+  <meta property="og:url" content="https://sistemamuebles.cl/puertas-hpl" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"

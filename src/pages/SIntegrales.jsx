@@ -145,17 +145,24 @@ const SIntegrales = () => {
 
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
-      <Helmet>
-        <title>Soluciones Integrales en Mobiliario para Oficinas, Clínicas y Espacios Comerciales | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Diseño y fabricación de muebles para oficinas: escritorios, salas de reunión, estaciones de trabajo y más. Estilo moderno y funcionalidad."
-        />
-        <meta
-          name="keywords"
-          content="muebles de oficina, estaciones de trabajo, escritorios modernos, salas de reuniones, mobiliario corporativo"
-        />
-      </Helmet>
+    <Helmet>
+  <title>Mobiliario Personalizado para Oficinas, Clínicas y Espacios Comerciales | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Diseñamos y fabricamos mobiliario moderno y funcional para oficinas, clínicas y locales comerciales. Escritorios, estaciones de trabajo, salas de reuniones, recepciones y más. Soluciones a medida con estilo y eficiencia."
+  />
+  <meta
+    name="keywords"
+    content="muebles de oficina, mobiliario clínico, estaciones de trabajo, escritorios modernos, salas de reuniones, mobiliario comercial, diseño personalizado, muebles corporativos, muebles para locales, soluciones integrales"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Mobiliario Personalizado para Oficinas, Clínicas y Espacios Comerciales | Sistema Muebles" />
+  <meta property="og:description" content="Soluciones integrales en mobiliario moderno para entornos corporativos, clínicos y comerciales. Diseño a medida con funcionalidad y estilo." />
+  <meta property="og:image" content="https://sistemamubles.cl/img/mobiliario-integral.jpg" />
+  <meta property="og:url" content="https://sistemamuebles.cl/mobiliario-integral" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"

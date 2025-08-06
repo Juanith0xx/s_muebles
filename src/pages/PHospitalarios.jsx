@@ -86,16 +86,23 @@ const PHospitalarios = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Mobiliario Clínico Hospitalario a Medida | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Muebles para clínicas, hospitales y laboratorios. Estaciones de enfermería, áreas limpias, lockers y más. Diseño funcional y cumplimiento sanitario."
-        />
-        <meta
-          name="keywords"
-          content="mobiliario clínico, muebles hospitalarios, estaciones de enfermería, lockers sanitarios, muebles para laboratorios"
-        />
-      </Helmet>
+  <title>Mobiliario Clínico y Hospitalario Personalizado | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Diseñamos y fabricamos mobiliario clínico a medida para hospitales, clínicas y laboratorios. Estaciones de enfermería, lockers sanitarios, áreas limpias y muebles funcionales que cumplen con normativas de higiene y seguridad."
+  />
+  <meta
+    name="keywords"
+    content="mobiliario clínico, muebles hospitalarios, diseño sanitario, estaciones de enfermería, lockers para hospitales, muebles para laboratorios, áreas limpias, cumplimiento normativo, mobiliario médico"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Mobiliario Clínico y Hospitalario Personalizado | Sistema Muebles" />
+  <meta property="og:description" content="Soluciones de mobiliario médico funcional y seguro para entornos clínicos. Diseño a medida con enfoque sanitario." />
+  <meta property="og:image" content="https://sitemamuebles.cl/img/mobiliario-clinico.jpg" />
+  <meta property="og:url" content="https://sistemamuebles.cl/mobiliario-clinico" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"

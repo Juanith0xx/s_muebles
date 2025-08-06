@@ -135,16 +135,23 @@ const Interiorismo = () => {
   return (
     <div className="px-6 pt-14 sm:px-10 lg:px-28 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
       <Helmet>
-        <title>Interiorismo Corporativo Personalizado | Sistema Muebles</title>
-        <meta
-          name="description"
-          content="Diseñamos espacios corporativos que reflejan identidad y fomentan productividad. Soluciones de interiorismo a medida con melamina, MDF, vidrio templado y acero para oficinas, salas de reuniones y áreas comunes."
-        />
-        <meta
-          name="keywords"
-          content="interiorismo corporativo, diseño de oficinas, espacios modernos, productividad, identidad de marca, salas de reuniones, melamina, vidrio templado, diseño funcional"
-        />
-      </Helmet>
+  <title>Diseño de Oficinas y Espacios Corporativos a Medida | Sistema Muebles</title>
+  <meta
+    name="description"
+    content="Transformamos oficinas y espacios corporativos en entornos modernos, funcionales y alineados con tu identidad de marca. Interiorismo personalizado con melamina, MDF, vidrio templado y acero para salas de reuniones, áreas comunes y estaciones de trabajo."
+  />
+  <meta
+    name="keywords"
+    content="diseño de oficinas, interiorismo corporativo, mobiliario a medida, espacios modernos, productividad empresarial, identidad de marca, salas de reuniones, estaciones de trabajo, melamina, vidrio templado, acero, MDF"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Diseño de Oficinas y Espacios Corporativos a Medida | Sistema Muebles" />
+  <meta property="og:description" content="Soluciones de interiorismo corporativo que combinan funcionalidad, estética y personalización para potenciar tu empresa." />
+  <meta property="og:image" content="https://sistemamueble.cl/img/interiorismo-corporativo.jpg" />
+  <meta property="og:url" content="https://sistemamuebles.cl/interiorismo-corporativo" />
+  <meta name="twitter:card" content="summary_large_image" />
+</Helmet>
+
 
       <motion.h1
         className="text-3xl sm:text-5xl font-bold font-poppins text-center text-[#011E31] dark:text-white mt-10 mb-6 pt-8"
