@@ -237,20 +237,39 @@ const Navbar = () => {
 
       {/* Íconos laterales a la derecha con nombres */}
       <div className="flex flex-col gap-4 w-24 items-center pt-4 pr-2">
-        {menus.map((menu) => (
-          <button
-            key={menu.label}
-            onClick={() => handleSectionClick(menu)}
-            className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
-              activeSection === menu.label ? "ring-2 ring-white" : ""
-            }`}
-          >
-            <div className="text-white">{menu.icon}</div>
-            <span className="text-white text-xs mt-1 text-center leading-tight">
-              {menu.label}
-            </span>
-          </button>
-        ))}
+        {menus.map((menu) =>
+  menu.href ? (
+    <RouterLink
+      key={menu.label}
+      to={menu.href}
+      onClick={() => {
+        setMenuOpen(false);
+        setActiveSection(null);
+      }}
+      className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
+        activeSection === menu.label ? "ring-2 ring-white" : ""
+      }`}
+    >
+      <div className="text-white">{menu.icon}</div>
+      <span className="text-white text-xs mt-1 text-center leading-tight">
+        {menu.label}
+      </span>
+    </RouterLink>
+  ) : (
+    <button
+      key={menu.label}
+      onClick={() => handleSectionClick(menu)}
+      className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
+        activeSection === menu.label ? "ring-2 ring-white" : ""
+      }`}
+    >
+      <div className="text-white">{menu.icon}</div>
+      <span className="text-white text-xs mt-1 text-center leading-tight">
+        {menu.label}
+      </span>
+    </button>
+  )
+)}
       </div>
     </div>
   </div>
