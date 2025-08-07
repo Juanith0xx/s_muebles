@@ -45,6 +45,12 @@ const NoticiaDetalle = () => {
           Volver al inicio
         </Link>
       </div>
+      {/* Fecha de publicación */}
+<div className="mt-10 text-right">
+  <p className="text-sm text-gray-500 font-[Barlow] italic">
+    Publicado el {noticia.fecha}
+  </p>
+</div>
     </section>
   );
 };

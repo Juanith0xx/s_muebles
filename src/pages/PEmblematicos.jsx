@@ -208,9 +208,15 @@ const PEmblematicos = () => {
             custom={index + 1}
           >
             <div className="w-full lg:w-1/2">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-[#011E31] font-[Poppins] dark:text-sky-400 mb-4">
-                {seccion.titulo}
-              </h2>
+             <h2
+            className={`text-2xl sm:text-3xl font-semibold text-[#011E31] font-[Poppins] dark:text-sky-400 mb-4 ${
+            seccion.titulo === "Vantrust" ||
+            seccion.titulo === "CCHC" ||
+            seccion.titulo === "COK" ? "text-right ml-auto" : ""
+            }`}
+            >
+            {seccion.titulo}
+            </h2>
               <p className="text-sm sm:text-base font-barlow text-gray-700 dark:text-gray-300 leading-relaxed">
                 {seccion.descripcion}
               </p>

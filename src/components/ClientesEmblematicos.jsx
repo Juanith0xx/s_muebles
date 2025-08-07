@@ -6,7 +6,7 @@ const ClientesEmblematicos = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1500,
+    speed: 750,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,

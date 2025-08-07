@@ -22,7 +22,7 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
-  const menus = [
+const menus = [
   {
     label: "Catálogos",
     icon: <Library size={24} />,
@@ -51,13 +51,7 @@ const Navbar = () => {
   {
     label: "Blog",
     icon: <PenLine size={24} />,
-    items: [
-      [
-        "https://www.linkedin.com/company/sistemamuebles/posts/",
-        "Artículos Técnicos",
-        true,
-      ],
-    ],
+    href: "/noticias",
   },
   {
     label: "Contacto",
@@ -65,18 +59,15 @@ const Navbar = () => {
     items: [
       ["/contacto/contact", "Formulario de Contacto"],
       ["https://wa.me/56912345678", "Whatsapp", true],
-      [
-        "https://www.linkedin.com/company/sistemamuebles",
-        "LinkedIn",
-        true,
-      ],
+      ["https://www.linkedin.com/company/sistemamuebles", "LinkedIn", true],
     ],
   },
   {
     label: "Sobre Nosotros",
     icon: <UserSquare size={24} />,
     href: "/nosotros",
-  },  ];
+  },
+];
 
   const handleSectionClick = (menu) => {
     if (menu.href) {

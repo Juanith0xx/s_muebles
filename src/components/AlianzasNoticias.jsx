@@ -45,7 +45,7 @@ const AlianzasNoticias = () => {
             className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto rounded-xl shadow-lg mb-6"
             loading="lazy"
           />
-          <p className="text-white text-base sm:text-lg font-[Barlow] max-w-md">
+          <p className="text-white text-base sm:text-xl font-[Barlow] max-w-md">
             Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
           </p>
         </div>
