@@ -19,7 +19,7 @@ const Home = () => {
 
   const slides = [
     {
-      src: "/img/Carrusel/Enfermeria_FALP.webp",
+      src: "/img/Carrusel/Enfermeria_FALP.jpg",
       label: "Proyectos Clínicos Hospitalarios",
       link: "producto/clinicos-hospitalarios",
     },

@@ -87,7 +87,7 @@ const menus = [
         <div className="flex items-center gap-8">
           <RouterLink to="/">
             <img
-              className="h-12 w-auto cursor-pointer"
+              className="h-16 w-auto cursor-pointer"
               src="/img/Logo.webp"
               alt="Logo"
             />
