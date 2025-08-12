@@ -176,7 +176,7 @@ const PEmblematicos = () => {
       {secciones.map((seccion, index) => {
         const mostrarBotonVerMas =
           seccion.titulo === "CCHC" ||
-          seccion.titulo === "COK" || 
+          seccion.titulo === "Consulta Oftalmológica Kennedy COK" || 
           seccion.titulo === "Correa & Gubbins" ||
           seccion.titulo === "Hotel Mandarin Oriental" || 
           seccion.titulo === "Vantrust" ||

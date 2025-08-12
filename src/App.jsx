@@ -20,6 +20,7 @@ import Residencial_Hoteles from './pages/Residencial_Hoteles';
 import PEmblematicos from './pages/PEmblematicos';
 import Noticias from './pages/Noticias';
 import NoticiaDetalle from './pages/NoticiaDetalle';
+import CatalogoPuertasHPL from './pages/Catalogos/CatalogoPuertasHPL';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { noticias } from './components/data/noticias';
@@ -75,6 +76,7 @@ function AppContent() {
         <Route path="/contacto/contact" element={<ContactForm />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/proyectos/proyectos_emblematicos" element={<PEmblematicos />} />
+        <Route path="/catalogo/puertas_hpl_marcos" element={<CatalogoPuertasHPL />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/noticias/:slug" element={<NoticiaDetalle />} />
       </Routes>
