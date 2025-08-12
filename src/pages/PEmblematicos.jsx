@@ -84,7 +84,7 @@ const secciones = [
      ], 
   },
    {
-    titulo: "COK",
+    titulo: "Consulta Oftalmológica Kennedy COK",
     descripcion: ``,
     imagenes: [
       { src: "/img/Emblematicos/COK/Cielo_COK.webp", descripcion: "" },

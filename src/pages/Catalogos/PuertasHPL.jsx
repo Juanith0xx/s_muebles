@@ -1,8 +1,12 @@
 import React from 'react'
+import PageNotFound from  "./"
 
 const PuertasHPL = () => {
   return (
-    <div>PuertasHPL</div>
+    <>
+    <PageNotFound />
+    </>
+
   )
 }
 

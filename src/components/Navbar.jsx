@@ -49,7 +49,7 @@ const menus = [
     ],
   },
   {
-    label: "Blog",
+    label: "Noticias",
     icon: <PenLine size={24} />,
     href: "/noticias",
   },
