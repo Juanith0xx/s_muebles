@@ -21,6 +21,7 @@ import PEmblematicos from './pages/PEmblematicos';
 import Noticias from './pages/Noticias';
 import NoticiaDetalle from './pages/NoticiaDetalle';
 import CatalogoPuertasHPL from './pages/Catalogos/CatalogoPuertasHPL';
+import PdfViewer from './pages/Catalogos/PdfViewer';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { noticias } from './components/data/noticias';
@@ -79,6 +80,7 @@ function AppContent() {
         <Route path="/catalogo/puertas_hpl_marcos" element={<CatalogoPuertasHPL />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/noticias/:slug" element={<NoticiaDetalle />} />
+        <Route path="/catalogo/pdf" element={<PdfViewer />} />
       </Routes>
 
       <Footer />
