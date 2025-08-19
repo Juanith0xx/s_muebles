@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppBubble = () => {
-  const phoneNumber = "56992319956"; // Tu número sin +
+  const phoneNumber = "56992319956";
 
   const [bounce, setBounce] = useState(false);
 

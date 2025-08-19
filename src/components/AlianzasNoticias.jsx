@@ -32,27 +32,28 @@ const AlianzasNoticias = () => {
     <section className="w-full px-4 sm:px-6 md:px-12 py-12 sm:py-16 bg-gray-600">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center lg:text-left">
         
-        {/* Alianzas con imagen centrada */}
-        <div
-          ref={alianzasRef}
-          className={`w-full lg:w-1/2 flex flex-col items-center justify-center text-center transition-opacity duration-700 ${
-            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <img
-            src="/img/Nosotros.webp"
-            alt="Alianzas estratégicas"
-            className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg w-full h-auto rounded-xl shadow-lg mb-6"
-            loading="lazy"
-          />
-          <p className="text-white text-base sm:text-xl font-[Barlow] max-w-md">
-            Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
-          </p>
-        </div>
+       {/* Alianzas con imagen centrada */}
+<div
+  ref={alianzasRef}
+  className={`w-full lg:w-1/2 flex flex-col items-center justify-center text-center transition-opacity duration-700 ${
+    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+  }`}
+>
+  <p className="text-white text-xl sm:text-2xl lg:text-3xl font-[Barlow] font-semibold px-4 sm:px-6 lg:px-0 pb-19 leading-relaxed lg:leading-snug w-full">
+    Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
+  </p>
+
+  <img
+    src="/img/Nosotros.webp"
+    alt="Alianzas estratégicas"
+    className="w-full max-w-full h-auto rounded-xl shadow-lg mb-20"
+    loading="lazy"
+  />
+</div>
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-[Poppins] text-white mb-6 mt-1.5">
             Noticias
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">

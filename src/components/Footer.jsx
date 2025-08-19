@@ -33,7 +33,7 @@ const Footer = () => {
         </li>
       </ul>
       <div className="flex justify-center gap-4 mt-4">
-        <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="group">
+        <a href="https://wa.me/56992319956" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="group">
           <FaWhatsapp className="text-2xl group-hover:text-green-500 group-hover:scale-135 transition-all duration-300" />
         </a>
         <a href="https://www.linkedin.com/company/sistemamuebles" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="group">

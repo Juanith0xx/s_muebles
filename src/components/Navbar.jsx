@@ -58,7 +58,7 @@ const menus = [
     icon: <MessageCircle size={24} />,
     items: [
       ["/contacto/contact", "Formulario de Contacto"],
-      ["https://wa.me/56912345678", "Whatsapp", true],
+      ["https://wa.me/56992319956", "Whatsapp", true],
       ["https://www.linkedin.com/company/sistemamuebles", "LinkedIn", true],
     ],
   },
