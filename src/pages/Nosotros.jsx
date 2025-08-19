@@ -8,7 +8,7 @@ const Nosotros = () => {
       className="min-h-screen pt-24 px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto space-y-16 text-gray-800">
       {/* 1. Título principal */}
       <section className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Sobre Nosotros</h1>
+        <h1 className="text-4xl font-bold mb-4 mt-13">Sobre Nosotros</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           En Sistema Muebles nos dedicamos a diseñar y fabricar soluciones personalizadas en mobiliario clínico, hospitalario y corporativo, con un enfoque en calidad, innovación y compromiso humano.
         </p>

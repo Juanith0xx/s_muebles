@@ -7,7 +7,7 @@ const Noticias = () => {
     <section className="min-h-screen w-full bg-gray-50 py-16 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold font-[Poppins] text-black mb-4 mt-8">
+          <h1 className="text-4xl sm:text-5xl font-bold font-[Poppins] text-black mb-4 mt-13">
             Noticias & Proyectos
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto font-[Barlow]">
