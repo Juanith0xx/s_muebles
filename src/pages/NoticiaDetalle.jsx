@@ -36,8 +36,14 @@ const NoticiaDetalle = () => {
         {noticia.contenido || noticia.descripcion}
       </p>
 
-      {/* Botón para volver al home */}
-      <div className="text-center">
+      {/* Botones de navegación */}
+      <div className="text-center space-x-4">
+        <Link
+          to="/noticias"
+          className="inline-block px-6 py-3 bg-[#021f31] text-white font-semibold rounded-full shadow-md hover:bg-[#0f1a4d] transition-colors duration-300"
+        >
+          Volver a noticias
+        </Link>
         <Link
           to="/"
           className="inline-block px-6 py-3 bg-[#d33834] text-white font-semibold rounded-full shadow-md hover:bg-[#b72c2a] transition-colors duration-300"
@@ -45,12 +51,13 @@ const NoticiaDetalle = () => {
           Volver al inicio
         </Link>
       </div>
+
       {/* Fecha de publicación */}
-<div className="mt-10 text-right">
-  <p className="text-sm text-gray-500 font-[Barlow] italic">
-    Publicado el {noticia.fecha}
-  </p>
-</div>
+      <div className="mt-10 text-right">
+        <p className="text-sm text-gray-500 font-[Barlow] italic">
+          Publicado el {noticia.fecha}
+        </p>
+      </div>
     </section>
   );
 };
