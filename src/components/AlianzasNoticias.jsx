@@ -1,6 +1,7 @@
 // src/components/AlianzasNoticias.jsx
 
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { noticias } from "../components/data/noticias";
 
 const AlianzasNoticias = () => {
@@ -8,7 +9,13 @@ const AlianzasNoticias = () => {
   const alianzasRef = useRef(null);
 
   // Mostrar las 2 noticias más recientes
-  const ultimasNoticias = noticias.slice(-2).reverse();
+  const ultimasNoticias = [...noticias]
+    .sort((a, b) => {
+      const fechaA = new Date(a.fecha.split(" de ").reverse().join(" "));
+      const fechaB = new Date(b.fecha.split(" de ").reverse().join(" "));
+      return fechaB - fechaA;
+    })
+    .slice(0, 2);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -32,24 +39,25 @@ const AlianzasNoticias = () => {
     <section className="w-full px-4 sm:px-6 md:px-12 py-12 sm:py-16 bg-gray-600">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 lg:flex-row text-center lg:text-left">
         
-       {/* Alianzas con imagen centrada */}
-<div
-  ref={alianzasRef}
-  className={`w-full lg:w-1/2 flex flex-col items-center justify-center text-center transition-opacity duration-700 ${
-    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-  }`}
->
-  <p className="text-white text-xl sm:text-2xl lg:text-3xl font-[Barlow] font-semibold px-4 sm:px-6 lg:px-0 pb-19 leading-relaxed lg:leading-snug w-full">
-    Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
-  </p>
+        {/* Alianzas con imagen y texto enlazados */}
+        <Link
+          to="/nosotros"
+          ref={alianzasRef}
+          className={`w-full lg:w-1/2 flex flex-col items-center justify-center text-center transition-opacity duration-700 no-underline ${
+            visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <p className="text-white text-xl sm:text-2xl lg:text-3xl font-[Barlow] font-semibold px-4 sm:px-6 lg:px-0 pb-19 leading-relaxed lg:leading-snug w-full hover:underline">
+            Trabajamos junto a marcas líderes para ofrecer soluciones modulares de alto nivel, combinando diseño, funcionalidad y tecnología en cada proyecto.
+          </p>
 
-  <img
-    src="/img/Nosotros.webp"
-    alt="Alianzas estratégicas"
-    className="w-full max-w-full h-auto rounded-xl shadow-lg mb-20"
-    loading="lazy"
-  />
-</div>
+          <img
+            src="/img/Nosotros.webp"
+            alt="Alianzas estratégicas"
+            className="w-full max-w-full h-auto rounded-xl shadow-lg mb-20 transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        </Link>
 
         {/* Noticias */}
         <div className="w-full lg:w-1/2">
