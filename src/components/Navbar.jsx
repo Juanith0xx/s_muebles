@@ -9,6 +9,7 @@ Menu,
   MessageCircle,
   UserSquare,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -170,7 +171,7 @@ const menus = [
         </ul>
 
         {/* Botón móvil */}
-        <div className="md:hidden px-2">
+        <div className="md:hidden px-2 ">
           <button onClick={() => setMenuOpen(true)}>
             <Menu size={22} />
           </button>
@@ -178,91 +179,108 @@ const menus = [
       </nav>
 
       {/* Menú móvil visual con animación */}
-      {menuOpen && (
-  <div className="fixed top-0 left-0 w-full h-screen bg-[#011E31]/70 z-50 overflow-y-auto fade-slide-in">
+     {/* Menú móvil estilo lista */}
+{menuOpen && (
+  <div className="fixed top-0 left-0 w-full h-screen bg-white z-50 overflow-y-auto fade-slide-in">
+    
+    {/* Cierre */}
     <div className="flex justify-end p-4">
       <button
         onClick={() => {
           setMenuOpen(false);
           setActiveSection(null);
         }}
-        className="text-white"
+        className="text-[#142063] focus:outline-none focus:ring-0 focus:border-none"
       >
-        <X size={24} />
+        <X size={28} />
       </button>
     </div>
 
-    <div className="flex h-full">
-      {/* Submenú dinámico a la izquierda */}
-      <div className="flex-1 px-6 pt-6 text-white font-[Barlow]">
-        {activeSection && (
-          <ul className="space-y-3">
-            {menus
-              .find((menu) => menu.label === activeSection)
-              ?.items.map(([href, name, external]) => (
-                <li key={name}>
-                  {external ? (
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setMenuOpen(false)}
-                      className="block px-2 py-1 hover:underline font-semibold"
-                    >
-                      {name}
-                    </a>
-                  ) : (
-                    <RouterLink
-                      to={href}
-                      onClick={() => setMenuOpen(false)}
-                      className="block px-2 py-1 hover:underline font-semibold"
-                    >
-                      {name}
-                    </RouterLink>
-                  )}
-                </li>
-              ))}
-          </ul>
-        )}
-      </div>
+    {/* Lista de navegación */}
+    <ul className="flex flex-col gap-6 px-8 text-[#142063] font-[Poppins] text-lg">
+      {menus.map((menu) => (
+        <li key={menu.label}>
+          {menu.href ? (
+            <RouterLink
+              to={menu.href}
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-3 text-[#142063] hover:font-semibold transition focus:outline-none focus:ring-0 focus:border-none"
+            >
+              {menu.icon}
+              {menu.label}
+            </RouterLink>
+          ) : (
+            <>
+              <button
+                onClick={() => handleSectionClick(menu)}
+                className={`flex items-center w-full gap-3 px-3 py-2 rounded-md transition-all 
+                  focus:outline-none focus:ring-0 focus:border-none 
+                  ${
+                    activeSection === menu.label
+                      ? "border border-[#142063] text-[#142063] font-semibold"
+                      : "text-[#142063] hover:text-[#142063] hover:font-semibold"
+                  }`}
+              >
+                {menu.icon}
+                {menu.label}
+              </button>
 
-      {/* Íconos laterales a la derecha con nombres */}
-      <div className="flex flex-col gap-4 w-24 items-center pt-4 pr-2">
-        {menus.map((menu) =>
-  menu.href ? (
-    <RouterLink
-      key={menu.label}
-      to={menu.href}
-      onClick={() => {
-        setMenuOpen(false);
-        setActiveSection(null);
-      }}
-      className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
-        activeSection === menu.label ? "ring-2 ring-white" : ""
-      }`}
-    >
-      <div className="text-white">{menu.icon}</div>
-      <span className="text-white text-xs mt-1 text-center leading-tight">
-        {menu.label}
-      </span>
-    </RouterLink>
-  ) : (
-    <button
-      key={menu.label}
-      onClick={() => handleSectionClick(menu)}
-      className={`w-full h-20 flex flex-col items-center justify-center rounded-xl bg-gray-600 hover:bg-red-500 transition ${
-        activeSection === menu.label ? "ring-2 ring-white" : ""
-      }`}
-    >
-      <div className="text-white">{menu.icon}</div>
-      <span className="text-white text-xs mt-1 text-center leading-tight">
-        {menu.label}
-      </span>
-    </button>
-  )
-)}
-      </div>
+              {/* Submenú */}
+              {activeSection === menu.label && menu.items && (
+                <ul className="ml-10 mt-2 flex flex-col gap-3 text-base !bg-grey-500 !text-white rounded-lg p-3 ">
+                  {menu.items.map(([href, name, external]) => (
+                    <li key={name}>
+                      {external ? (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMenuOpen(false)}
+                          className="hover:underline text-[#142063] focus:outline-none focus:ring-0 focus:border-none"
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        <RouterLink
+                          to={href}
+                          onClick={() => setMenuOpen(false)}
+                          className="hover:underline text-[#142063] focus:outline-none focus:ring-0 focus:border-none"
+                        >
+                          {name}
+                        </RouterLink>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    {/* Botones inferiores */}
+    <div className="flex flex-col gap-4 px-8 mt-10 pb-8">
+      <RouterLink
+        to="/contacto/contact"
+        onClick={() => setMenuOpen(false)}
+        className="flex items-center justify-center gap-2 bg-[#142063] text-white font-semibold py-3 rounded-lg shadow-md hover:bg-[#0f1a52] transition focus:outline-none focus:ring-0 focus:border-none"
+      >
+        <MessageCircle size={20} />
+        Contacto
+      </RouterLink>
+
+      <a
+        href="https://wa.me/56992319956"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold py-3 rounded-lg shadow-md hover:bg-green-600 transition focus:outline-none focus:ring-0 focus:border-none"
+      >
+        <FaWhatsapp alt="WhatsApp" className="h-5 w-5" />
+        WhatsApp
+      </a>
     </div>
+
   </div>
 )}
 
