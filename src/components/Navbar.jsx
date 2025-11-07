@@ -181,7 +181,8 @@ const menus = [
       {/* Menú móvil visual con animación */}
      {/* Menú móvil estilo lista */}
 {menuOpen && (
-  <div className="fixed top-0 left-0 w-full h-screen bg-white z-50 overflow-y-auto fade-slide-in">
+  <div className="fixed top-0 left-0 w-full h-screen bg-white/80 backdrop-blur-sm z-50 overflow-y-auto fade-slide-in">
+
     
     {/* Cierre */}
     <div className="flex justify-end p-4">
@@ -227,7 +228,7 @@ const menus = [
 
               {/* Submenú */}
               {activeSection === menu.label && menu.items && (
-                <ul className="ml-10 mt-2 flex flex-col gap-3 text-base !bg-grey-500 !text-white rounded-lg p-3 ">
+                <ul className="ml-6 mt-2 flex flex-col gap-2 text-base text-white rounded-md p-3 w-[85%]">
                   {menu.items.map(([href, name, external]) => (
                     <li key={name}>
                       {external ? (
